@@ -1,9 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+
+import Progress from "react-progress-2";
+import "react-progress-2/main.css"
+
+import PortfolioPage from "./Portfolio/PortfolioPage";
 
 function App() {
-  return (
+    return (
+        <React.Fragment>
+            <Progress.Component thumbStyle={{background: 'rgb(75,75,179)'}}/>
+
+            <Router>
+                <Switch>
+                    {/* TODO: Other paths */}
+
+                    <Route path="/" component={ PortfolioPage } />
+                </Switch>
+            </Router>
+
+        </React.Fragment>
+    );
+}
+
+/*
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -20,7 +40,6 @@ function App() {
         </a>
       </header>
     </div>
-  );
-}
+ */
 
 export default App;

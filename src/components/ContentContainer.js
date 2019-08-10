@@ -1,0 +1,13 @@
+import React from "react";
+
+export default function ContentContainer(props) {
+    const classes = "page-content-container w-100 " + props.className;
+    return (
+        <div id={ props.id } className={ classes }>
+            <div className="inner-page-content">
+                <h3 className="inner-page-content-title">{ props.contentTitle }</h3>
+                { props.children }
+            </div>
+        </div>
+    );
+}
