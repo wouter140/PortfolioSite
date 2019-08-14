@@ -1,0 +1,19 @@
+.nav-profile-picture {
+  max-height: 100%;
+}
+
+.navbar {
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+
+.navbar.navbar-light .breadcrumb .nav-item.active > .nav-link, .navbar.navbar-light .navbar-nav .nav-item.active > .nav-link,
+    .navbar.navbar-light .navbar-nav .active .nav-link {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: .25rem;
+}
+
+.navbar .navbar-nav > a {
+  margin-right: .25rem;
+  margin-bottom: .25rem;
+}

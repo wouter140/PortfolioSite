@@ -10,6 +10,7 @@
     "react-progress-2": "^4.4.3",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
+    "react-scroll": "^1.7.12",
     "rfs": "^8.0.4"
   },
   "scripts": {
