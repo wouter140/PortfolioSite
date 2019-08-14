@@ -1,10 +1,16 @@
 .nav-profile-picture {
   max-height: 100%;
+
+  border-radius: 50% !important;
+  border-top-right-radius: 10% !important;
 }
 
 .navbar {
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
+}
+.navbar-brand {
+  width: 190px;
 }
 
 .navbar.navbar-light .breadcrumb .nav-item.active > .nav-link, .navbar.navbar-light .navbar-nav .nav-item.active > .nav-link,
@@ -16,4 +22,19 @@
 .navbar .navbar-nav > a {
   margin-right: .25rem;
   margin-bottom: .25rem;
+}
+
+.navbar-icon {
+  width: 0;
+  overflow: hidden;
+  opacity: 0;
+
+  transition: width .5s cubic-bezier(.79,.14,.15,.86),
+              opacity .5s cubic-bezier(.79,.14,.15,.86);
+}
+.top-nav-collapse {
+  .navbar-icon {
+    width: 100%;
+    opacity: 1;
+  }
 }
