@@ -5,7 +5,7 @@ export default function ContentContainer(props) {
     return (
         <div id={ props.id } className={ classes }>
             <div className="inner-page-content">
-                <h3 className="inner-page-content-title">{ props.contentTitle }</h3>
+                <h3 className="inner-page-content-title pb-2">{ props.contentTitle }</h3>
                 { props.children }
             </div>
         </div>
