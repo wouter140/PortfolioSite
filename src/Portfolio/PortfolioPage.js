@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {Component} from 'react';
 
+import PortfolioNavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 
 import LandingPageContent from "./LandingPage/LandingPageContent";
@@ -10,11 +11,16 @@ import ContactContent from "./Contact/ContactContent";
 
 import "./PortfolioGeneral.scss"
 
-export default class PortfolioPage extends React.Component {
+export default class PortfolioPage extends Component {
+
     render() {
         return (
             <React.Fragment>
-                <LandingPageContent />
+                <header>
+                    <PortfolioNavBar />
+
+                    <LandingPageContent />
+                </header>
 
                 <AboutContent />
 
@@ -23,7 +29,7 @@ export default class PortfolioPage extends React.Component {
 
                 <ContactContent />
 
-                <Footer />
+                <Footer/>
             </React.Fragment>
         );
     }
