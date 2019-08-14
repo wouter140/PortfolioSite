@@ -1,0 +1,23 @@
+@import "../Options";
+
+#contact-page {
+
+  form {
+
+    .btn[type=submit] {
+      float: right;
+    }
+
+    margin: 0;
+    @media (min-width: $breakpoint-tablet) {
+      margin: 0 5%;
+    }
+    @media (min-width: $breakpoint-big-tablet) {
+      margin: 0 10%;
+
+      .btn[type=submit] {
+        float: unset;
+      }
+    }
+  }
+}
