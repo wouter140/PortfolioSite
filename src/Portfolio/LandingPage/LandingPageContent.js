@@ -3,6 +3,7 @@ import React from 'react';
 import ProfilePicture from "../../images/profilepicture.png";
 
 import "./LandingPageContent.scss";
+import {Link} from "react-scroll/modules";
 
 export default class LandingPageContent extends React.Component {
     render() {
@@ -23,7 +24,9 @@ export default class LandingPageContent extends React.Component {
 
                     </div>
 
-                    <span className="scroll-indicator clickable" />
+                    <Link to="about-page" smooth={true} offset={-80} duration={1000}>
+                        <span className="scroll-indicator clickable" />
+                    </Link>
                 </div>
             </React.Fragment>
         );
