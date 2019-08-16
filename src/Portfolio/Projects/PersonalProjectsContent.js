@@ -1,10 +1,11 @@
 import React from 'react';
 
+import {MDBBtn, MDBCol, MDBIcon} from "mdbreact";
+
 import ContentContainer from "../../components/ContentContainer";
+import ProjectCard from "./components/ProjectCard";
 
 import "./ProjectsContent.scss";
-import {MDBBtn, MDBCol, MDBCollapse, MDBContainer, MDBIcon, MDBRow} from "mdbreact";
-import ProjectCard from "./components/ProjectCard";
 
 export default class PersonalProjectsContent extends React.Component {
 
@@ -36,7 +37,7 @@ export default class PersonalProjectsContent extends React.Component {
 
                 <div className="d-flex flex-wrap justify-content-start">
                     <MDBCol md="6" xl="4" className="animated fadeIn">
-                        <ProjectCard imgAlt=""
+                        <ProjectCard imgAlt="" onClick={this.props.openOverlay}
                                      title="Testing Title">
                             Some super duper amazing card text.
 
@@ -45,7 +46,7 @@ export default class PersonalProjectsContent extends React.Component {
                     </MDBCol>
 
                     <MDBCol md="6" xl="4" className="animated fadeIn">
-                        <ProjectCard imgAlt=""
+                        <ProjectCard imgAlt="" onClick={this.props.openOverlay}
                                      title="Testing Title">
                             Some super duper amazing card text.
 
@@ -54,7 +55,7 @@ export default class PersonalProjectsContent extends React.Component {
                     </MDBCol>
 
                     <MDBCol md="6" xl="4" className="extra-project-md">
-                        <ProjectCard imgAlt=""
+                        <ProjectCard imgAlt="" onClick={this.props.openOverlay}
                                      title="Testing Title">
                             Some super duper amazing card text.
 
@@ -63,7 +64,7 @@ export default class PersonalProjectsContent extends React.Component {
                     </MDBCol>
 
                     <MDBCol md="6" xl="4" className="extra-project">
-                        <ProjectCard imgAlt=""
+                        <ProjectCard imgAlt="" onClick={this.props.openOverlay}
                                      title="Testing Title">
                             Some super duper amazing card text.
 
@@ -72,7 +73,7 @@ export default class PersonalProjectsContent extends React.Component {
                     </MDBCol>
 
                     <MDBCol md="6" xl="4" className="extra-project">
-                        <ProjectCard imgAlt=""
+                        <ProjectCard imgAlt="" onClick={this.props.openOverlay}
                                      title="Testing Title">
                             Some super duper amazing card text.
 
@@ -81,7 +82,7 @@ export default class PersonalProjectsContent extends React.Component {
                     </MDBCol>
 
                     <MDBCol md="6" xl="4" className="extra-project">
-                        <ProjectCard imgAlt=""
+                        <ProjectCard imgAlt="" onClick={this.props.openOverlay}
                                      title="Testing Title">
                             Some super duper amazing card text.
 
