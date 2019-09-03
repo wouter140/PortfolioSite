@@ -1,11 +1,6 @@
 import React from 'react';
 import {MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardText, MDBCardTitle} from "mdbreact";
 
-const RefImage = React.forwardRef((props, ref) => (
-    <img ref={ref} {...props} />
-));
-
-
 export default class ProjectCard extends React.Component {
 
     constructor(props) {
@@ -16,17 +11,17 @@ export default class ProjectCard extends React.Component {
 
     openOverlay(event) {
         const rect = this.imageRef.current.getBoundingClientRect();
-        this.props.onClick({x: rect.x, y: rect.y}, {width: rect.width, height: rect.height}, "https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(118).jpg");
+        this.props.onClick({x: rect.x, y: rect.y}, {width: rect.width, height: rect.height}, this.props.src);
     }
 
     render() {
         return (
             <MDBCard className="project-card mb-4">
                 <div onClick={ () => this.openOverlay() }>
-                    <MDBCardImage tag="div" waves src=" " >
+                    <MDBCardImage tag="div" waves src=" " overlay={false} >
                         <div className="project-image-container" ref={ this.imageRef }>
-                        <RefImage className="img-fluid project-image"
-                                  src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(118).jpg" />
+                        <img className="img-fluid project-image"
+                                  src={ this.props.src } alt={ this.props.alt } />
                         </div>
                     </MDBCardImage>
                 </div>

@@ -7,6 +7,8 @@ import ProjectCard from "./components/ProjectCard";
 
 import "./ProjectsContent.scss";
 
+import testImage from '../../images/img (118).jpg';
+
 export default class PersonalProjectsContent extends React.Component {
 
     constructor(props) {
@@ -37,7 +39,7 @@ export default class PersonalProjectsContent extends React.Component {
 
                 <div className="d-flex flex-wrap justify-content-start">
                     <MDBCol md="6" xl="4" className="animated fadeIn">
-                        <ProjectCard imgAlt="" onClick={this.props.openOverlay}
+                        <ProjectCard src={ testImage } alt="" onClick={this.props.openOverlay}
                                      title="Testing Title">
                             Some super duper amazing card text.
 
@@ -46,7 +48,7 @@ export default class PersonalProjectsContent extends React.Component {
                     </MDBCol>
 
                     <MDBCol md="6" xl="4" className="animated fadeIn">
-                        <ProjectCard imgAlt="" onClick={this.props.openOverlay}
+                        <ProjectCard src={ testImage } alt="" onClick={this.props.openOverlay}
                                      title="Testing Title">
                             Some super duper amazing card text.
 
@@ -55,7 +57,7 @@ export default class PersonalProjectsContent extends React.Component {
                     </MDBCol>
 
                     <MDBCol md="6" xl="4" className="extra-project-md">
-                        <ProjectCard imgAlt="" onClick={this.props.openOverlay}
+                        <ProjectCard src={ testImage } alt="" onClick={this.props.openOverlay}
                                      title="Testing Title">
                             Some super duper amazing card text.
 
@@ -64,7 +66,7 @@ export default class PersonalProjectsContent extends React.Component {
                     </MDBCol>
 
                     <MDBCol md="6" xl="4" className="extra-project">
-                        <ProjectCard imgAlt="" onClick={this.props.openOverlay}
+                        <ProjectCard src={ testImage } alt="" onClick={this.props.openOverlay}
                                      title="Testing Title">
                             Some super duper amazing card text.
 
@@ -73,7 +75,7 @@ export default class PersonalProjectsContent extends React.Component {
                     </MDBCol>
 
                     <MDBCol md="6" xl="4" className="extra-project">
-                        <ProjectCard imgAlt="" onClick={this.props.openOverlay}
+                        <ProjectCard src={ testImage } alt="" onClick={this.props.openOverlay}
                                      title="Testing Title">
                             Some super duper amazing card text.
 
@@ -82,7 +84,7 @@ export default class PersonalProjectsContent extends React.Component {
                     </MDBCol>
 
                     <MDBCol md="6" xl="4" className="extra-project">
-                        <ProjectCard imgAlt="" onClick={this.props.openOverlay}
+                        <ProjectCard src={ testImage } alt="" onClick={this.props.openOverlay}
                                      title="Testing Title">
                             Some super duper amazing card text.
 
