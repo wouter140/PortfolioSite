@@ -135,7 +135,7 @@ export default class ContactContent extends React.Component {
 
                     <div style={{height: "3.6rem"}}>
 
-                        <div className="d-inline-block position-relative">
+                        <div className="d-block position-relative">
                             <MDBBtn color="success" type="submit" disabled={ this.state.sendingEmail }>
                                 <MDBIcon icon="paper-plane" />
                                 <span className="ml-2">Send Message</span>
