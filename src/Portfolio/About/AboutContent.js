@@ -7,7 +7,7 @@ export default class AboutContent extends React.Component {
     render() {
         return (
             <ContentContainer id="about-page" className="responsive-text-size"
-                        contentTitle="About" >
+                        contentTitle={ <span>About <strong>Me</strong></span> }>
                 Hey there! My name is Wouter Grutter and I am a software developer. I am currently studying GameDevelopment at Breda University of Applied Sciences aka BUAS, formerly known as NHTV.<br/>
                 I previously graduated from ROCA12 with a Game Development degree. As most in this field do, I love video games and movies which take a significant amount of my free time.<br/>
                 I am currently based in Breda, The Netherlands but am able to relocate.<br/>

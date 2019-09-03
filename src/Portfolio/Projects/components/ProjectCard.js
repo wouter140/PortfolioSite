@@ -33,7 +33,7 @@ export default class ProjectCard extends React.Component {
                         {this.props.children}
                     </MDBCardText>
                     <MDBBtn className="float-right" onClick={ (e) => this.openOverlay() }>
-                        More...
+                        Learn More
                     </MDBBtn>
                 </MDBCardBody>
             </MDBCard>

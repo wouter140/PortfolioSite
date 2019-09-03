@@ -28,7 +28,7 @@ export default class PersonalProjectsContent extends React.Component {
             <ContentContainer id="personal-projects-page" className={ containerClasses }
                               contentTitle={ (
                                   <React.Fragment>
-                                      <span>Personal Projects</span>
+                                      <span>Personal <strong>Projects</strong></span>
                                       <MDBBtn size="sm" className="rounded-circle float-right m-0 expand-projects-btn"
                                             onClick={ () => this.setState((state) => { return {expandProjects: !state.expandProjects} }) }
                                       >

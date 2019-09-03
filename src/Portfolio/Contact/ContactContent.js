@@ -102,7 +102,7 @@ export default class ContactContent extends React.Component {
     render() {
         return (
             <ContentContainer id="contact-page" className="responsive-text-size"
-                              contentTitle="Contact" >
+                              contentTitle={ <span>Contact <strong>Me</strong></span> } >
 
                 <form
                     className="needs-validation"
