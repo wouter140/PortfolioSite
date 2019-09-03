@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 
 import {
+    MDBBtn,
     MDBCollapse,
     MDBContainer,
     MDBNavbar,
@@ -43,22 +44,22 @@ export default class PortfolioNavBar extends Component {
                         <MDBNavbarNav left>
                             <Link activeClass="active" to="about-page" spy={true} smooth={true} offset={-80} duration={1000}>
                                 <MDBNavItem>
-                                    <MDBNavLink>About</MDBNavLink>
+                                    <MDBBtn color="link" className="m-0 p-2 nav-link-button nav-link">About</MDBBtn>
                                 </MDBNavItem>
                             </Link>
                             <Link activeClass="active" to="professional-projects-page" spy={true} smooth={true} offset={-40} duration={1000}>
                                 <MDBNavItem>
-                                    <MDBNavLink>Professional Projects</MDBNavLink>
+                                    <MDBBtn color="link" className="m-0 p-2 nav-link-button nav-link">Professional Projects</MDBBtn>
                                 </MDBNavItem>
                             </Link>
                             <Link activeClass="active" to="personal-projects-page" spy={true} smooth={true} offset={-40} duration={1000}>
                                 <MDBNavItem>
-                                    <MDBNavLink>Personal Projects</MDBNavLink>
+                                    <MDBBtn color="link" className="m-0 p-2 nav-link-button nav-link">Personal Projects</MDBBtn>
                                 </MDBNavItem>
                             </Link>
                             <Link activeClass="active" to="contact-page" spy={true} smooth={true} offset={-40} duration={1000}>
                                 <MDBNavItem>
-                                    <MDBNavLink>Contact</MDBNavLink>
+                                    <MDBBtn color="link" className="m-0 p-2 nav-link-button nav-link">Contact</MDBBtn>
                                 </MDBNavItem>
                             </Link>
                         </MDBNavbarNav>
