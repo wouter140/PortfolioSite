@@ -36,7 +36,7 @@ export default class PortfolioNavBar extends Component {
                             <img src={ ProfilePicture } alt="Wouter Grutter - Software Developer"
                                 className="nav-profile-picture mr-3" style={{height: "2.5rem"}}/>
                         </div>
-                        <strong className="align-self-center">Wouter Grutter</strong>
+                        <strong className="align-self-center navbar-brand-title">Wouter Grutter</strong>
                     </MDBNavbarBrand>
                     <MDBNavbarToggler className="portfolio-page-nav-toggle"
                                       onClick={() => this.setState((state) => {return {collapse: !state.collapse}})}/>
@@ -54,7 +54,7 @@ export default class PortfolioNavBar extends Component {
                             </Link>
                             <Link activeClass="active" to="personal-projects-page" spy={true} smooth={true} offset={-40} duration={1000}>
                                 <MDBNavItem>
-                                    <MDBBtn color="link" className="m-0 p-2 nav-link-button nav-link">Personal Projects</MDBBtn>
+                                    <MDBBtn color="link" className="m-0 p-2 nav-link-button nav-link">Side Projects</MDBBtn>
                                 </MDBNavItem>
                             </Link>
                             <Link activeClass="active" to="contact-page" spy={true} smooth={true} offset={-40} duration={1000}>

@@ -16,12 +16,23 @@
 .navbar.navbar-light .breadcrumb .nav-item.active > .nav-link, .navbar.navbar-light .navbar-nav .nav-item.active > .nav-link,
     .navbar.navbar-light .navbar-nav .active .nav-link {
   background-color: rgba(0, 0, 0, 0.1);
-  border-radius: .25rem;
+  border-bottom: 2px solid #202020;
+  padding-bottom: 4px !important;
+  margin-bottom: 4px !important;
+}
+
+.navbar.navbar-light .navbar-nav .nav-link {
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
 }
 
 .navbar .navbar-nav > a {
   margin-right: .25rem;
-  margin-bottom: .25rem;
+}
+
+.navbar-brand-title {
+  font-size: 1.5rem;
+  transition: font-size .5s ease-in-out;
 }
 
 .navbar-icon {
@@ -36,5 +47,8 @@
   .navbar-icon {
     width: 100%;
     opacity: 1;
+  }
+  .navbar-brand-title {
+    font-size: 1.25rem;
   }
 }
