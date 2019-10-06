@@ -5,6 +5,7 @@ import Progress from "react-progress-2";
 import "react-progress-2/main.css"
 
 import PortfolioPage from "./Portfolio/PortfolioPage";
+import {projects} from "./ProjectPages/ProjectPages";
 
 function App() {
     return (
@@ -13,7 +14,9 @@ function App() {
 
             <Router>
                 <Switch>
-                    {/* TODO: Other paths */}
+                    { projects.map((project) => (
+                        <Route path={ project.path } component={ project.component } />
+                    )) }
 
                     <Route path="/" component={ PortfolioPage } />
                 </Switch>
@@ -22,24 +25,5 @@ function App() {
         </React.Fragment>
     );
 }
-
-/*
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
- */
 
 export default App;
