@@ -6,14 +6,6 @@
   }
 }
 
-.expand-projects-btn {
-  width: 37px;
-  height: 37px;
-  padding: 0 !important;
-  font-size: 1.1rem !important;
-  letter-spacing: -0.09em;
-}
-
 .project-card {
   box-shadow: unset !important;
   border-radius: 0 !important;
@@ -122,5 +114,16 @@
       -o-transform: translateY(-50%);
       left: 0;
     }
+  }
+}
+
+.project-page-container {
+  min-height: 100vh;
+
+  .project-title div {
+    padding-bottom: .7rem;
+    margin-bottom: .5rem;
+
+    border-bottom: 4px solid #4285f4;
   }
 }

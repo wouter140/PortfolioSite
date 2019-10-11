@@ -29,11 +29,6 @@ export default class ProfessionalProjectsContent extends React.Component {
                               contentTitle={ (
                                   <React.Fragment>
                                       <span>Professional <strong>Projects</strong></span>
-                                      <MDBBtn size="sm" className="rounded-circle float-right m-0 expand-projects-btn"
-                                              onClick={ () => this.setState((state) => { return {expandProjects: !state.expandProjects} }) }
-                                      >
-                                          <MDBIcon icon="angle-down" />
-                                      </MDBBtn>
                                   </React.Fragment>
                               ) } >
                     <div className="d-flex flex-wrap justify-content-start">
@@ -108,6 +103,19 @@ export default class ProfessionalProjectsContent extends React.Component {
 
                                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut
                             </ProjectCard>
+                        </MDBCol>
+
+                        <MDBCol className="d-flex flex-center">
+                            <MDBBtn color="indigo" className="m-0 expand-projects-btn"
+                                    onClick={ () => this.setState((state) => { return {expandProjects: !state.expandProjects} }) }
+                            >
+                                { this.state.expandProjects ? (
+                                    <span>Hide extra</span>
+                                ) : (
+                                    <span>Show More</span>
+                                )}
+                                <MDBIcon icon="angle-down ml-2" />
+                            </MDBBtn>
                         </MDBCol>
 
                     </div>
