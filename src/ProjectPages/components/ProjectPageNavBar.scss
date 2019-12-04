@@ -1,0 +1,13 @@
+.project-page-navbar {
+  .navbar-brand {
+    svg {
+      margin-right: 1rem;
+      transition: margin-right .35s cubic-bezier(.18,.89,.21,1.47);
+    }
+    &:hover {
+      svg {
+        margin-right: .25rem;
+      }
+    }
+  }
+}

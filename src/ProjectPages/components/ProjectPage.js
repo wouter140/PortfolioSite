@@ -1,5 +1,6 @@
 import React from "react";
 import {Parallax} from "react-scroll-parallax/cjs";
+import PortfolioNavBar from "./ProjectPageNavBar";
 
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
@@ -9,8 +10,10 @@ export default class ProjectPage extends React.Component {
     render() {
         return (
             <React.Fragment>
-
-                <div className="project-page-container" style={{minHeight: "100vh"}}>
+                <header>
+                    <PortfolioNavBar />
+                </header>
+                <div className="project-page-container" style={{minHeight: "100vh", marginTop: "3.5rem"}}>
                     <Parallax y={[-20, 20]}>
                         <div className="img-transition d-inline-block overflow-hidden"
                              style={{

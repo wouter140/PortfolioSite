@@ -1,8 +1,8 @@
 import * as React from "react";
 
-import image from "../images/img (118).jpg";
+import image from "../../images/img (118).jpg";
 
-import ProjectPage from "./components/ProjectPage";
+import ProjectPage from "../components/ProjectPage";
 
 export default function TestProject(props) {
     return (
