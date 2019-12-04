@@ -1,5 +1,14 @@
 import React from 'react';
-import {MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardText, MDBCardTitle} from "mdbreact";
+import {
+    MDBBadge,
+    MDBBtn,
+    MDBCard,
+    MDBCardBody,
+    MDBCardImage,
+    MDBCardText,
+    MDBCardTitle
+} from "mdbreact";
+import {Link} from "react-router-dom";
 
 export default class ProjectCard extends React.Component {
 
@@ -9,34 +18,38 @@ export default class ProjectCard extends React.Component {
         this.imageRef = React.createRef();
     }
 
-    openOverlay(event) {
-        const rect = this.imageRef.current.getBoundingClientRect();
-        this.props.onClick({x: rect.x, y: rect.y}, {width: rect.width, height: rect.height}, this.props.src);
-    }
-
     render() {
         return (
             <MDBCard className="project-card mb-4">
-                <div onClick={ () => this.openOverlay() }>
-                    <MDBCardImage tag="a" href={this.props.location}
-                              waves src=" " overlay={false}>
-                        <div className="project-image-container" ref={ this.imageRef }>
-                        <img className="img-fluid project-image"
+                <div>
+                    <Link to={ this.props.location }>
+                        <MDBCardImage tag='a' waves src=" " overlay={false}>
+                            <div className="project-image-container" ref={ this.imageRef }>
+                            <img className="img-fluid project-image"
                                   src={ this.props.src } alt={ this.props.alt } />
-                        </div>
-                    </MDBCardImage>
+                            </div>
+                        </MDBCardImage>
+                    </Link>
                 </div>
                 <MDBCardBody>
+                    { this.props.badges && this.props.badges.length > 0 && (
+                        <div className="mb-3">
+                            { this.props.badges.map((badge, index) => (
+                                <MDBBadge key={index} color={ badge.type || '' } className="mr-2">{ badge.content }</MDBBadge>
+                            ))}
+                        </div>
+                    ) }
                     <MDBCardTitle>
-                        {this.props.title}
+                        { this.props.title }
                     </MDBCardTitle>
                     <MDBCardText>
-                        {this.props.children}
+                        { this.props.children }
                     </MDBCardText>
-                    <MDBBtn color="primary" className="float-right" tag='a' href={this.props.location}
-                            onClick={ (e) => this.openOverlay() }>
-                        More info
-                    </MDBBtn>
+                    <Link to={ this.props.location }>
+                        <MDBBtn color="primary" className="float-right">
+                            More info
+                        </MDBBtn>
+                    </Link>
                 </MDBCardBody>
             </MDBCard>
         )

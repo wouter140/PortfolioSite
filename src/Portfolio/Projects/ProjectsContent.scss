@@ -58,7 +58,6 @@
     }
   }
 
-
   &.expanded {
     .expand-projects-btn {
       i.fa {
@@ -126,4 +125,8 @@
 
     border-bottom: 4px solid #4285f4;
   }
+}
+
+.badge {
+  padding: .4rem .6rem;
 }
