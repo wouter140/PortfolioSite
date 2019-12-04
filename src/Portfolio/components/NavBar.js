@@ -8,7 +8,7 @@ import {
     MDBNavbarBrand,
     MDBNavbarNav,
     MDBNavbarToggler,
-    MDBNavItem, MDBNavLink
+    MDBNavItem
 } from "mdbreact";
 
 import {Link, animateScroll} from "react-scroll"

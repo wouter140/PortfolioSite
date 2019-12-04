@@ -19,10 +19,10 @@ function App() {
                 <ScrollToTop />
                 <Switch>
                     { projects.map((project) => (
-                        <Route path={ project.path } component={ project.component } />
+                        <Route key={ project.path } path={ project.path } component={ project.component } />
                     )) }
 
-                    <Route path="/" component={ PortfolioPage } />
+                    <Route key='default' path="/" component={ PortfolioPage } />
                 </Switch>
             </Router>
 
