@@ -6,7 +6,7 @@ import {Link} from "react-router-dom";
 
 import "./ProjectPageNavBar.scss";
 
-export default function PortfolioNavBar() {
+export default function PortfolioNavBar(props) {
     return (
         <MDBNavbar color="bg-primary" className="project-page-navbar" fixed="top" light expand="md">
             <div style={{
@@ -30,7 +30,9 @@ export default function PortfolioNavBar() {
                     </MDBNavbarBrand>
                 </Link>
 
-            {/* TODO: After some scrolling, show the project title here*/}
+                <h1 className={"font-weight-bold project-title-nav" + (!props.projectTitleVisible ? " show" : "")}>
+                    <div className="d-inline-block">{ props.title }</div>
+                </h1>
             </div>
         </MDBNavbar>
     );

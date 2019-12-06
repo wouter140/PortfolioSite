@@ -15,6 +15,7 @@
     "react-scroll": "^1.7.14",
     "react-scroll-parallax": "^2.2.0",
     "react-slick": "^0.25.2",
+    "react-visibility-sensor": "^5.1.1",
     "rfs": "^8.0.4"
   },
   "scripts": {
@@ -26,6 +27,15 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+//   "babel": {
+//     "presets": [
+//       "@babel/preset-env",
+//       "@babel/preset-react"
+//     ],
+//     "plugins": [
+//       "@babel/plugin-proposal-class-properties"
+//     ]
+//   },
   "browserslist": {
     "production": [
       ">0.2%",

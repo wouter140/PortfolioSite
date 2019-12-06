@@ -1,17 +1,26 @@
 import React from "react";
 import {Parallax} from "react-scroll-parallax/cjs";
 import PortfolioNavBar from "./ProjectPageNavBar";
+import VisibilitySensor from "react-visibility-sensor/dist/visibility-sensor";
 
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
 
 export default class ProjectPage extends React.Component {
 
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            titleVisible: true
+        };
+    }
+
     render() {
         return (
             <React.Fragment>
                 <header>
-                    <PortfolioNavBar />
+                    <PortfolioNavBar title={ this.props.title } projectTitleVisible={ this.state.titleVisible } />
                 </header>
                 <div className="project-page-container" style={{minHeight: "100vh", marginTop: "3.5rem"}}>
                     <Parallax y={[-20, 20]}>
@@ -39,9 +48,11 @@ export default class ProjectPage extends React.Component {
                             boxShadow: "0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15)",
                         }}
                     >
-                        <h1 className="font-weight-bold project-title">
-                            <div className="d-inline-block">{ this.props.title }</div>
-                        </h1>
+                        <VisibilitySensor onChange={(visible) => this.setState({titleVisible: visible})}>
+                            <h1 className="font-weight-bold project-title">
+                                <div className="d-inline-block">{ this.props.title }</div>
+                            </h1>
+                        </VisibilitySensor>
 
                         <div className="text-left mt-3">
                             { this.props.children }
