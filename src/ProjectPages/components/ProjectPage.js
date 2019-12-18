@@ -1,11 +1,9 @@
 import React from "react";
-import {Parallax} from "react-scroll-parallax/cjs";
-import PortfolioNavBar from "./ProjectPageNavBar";
-import VisibilitySensor from "react-visibility-sensor/dist/visibility-sensor";
-import YouTube from "react-youtube";
 
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
+import VisibilitySensor from "react-visibility-sensor/dist/visibility-sensor";
+
+import PortfolioNavBar from "./ProjectPageNavBar";
+import InlineYouTubeVideo from "../../components/InlineYouTubeVideo";
 
 export default class ProjectPage extends React.Component {
 
@@ -36,39 +34,9 @@ export default class ProjectPage extends React.Component {
                              position: "absolute",
                          }}
                     >
-                        <div className={"project-video" + (this.state.videoReady ? "" : " hidden")} style={{marginTop: (window.innerHeight * .7 / 2) - ((window.innerWidth / (this.props.videoRatio || 16/9)) / 2)}}>
-                            <YouTube
-                                videoId={ this.props.videoID || "U-mC90Tu5SM" }
-                                opts={{
-                                    height: window.innerWidth / (this.props.videoRatio || 16/9),
-                                    width: window.innerWidth,
-                                    playerVars: { // https://developers.google.com/youtube/player_parameters
-                                        autoplay: 1,
-                                        controls: 0,
-                                        loop: 1,
-                                        playlist: this.props.videoID || "U-mC90Tu5SM",
-                                        modestbranding: 1,
-                                        playsinline: 1
-                                    }
-                                }}
-                                onReady={(event) => {
-                                    // The player is loaded and ready
-                                    console.log(event);
-                                }}
-                                onStateChange={(event) => {
-                                    console.log(event);
-
-                                    if(event.data === YouTube.PlayerState.UNSTARTED) {
-                                        // When the player is unable to start, usually because the browser does not allow autoplay
-                                        // TODO: Can show custom play button here to start play instead
-                                        this.setState({videoReady: true});
-                                    } else if(event.data >= YouTube.PlayerState.PLAYING) {
-                                        // Player has started playing the video
-                                        this.setState({videoReady: true});
-                                    }
-                                }}
-                            />
-                        </div>
+                        { this.props.videoID && (
+                            <InlineYouTubeVideo videoID={this.props.videoID} videoRatio={this.props.videoRatio} width={window.innerWidth} height={window.innerHeight * .7} />
+                        )}
                     </div>
 
                     <div className="card-body text-center card-body-cascade"

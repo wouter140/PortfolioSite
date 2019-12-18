@@ -101,3 +101,11 @@ body {
     transform: scale(2);
   }
 }
+
+.project-video {
+  opacity: 1;
+  transition: opacity .5s ease-in-out;
+  &.hidden {
+    opacity: 0;
+  }
+}
