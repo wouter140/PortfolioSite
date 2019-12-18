@@ -16,6 +16,7 @@
     "react-scroll-parallax": "^2.2.0",
     "react-slick": "^0.25.2",
     "react-visibility-sensor": "^5.1.1",
+    "react-youtube": "^7.9.0",
     "rfs": "^8.0.4"
   },
   "scripts": {

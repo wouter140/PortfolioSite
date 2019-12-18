@@ -125,6 +125,14 @@
 
     border-bottom: 4px solid #4285f4;
   }
+
+  .project-video {
+    opacity: 1;
+    transition: opacity .5s ease-in-out;
+    &.hidden {
+      opacity: 0;
+    }
+  }
 }
 
 .badge {
