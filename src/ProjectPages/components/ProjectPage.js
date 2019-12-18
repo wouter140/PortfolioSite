@@ -22,7 +22,7 @@ export default class ProjectPage extends React.Component {
                 <header>
                     <PortfolioNavBar title={ this.props.title } projectTitleVisible={ this.state.titleVisible } />
                 </header>
-                <div className="project-page-container" style={{minHeight: "100vh", marginTop: "3.5rem"}}>
+                <div className="project-page-container" style={{minHeight: "100vh", marginTop: "3rem"}}>
                     <Parallax y={[-20, 20]}>
                         <div className="img-transition d-inline-block overflow-hidden"
                              style={{

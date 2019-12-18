@@ -1,4 +1,8 @@
 .project-page-navbar {
+  transition: padding .3s cubic-bezier(0, 0, 0, 1);
+  padding-top: 5px;
+  padding-bottom: 5px;
+
   .navbar-brand {
     svg {
       margin-right: 1rem;
@@ -6,8 +10,31 @@
     }
     &:hover {
       svg {
-        margin-right: .25rem;
+        margin-right: .5rem;
       }
     }
   }
+
+  .project-title-nav {
+    top: 3.5rem;
+    transition: .3s cubic-bezier(0, 0, 0, 1);
+    position: absolute;
+    width: 85vw;
+    width: calc(90vw - 3rem);
+    text-align: center;
+    z-index: -1;
+
+    &.show {
+      top: 0 !important;
+    }
+    &.enlarge-padding {
+      padding-top: 7px;
+      padding-bottom: 7px;
+    }
+  }
+}
+
+.enlarge-padding {
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
