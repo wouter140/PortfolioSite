@@ -19,7 +19,7 @@ export default class ProjectPage extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <header>
+                <header className='position-absolute'>
                     <PortfolioNavBar title={ this.props.title } projectTitleVisible={ this.state.titleVisible } />
                 </header>
                 <div className="project-page-container" style={{minHeight: "100vh", marginTop: "3rem"}}>
