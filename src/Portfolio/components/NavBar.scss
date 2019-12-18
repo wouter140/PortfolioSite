@@ -6,15 +6,21 @@
 }
 
 .navbar {
-  -webkit-backdrop-filter: blur(4px);
-  backdrop-filter: blur(4px);
+  background-color: rgba(227, 227, 227, 0.8);
+}
+@supports ((-webkit-backdrop-filter: blur(4px)) or (backdrop-filter: blur(4px))) {
+  .navbar {
+    background-color: rgba(227, 227, 227, .2);
+    -webkit-backdrop-filter: blur(1rem);
+    backdrop-filter: blur(1rem);
+  }
 }
 .navbar-brand {
   width: 190px;
 }
 
 .navbar.navbar-light .breadcrumb .nav-item.active > .nav-link, .navbar.navbar-light .navbar-nav .nav-item.active > .nav-link,
-    .navbar.navbar-light .navbar-nav .active .nav-link {
+.navbar.navbar-light .navbar-nav .active .nav-link {
   background-color: rgba(0, 0, 0, 0.1);
   border-bottom: 2px solid #202020;
   padding-bottom: 4px !important;
@@ -41,7 +47,7 @@
   opacity: 0;
 
   transition: width .5s cubic-bezier(.79,.14,.15,.86),
-              opacity .5s cubic-bezier(.79,.14,.15,.86);
+  opacity .5s cubic-bezier(.79,.14,.15,.86);
 }
 .top-nav-collapse {
   .navbar-icon {

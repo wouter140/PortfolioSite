@@ -1,27 +1,31 @@
 import React from 'react';
 
+import {Link} from "react-scroll/modules";
+
 import ProfilePicture from "../../images/profilepicture.png";
+import InlineYouTubeVideo from "../../components/InlineYouTubeVideo";
 
 import "./LandingPageContent.scss";
-import {Link} from "react-scroll/modules";
 
 export default class LandingPageContent extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <div id="landing-page" className="page-content-container w-100">
-                    <canvas className="w-100 h-100 position-relative" />
+                <div id="landing-page" className="page-content-container w-100 overflow-hidden">
+                    <InlineYouTubeVideo videoID="U-mC90Tu5SM" width={window.innerWidth} height={window.innerHeight * .95} />
 
-                    <div className="inner-page-content">
+                    <div className='inner-page-content-container py-4'>
+                        <div className="inner-page-content">
 
-                        <div id="landing-page-profile-picture" className="d-inline-block">
-                            <img src={ ProfilePicture } alt="Wouter Grutter - Software Developer" />
+                            <div id="landing-page-profile-picture" className="d-inline-block">
+                                <img src={ ProfilePicture } alt="Wouter Grutter - Software Developer" />
+                            </div>
+                            <div id="landing-page-name-title" className="d-inline-block align-top">
+                                <h1 id="landing-page-name" className="mb-1">Wouter Grutter</h1>
+                                <h2 id="landing-page-title">Software Developer</h2>
+                            </div>
+
                         </div>
-                        <div id="landing-page-name-title" className="d-inline-block align-top">
-                            <h1 id="landing-page-name" className="mb-1">Wouter Grutter</h1>
-                            <h2 id="landing-page-title">Software Developer</h2>
-                        </div>
-
                     </div>
 
                     <Link to="about-page" smooth={true} offset={-80} duration={1000}>

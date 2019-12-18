@@ -6,10 +6,21 @@
   padding: 0 !important;
   margin: 0 !important;
 
-  .inner-page-content {
+  .inner-page-content-container {
+    background: rgba(245, 245, 245, .8);
     position: absolute;
     top: 35%;
+    width: 100%
+  }
+  @supports ((-webkit-backdrop-filter: blur(4px)) or (backdrop-filter: blur(4px))) {
+    .inner-page-content-container {
+      background-color: rgba(245, 245, 245, .4);
+      -webkit-backdrop-filter: blur(.25rem);
+      backdrop-filter: blur(.25rem);
+    }
+  }
 
+  .inner-page-content {
     $width: 275px;
     width: $width;
     max-width: initial;
