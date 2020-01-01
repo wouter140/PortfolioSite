@@ -3,7 +3,9 @@ import React from "react";
 import VisibilitySensor from "react-visibility-sensor/dist/visibility-sensor";
 
 import PortfolioNavBar from "./ProjectPageNavBar";
+
 import InlineYouTubeVideo from "../../components/InlineYouTubeVideo";
+import InlineVideo from "../../components/InlineVideo";
 
 export default class ProjectPage extends React.Component {
 
@@ -35,7 +37,13 @@ export default class ProjectPage extends React.Component {
                          }}
                     >
                         { this.props.videoID && (
-                            <InlineYouTubeVideo videoID={this.props.videoID} videoRatio={this.props.videoRatio} width={window.innerWidth} height={window.innerHeight * .7} />
+                            <InlineYouTubeVideo videoID={this.props.videoID} videoRatio={this.props.videoRatio}
+                                                width={window.innerWidth} height={window.innerHeight * .7} />
+                        )}
+                        { this.props.videoSource && (
+                            <InlineVideo className="position-relative w-100 h-100 d-flex"
+                                         sources={ this.props.videoSource }
+                            />
                         )}
                     </div>
 

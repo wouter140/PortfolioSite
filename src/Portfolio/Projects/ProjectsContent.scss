@@ -125,6 +125,12 @@
 
     border-bottom: 4px solid #4285f4;
   }
+
+  .project-video-controls {
+    top: calc(62vh - 3.5rem);
+    left: 5%;
+    bottom: initial;
+  }
 }
 
 .badge {

@@ -105,7 +105,44 @@ body {
 .project-video {
   opacity: 1;
   transition: opacity .5s ease-in-out;
+  background-color: #0e0e10;
   &.hidden {
     opacity: 0;
+  }
+
+  video {
+    /* Make video to at least 100% wide and tall */
+    min-width: 100%;
+    min-height: 100%;
+
+    /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+    width: auto;
+    height: auto;
+
+    /* Center the video */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+}
+
+.project-video-controls {
+  position: absolute;
+  bottom: 0;
+  margin: .75rem 1.75rem;
+
+  .pause-project-video, .play-project-video,
+  .mute-project-video, .unmute-project-video {
+    @extend .clickable;
+
+    width: 2rem;
+    opacity: .75;
+    margin-right: 1.25rem;
+
+    fill: rgba(255, 255, 255, 1);
+
+    -webkit-filter: drop-shadow(1px 1px 5px rgba(0, 0, 0, .25));
+    filter: drop-shadow(1px 1px 5px rgba(0, 0, 0, .25));
   }
 }

@@ -3,7 +3,9 @@ import React from 'react';
 import {Link} from "react-scroll/modules";
 
 import ProfilePicture from "../../images/profilepicture.png";
-import InlineYouTubeVideo from "../../components/InlineYouTubeVideo";
+import InlineVideo from "../../components/InlineVideo";
+
+import mp4Video from "../../videos/bbb_sunflower_1080p_30fps_normal.mp4";
 
 import "./LandingPageContent.scss";
 
@@ -12,7 +14,12 @@ export default class LandingPageContent extends React.Component {
         return (
             <React.Fragment>
                 <div id="landing-page" className="page-content-container w-100 overflow-hidden">
-                    <InlineYouTubeVideo videoID="U-mC90Tu5SM" width={window.innerWidth} height={window.innerHeight * .95} />
+                    <InlineVideo className="position-relative w-100 h-100 d-flex"
+                        sources={[
+                            {src: mp4Video, type: "video/mp4"},
+                            {src: "", type: "video/ogg"}
+                        ]}
+                    />
 
                     <div className='inner-page-content-container py-4'>
                         <div className="inner-page-content">
