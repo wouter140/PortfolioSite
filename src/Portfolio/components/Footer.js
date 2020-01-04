@@ -39,27 +39,27 @@ export default class Footer extends React.Component {
 
                 <div className="text-center mb-4 social-buttons-small-round">
 
-                    <MDBBtn tag="a" size="lg" social="li" floating href="https://www.linkedin.com/in/woutergrutter/" target="_blank" rel="noopener noreferrer"
+                    <MDBBtn tag="a" size="lg" social="li" className="btn-floating" href="https://www.linkedin.com/in/woutergrutter/" target="_blank" rel="noopener noreferrer"
                         title="LinkedIn">
                         <MDBIcon fab icon="linkedin-in" />
                     </MDBBtn>
 
-                    <MDBBtn tag="a" size="lg" social="git" floating href="https://github.com/wouter140" target="_blank" rel="noopener noreferrer"
+                    <MDBBtn tag="a" size="lg" social="git" className="btn-floating" href="https://github.com/wouter140" target="_blank" rel="noopener noreferrer"
                         title="Github">
                         <MDBIcon fab icon="github" />
                     </MDBBtn>
 
-                    <MDBBtn tag="a" size="lg" social="so" floating href="https://stackoverflow.com/users/5333948/wouter140" target="_blank" rel="noopener noreferrer"
+                    <MDBBtn tag="a" size="lg" social="so" className="btn-floating" href="https://stackoverflow.com/users/5333948/wouter140" target="_blank" rel="noopener noreferrer"
                         title="Stack Overflow">
                         <MDBIcon fab icon="stack-overflow" />
                     </MDBBtn>
 
-                    <MDBBtn tag="a" size="lg" social="steam" floating href="https://steamcommunity.com/id/wouter140/" target="_blank" rel="noopener noreferrer"
+                    <MDBBtn tag="a" size="lg" social="steam" className="btn-floating" href="https://steamcommunity.com/id/wouter140/" target="_blank" rel="noopener noreferrer"
                          title="Steam">
                         <MDBIcon fab icon="steam" />
                     </MDBBtn>
 
-                    <MDBBtn tag="a" size="lg" social="email" floating href="mailto:info@woutergrutter.com"
+                    <MDBBtn tag="a" size="lg" social="email" className="btn-floating" href="mailto:info@woutergrutter.com"
                         title="Email Me">
                         <MDBIcon icon="envelope" />
                     </MDBBtn>

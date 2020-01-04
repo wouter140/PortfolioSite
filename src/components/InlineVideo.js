@@ -59,8 +59,8 @@ export default class InlineVideo extends Component {
                             }
                         }}
                     >
-                        { this.props.sources.map((source) => {
-                            return <source src={ source.src } type={ source.type } />
+                        { this.props.sources.map((source, index) => {
+                            return <source key={ index } src={ source.src } type={ source.type } />
                         })}
                     </video>
 

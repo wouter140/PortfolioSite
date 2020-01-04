@@ -23,7 +23,7 @@ export default class ProjectCard extends React.Component {
             <MDBCard className="project-card mb-4">
                 <div>
                     <Link to={ this.props.location }>
-                        <MDBCardImage tag='a' waves src=" " overlay={false}>
+                        <MDBCardImage tag='div' waves src=" " overlay={false}>
                             <div className="project-image-container" ref={ this.imageRef }>
                             <img className="img-fluid project-image"
                                   src={ this.props.src } alt={ this.props.alt } />
