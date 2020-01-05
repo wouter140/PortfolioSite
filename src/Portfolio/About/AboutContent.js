@@ -48,32 +48,32 @@ export default class AboutContent extends React.Component {
             <ContentContainer id="about-page" className="responsive-text-size px-3"
                               contentTitle={<span>About <strong>Me</strong></span>}>
 
-                <img src={profilepicture} alt="Wouter Grutter"
-                     className="float-left mr-5 mb-3 d-none d-md-inline-block profile-picture"/>
+                <MDBContainer>
+                    <img src={profilepicture} alt="Wouter Grutter"
+                         className="float-left mr-5 mb-3 d-none d-md-inline-block profile-picture"/>
 
-                <div>
-                    <b>Hey there</b> and welcome to my portfolio! I'm <i>Wouter Grutter</i> and I am a software developer, focusing on games.<br/>
-                    I am currently studying Game Programming at
-                    <a href="https://www.buas.nl/opleidingen/creative-media-and-game-technologies" target="_blank" rel="noopener noreferrer">Breda University of Applied Sciences</a>,
-                    formerly known as NHTV.<br/>
-                    I have previously graduated from ROCA12 with a Game Programmer degree.
-                </div>
-                <div className="mt-2">
-                    I am currently based in Breda, the Netherlands but am able to relocate.
-                </div>
-                <div className="mt-3">
-                    As most in this field do, I love video games and movies which take a significant amount of my free time.<br/>
+                    <div>
+                        <b>Hey there</b> and welcome to my portfolio! I'm <i>Wouter Grutter</i> and I am a software developer, focusing on games.<br/>
+                        I am currently studying Game Programming at <a href="https://www.buas.nl/opleidingen/creative-media-and-game-technologies" target="_blank" rel="noopener noreferrer">Breda University of Applied Sciences</a>,
+                        formerly known as NHTV.<br/>
+                        I have previously graduated from ROCA12 with a Game Programmer degree.
+                    </div>
+                    <div className="mt-2">
+                        I am currently based in Breda, the Netherlands but am able to relocate.
+                    </div>
+                    <div className="mt-3">
+                        As most in this field do, I love video games and movies which take a significant amount of my free time.<br/>
 
-                    I'm a huge enthusiast when it comes to game development and enjoy solving all kinds of problems through code.<br/>
-                    I work on <Link to="personal-projects-page" href="" smooth={true} offset={-40} duration={500}>personal projects</Link>
-                    in my spare time and am always interested and eager to learn and use new technologies.<br/>
-                </div>
+                        I'm a huge enthusiast when it comes to game development and enjoy solving all kinds of problems through code.
+                        I work on <Link to="personal-projects-page" href="" smooth={true} offset={-40} duration={500}>personal projects</Link> in my spare time and am always interested and eager to learn and use new technologies.<br/>
+                    </div>
 
-                <div className="mt-3">
-                    I am currently employed at Learning Valley where I work on their online video platform, tools, apps and other applications that are used in their products and customers.<br/>
-                    With my work I learn new technologies like React, 3D rendering in the browser, integrated tools and authentication.<br/>
-                    Some of my work at Leaning Valley can be found in the <Link to="personal-projects-page" href="" smooth={true} offset={-40} duration={500}>personal projects</Link> section below with more details.
-                </div>
+                    <div className="mt-3">
+                        I am currently employed at Learning Valley where I work on their online video platform, tools, apps and other applications that are used in their products and customers.<br/>
+                        With my work I learn new technologies like React, 3D rendering in the browser, integrated tools and authentication.<br/>
+                        Some of my work at Leaning Valley can be found in the <Link to="personal-projects-page" href="" smooth={true} offset={-40} duration={500}>personal projects</Link> section below with more details.
+                    </div>
+                </MDBContainer>
 
                 <MDBContainer className="mt-5">
                     <MDBCardGroup>
@@ -86,7 +86,7 @@ export default class AboutContent extends React.Component {
                                     <ExperienceIcon src={cSharpIcon} text="C#" />
                                     <ExperienceIcon src={pythonIcon} text="Python" />
 
-                                    <ExperienceIcon src={javascriptIcon} text="Javascript" />
+                                    <ExperienceIcon src={javascriptIcon} text="JavaScript" />
                                     <ExperienceIcon src={reactIcon} text="React" />
                                     <ExperienceIcon src={webGLIcon} text="WebGL" />
                                     <ExperienceIcon src={htmlIcon} text="HTML" />
@@ -103,7 +103,7 @@ export default class AboutContent extends React.Component {
                                     <ExperienceIcon src={jiraIcon} text="Jira" />
 
                                     <ExperienceIcon src={perforceIcon} text="Perforce" />
-                                    <ExperienceIcon src={gitIcon} text="Git / Github" />
+                                    <ExperienceIcon src={gitIcon} text="Git / GitHub" />
                                     <ExperienceIcon src={jenkinsIcon} text="Jenkins" />
                                 </MDBCardText>
                             </MDBCardBody>
