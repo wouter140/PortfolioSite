@@ -13,11 +13,11 @@ export default class AboutContent extends React.Component {
             <ContentContainer id="about-page" className="responsive-text-size px-3"
                         contentTitle={ <span>About <strong>Me</strong></span> }>
 
-                <img src={ profilepicture } alt="Profile Picture" className="float-left mr-5 mb-3 d-none d-md-inline-block profile-picture" />
+                <img src={ profilepicture } alt="Wouter Grutter" className="float-left mr-5 mb-3 d-none d-md-inline-block profile-picture" />
 
                 <div>
                     <b>Hey there</b> and welcome to my portfolio! I'm <i>Wouter Grutter</i> and I am a software developer, focusing on games.<br/>
-                    I am currently studying Game Programming at <a href="https://www.buas.nl/opleidingen/creative-media-and-game-technologies" target="_blank">Breda University of Applied Sciences</a>, formerly known as NHTV.<br/>
+                    I am currently studying Game Programming at <a href="https://www.buas.nl/opleidingen/creative-media-and-game-technologies" target="_blank" rel="noopener noreferrer">Breda University of Applied Sciences</a>, formerly known as NHTV.<br/>
                     I have previously graduated from ROCA12 with a Game Programmer degree.
                 </div>
                 <div className="mt-2">
