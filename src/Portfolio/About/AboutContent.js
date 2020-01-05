@@ -80,7 +80,7 @@ export default class AboutContent extends React.Component {
                         <MDBCard className="z-index-1">
                             <MDBCardBody>
                                 <MDBCardTitle tag="h5" className="text-center">Languages</MDBCardTitle>
-                                <MDBCardText className="container ">
+                                <MDBCardText className="container d-flex justify-content-center flex-wrap">
                                     <ExperienceIcon src={cPlusPlusIcon} text="C++" />
                                     <ExperienceIcon src={cIcon} text="C" />
                                     <ExperienceIcon src={cSharpIcon} text="C#" />
@@ -98,7 +98,7 @@ export default class AboutContent extends React.Component {
                         <MDBCard className="middle-card">
                             <MDBCardBody>
                                 <MDBCardTitle tag="h5" className="text-center">Production and QA</MDBCardTitle>
-                                <MDBCardText>
+                                <MDBCardText className="d-flex justify-content-center flex-wrap">
                                     <ExperienceIcon src={trelloIcon} text="Trello" />
                                     <ExperienceIcon src={jiraIcon} text="Jira" />
 
@@ -111,7 +111,7 @@ export default class AboutContent extends React.Component {
                         <MDBCard>
                             <MDBCardBody>
                                 <MDBCardTitle tag="h5" className="text-center">Tools</MDBCardTitle>
-                                <MDBCardText>
+                                <MDBCardText className="d-flex justify-content-center flex-wrap">
                                     <ExperienceIcon src={unrealEngineIcon} text="Unreal Engine 4" />
                                     <ExperienceIcon src={unity3DIcon} text="Unity3D" />
 
