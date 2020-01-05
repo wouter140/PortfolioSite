@@ -15,4 +15,25 @@
   .z-index-1 {
     z-index: 1;
   }
+  
+  .middle-card {
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+
+  .skills-icon {
+    img, svg {
+      width: 100%;
+      height: auto;
+      transition: filter .5s ease-out;
+
+      &:hover {
+        -webkit-filter: grayscale(75%);
+        -moz-filter: grayscale(75%);
+        -o-filter: grayscale(75%);
+        -ms-filter: grayscale(75%);
+        filter: grayscale(75%);
+      }
+    }
+  }
 }
