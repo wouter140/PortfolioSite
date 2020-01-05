@@ -6,8 +6,11 @@ import ContentContainer from "../../components/ContentContainer";
 import ProjectCard from "./components/ProjectCard";
 
 import "./ProjectsContent.scss";
+import "./ProjectSpecific.scss";
 
 import testImage from '../../images/img (118).jpg';
+
+import bitBusterImage from "../../images/projects/bit-buster/main-face.png";
 
 export default class ProfessionalProjectsContent extends React.Component {
 
@@ -36,9 +39,13 @@ export default class ProfessionalProjectsContent extends React.Component {
                 <div className="d-flex flex-wrap justify-content-start">
 
                     <MDBCol lg="6" className="animated fadeIn">
-                        <ProjectCard src={ testImage } alt="" title="Testing Title"
+                        <ProjectCard src={ testImage } alt="" title="P.A.I.N.T."
                                      location="/TestProject"
-                                     badges={[{type: 'primary', content: 'Primary'}, {type: 'secondary', content: 'Secondary'}, {type: 'danger', content: 'Danger'}]}
+                                     badges={[
+                                         {type: 'primary', content: '25 Person Team'},
+                                         {type: 'secondary', content: 'Unreal Engine 4d'},
+                                         {type: 'danger', content: 'Danger'}
+                                     ]}
                         >
                             Some super duper amazing card text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
                             Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
@@ -48,14 +55,18 @@ export default class ProfessionalProjectsContent extends React.Component {
                     </MDBCol>
 
                     <MDBCol lg="6" className="animated fadeIn">
-                        <ProjectCard src={ testImage } alt="" title="Testing Title"
-                                     location="/TestProject"
-                                     badges={[{type: 'primary', content: 'Primary'}, {type: 'secondary', content: 'Secondary'}, {type: 'danger', content: 'Danger'}]}
+                        <ProjectCard src={ bitBusterImage } alt="Bit-Buster Project" title="Bit-Buster" className="bit-buster"
+                                     location="/Bit-Buster"
+                                     badges={[
+                                         {type: 'primary', content: '25 Person Team'},
+                                         {type: 'secondary', content: 'Custom Engine'},
+                                         {type: 'danger', content: 'Danger'}
+                                     ]}
                         >
-                            Some super duper amazing card text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-                            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
-                            pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
-                            In enim justo, rhoncus ut
+                            Bit-buster is a local multiplayer coop game, in which you have to pass a disk around to kill all the evil spirits.
+                            The entire game is made out of voxels to allow for mayhem and destruction!<br/>
+
+
                         </ProjectCard>
                     </MDBCol>
 

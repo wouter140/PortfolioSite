@@ -6,6 +6,7 @@ import ContentContainer from "../../components/ContentContainer";
 import ProjectCard from "./components/ProjectCard";
 
 import "./ProjectsContent.scss";
+import "./ProjectSpecific.scss";
 
 import testImage from '../../images/img (118).jpg';
 

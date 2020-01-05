@@ -5,6 +5,8 @@ import {Link} from "react-scroll/modules";
 import ProfilePicture from "../../images/profilepicture.png";
 import InlineVideo from "../../components/InlineVideo";
 
+import video from "../../content/videos/bit-buster/bit-buster-trailer.mp4";
+
 import "./LandingPageContent.scss";
 
 export default class LandingPageContent extends React.Component {
@@ -14,8 +16,7 @@ export default class LandingPageContent extends React.Component {
                 <div id="landing-page" className="page-content-container w-100 overflow-hidden">
                     <InlineVideo className="position-relative w-100 h-100 d-flex"
                         sources={[
-                            {src: "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4", type: "video/mp4"},
-                            {src: "http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv", type: "video/ogg"}
+                            {src: video, type: "video/mp4"}
                         ]}
                     />
 
