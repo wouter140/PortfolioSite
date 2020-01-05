@@ -22,7 +22,7 @@ export default class ProjectPage extends React.Component {
         return (
             <React.Fragment>
                 <header className='position-absolute'>
-                    <PortfolioNavBar title={ this.props.title } projectTitleVisible={ this.state.titleVisible } />
+                    <PortfolioNavBar title={ this.props.title.toUpperCase() } projectTitleVisible={ this.state.titleVisible } />
                 </header>
                 <div className="project-page-container" style={{minHeight: "100vh", marginTop: "3rem"}}>
                     <div className="img-transition d-inline-block overflow-hidden"
@@ -61,7 +61,7 @@ export default class ProjectPage extends React.Component {
                     >
                         <VisibilitySensor onChange={(visible) => this.setState({titleVisible: visible})}>
                             <h1 className="font-weight-bold project-title">
-                                <div className="d-inline-block">{ this.props.title }</div>
+                                <div className="d-inline-block">{ this.props.title.toUpperCase() }</div>
                             </h1>
                         </VisibilitySensor>
 

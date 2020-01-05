@@ -19,8 +19,12 @@ export default class ProjectCard extends React.Component {
     }
 
     render() {
+        let className = "project-card mb-4";
+        if(this.props.className)
+            className += " " + this.props.className;
+
         return (
-            <MDBCard className="project-card mb-4">
+            <MDBCard className={className}>
                 <div>
                     <Link to={ this.props.location }>
                         <MDBCardImage tag='div' waves src=" " overlay={false}>
@@ -40,7 +44,7 @@ export default class ProjectCard extends React.Component {
                         </div>
                     ) }
                     <MDBCardTitle>
-                        { this.props.title }
+                        { this.props.title.toUpperCase() }
                     </MDBCardTitle>
                     <MDBCardText>
                         { this.props.children }
