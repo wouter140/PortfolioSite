@@ -43,7 +43,7 @@ export default class ProfessionalProjectsContent extends React.Component {
                                      location="/TestProject"
                                      badges={[
                                          {type: 'primary', content: '25 Person Team'},
-                                         {type: 'secondary', content: 'Unreal Engine 4d'},
+                                         {type: 'secondary', content: 'Unreal Engine 4'},
                                          {type: 'danger', content: 'Danger'}
                                      ]}
                         >
