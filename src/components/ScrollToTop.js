@@ -47,7 +47,7 @@ function LocationChangeScrollHandlerFun({ history, handleRouteChangeScroll }) {
         return () => {
             unlisten();
         }
-    }, [history]);
+    }, [history, handleRouteChangeScroll]);
 
     return null;
 }

@@ -6,7 +6,7 @@ import {
     MDBCardBody,
     MDBCardImage,
     MDBCardText,
-    MDBCardTitle, MDBTooltip
+    MDBCardTitle
 } from "mdbreact";
 import {Link} from "react-router-dom";
 import Tooltip from "@material-ui/core/Tooltip";

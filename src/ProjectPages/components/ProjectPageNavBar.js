@@ -1,6 +1,6 @@
 import React from "react";
 
-import {MDBBtn, MDBIcon, MDBNavbar, MDBNavbarBrand, MDBTooltip,} from "mdbreact";
+import {MDBIcon, MDBNavbar, MDBNavbarBrand} from "mdbreact";
 
 import {Link} from "react-router-dom";
 import {animateScroll} from "react-scroll";
