@@ -1,11 +1,14 @@
 import React from "react";
 
-import {MDBBtn, MDBNavbar, MDBNavbarBrand, MDBTooltip,} from "mdbreact";
+import {MDBBtn, MDBIcon, MDBNavbar, MDBNavbarBrand, MDBTooltip,} from "mdbreact";
 
 import {Link} from "react-router-dom";
 import {animateScroll} from "react-scroll";
 
 import "./ProjectPageNavBar.scss";
+import Fab from "@material-ui/core/Fab";
+import Tooltip from "@material-ui/core/Tooltip";
+import Zoom from "@material-ui/core/Zoom";
 
 export default function PortfolioNavBar(props) {
     return (
@@ -37,19 +40,18 @@ export default function PortfolioNavBar(props) {
                     </h1>
                 </div>
             </MDBNavbar>
-
-            <MDBTooltip placement="top">
-                <MDBBtn size="lg"
-                        className={"btn-floating floating-fixed-br" + (props.projectTitleVisible ? " hidden" : "")}
-                        onClick={ () => animateScroll.scrollToTop({duration: 500}) }
+                <Zoom
+                    in={!props.projectTitleVisible}
+                    timeout={500}
+                    unmountOnExit
                 >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                        <path fill="none" d="M0 0h24v24H0V0z"/>
-                        <path d="M13 19V7.83l4.88 4.88c.39.39 1.03.39 1.42 0 .39-.39.39-1.02 0-1.41l-6.59-6.59c-.39-.39-1.02-.39-1.41 0l-6.6 6.58c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L11 7.83V19c0 .55.45 1 1 1s1-.45 1-1z"/>
-                    </svg>
-                </MDBBtn>
-                <div>Scroll to top</div>
-            </MDBTooltip>
+                    <Tooltip title="Scroll to top" aria-label="Scroll to top" placement="top" className="btn-floating floating-fixed-br">
+                        <Fab color="primary" aria-label="To top" size="medium" onClick={ () => animateScroll.scrollToTop({duration: 500}) }>
+                            <MDBIcon icon="arrow-up" />
+                        </Fab>
+                    </Tooltip>
+                </Zoom>
+
         </React.Fragment>
     );
 }

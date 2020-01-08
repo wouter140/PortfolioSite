@@ -59,9 +59,9 @@ footer {
 }
 
 .floating-fixed-br {
-  position: fixed;
-  bottom: .75rem;
-  right: .75rem;
+  position: fixed !important;
+  bottom: 1.25rem;
+  right: 1.25rem;
   &.hidden{
     transform: scale(0.5);
     opacity: 0;
