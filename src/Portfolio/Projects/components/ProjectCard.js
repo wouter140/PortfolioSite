@@ -6,9 +6,18 @@ import {
     MDBCardBody,
     MDBCardImage,
     MDBCardText,
-    MDBCardTitle
+    MDBCardTitle, MDBTooltip
 } from "mdbreact";
 import {Link} from "react-router-dom";
+import Tooltip from "@material-ui/core/Tooltip";
+
+const badgeConverter = [
+    {type: 'secondary', name: 'Engine', title: "Engine"},
+    {type: 'primary', name: 'Languages', title: "Used Languages"},
+    {type: 'danger', name: 'Platforms', title: "Target Platforms"},
+    {type: 'warning', name: 'Team Size', title: "Project Team Size"},
+    {type: 'default', name: 'Duration', title: "Project Duration"}
+];
 
 export default class ProjectCard extends React.Component {
 
@@ -35,12 +44,23 @@ export default class ProjectCard extends React.Component {
                         </MDBCardImage>
                     </Link>
                 </div>
-                <MDBCardBody>
+                <MDBCardBody className="">
                     { this.props.badges && this.props.badges.length > 0 && (
-                        <div className="mb-3">
-                            { this.props.badges.map((badge, index) => (
-                                <MDBBadge key={index} color={ badge.type || '' } className="mr-2">{ badge.content }</MDBBadge>
-                            ))}
+                        <div className="mb-2">
+                            { this.props.badges.map((badge) => {
+                                const badgeInfo = badgeConverter.find((badgeInfo) => (badgeInfo.name === badge.name));
+                                if(!badgeInfo)
+                                    return null;
+                                return (
+                                    <Tooltip title={badgeInfo.title} aria-label={badgeInfo.title} placement="top">
+                                        <span>
+                                            <MDBBadge key={badgeInfo.type} color={badgeInfo.type || 'default'} className="mr-2 mb-2">
+                                                {badge.content}
+                                            </MDBBadge>
+                                        </span>
+                                    </Tooltip>
+                                )
+                            }) }
                         </div>
                     ) }
                     <MDBCardTitle>
