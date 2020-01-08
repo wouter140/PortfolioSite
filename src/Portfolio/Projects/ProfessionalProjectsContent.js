@@ -40,17 +40,17 @@ export default class ProfessionalProjectsContent extends React.Component {
 
                     <MDBCol lg="6" className="animated fadeIn">
                         <ProjectCard src={ testImage } alt="" title="P.A.I.N.T."
-                                     location="/TestProject"
+                                     location="/Paint"
                                      badges={[
-                                         {type: 'primary', content: '25 Person Team'},
-                                         {type: 'secondary', content: 'Unreal Engine 4'},
-                                         {type: 'danger', content: 'Danger'}
+                                         {name: 'Engine', content: 'Unreal Engine 4', title: "Engine"},
+                                         {name: 'Languages', content: 'C++ & Python', title: "Used Languages"},
+                                         {name: 'Platforms', content: 'PC & PS4', title: "Target Platforms"},
+                                         {name: 'Team Size', content: '25 Person Team', title: "Project Team Size"},
+                                         {name: 'Duration', content: '40 Weeks', title: "Project Duration"}
                                      ]}
                         >
-                            Some super duper amazing card text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-                            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
-                            pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
-                            In enim justo, rhoncus ut
+                            This project is currently in development.<br/>
+                            More will come soon!
                         </ProjectCard>
                     </MDBCol>
 
@@ -58,22 +58,23 @@ export default class ProfessionalProjectsContent extends React.Component {
                         <ProjectCard src={ bitBusterImage } alt="Bit-Buster Project" title="Bit-Buster" className="bit-buster"
                                      location="/Bit-Buster"
                                      badges={[
-                                         {type: 'primary', content: '25 Person Team'},
-                                         {type: 'secondary', content: 'Custom Engine'},
-                                         {type: 'danger', content: 'Danger'}
+                                         {name: 'Engine', content: 'Custom Engine'},
+                                         {name: 'Languages', content: 'C++'},
+                                         {name: 'Platforms', content: 'PC'},
+                                         {name: 'Team Size', content: '25 Person Team'},
+                                         {name: 'Duration', content: '8 Weeks'}
                                      ]}
                         >
                             Bit-buster is a local multiplayer coop game, in which you have to pass a disk around to kill all the evil spirits.
-                            The entire game is made out of voxels to allow for mayhem and destruction!<br/>
-
-
+                            The entire game is made out of voxels to allow for mayhem and destruction of the enemies and the level!
+                            The voxels also have physics support to allow for partial voxel objects to fall and break for example.<br/>
                         </ProjectCard>
                     </MDBCol>
 
                     <MDBCol md="6" xl="4" className="animated fadeIn">
                         <ProjectCard src={ testImage } alt="" title="Testing Title"
                                      location="/TestProject"
-                                     badges={[{type: 'primary', content: 'Primary'}, {type: 'secondary', content: 'Secondary'}, {type: 'danger', content: 'Danger'}]}
+                                     badges={[{name: 'Languages', content: 'Primary'}, {name: 'Engine', content: 'Secondary'}, {name: 'Platforms', content: 'Danger'}]}
                         >
                             Some super duper amazing card text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
                             Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
@@ -85,7 +86,7 @@ export default class ProfessionalProjectsContent extends React.Component {
                     <MDBCol md="6" xl="4" className="animated fadeIn">
                         <ProjectCard src={ testImage } alt="" title="Testing Title"
                                      location="/TestProject"
-                                     badges={[{type: 'primary', content: 'Primary'}, {type: 'secondary', content: 'Secondary'}, {type: 'danger', content: 'Danger'}]}
+                                     badges={[{name: 'Languages', content: 'Primary'}, {name: 'Engine', content: 'Secondary'}, {name: 'Platforms', content: 'Danger'}]}
                         >
                             Some super duper amazing card text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
                             Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
@@ -97,7 +98,7 @@ export default class ProfessionalProjectsContent extends React.Component {
                     <MDBCol md="6" xl="4" className="extra-project-md">
                         <ProjectCard src={ testImage } alt="" title="Testing Title"
                                      location="/TestProject"
-                                     badges={[{type: 'primary', content: 'Primary'}, {type: 'secondary', content: 'Secondary'}, {type: 'danger', content: 'Danger'}]}
+                                     badges={[{name: 'Languages', content: 'Primary'}, {name: 'Engine', content: 'Secondary'}, {name: 'Platforms', content: 'Danger'}]}
                         >
                             Some super duper amazing card text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
                             Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
@@ -109,7 +110,7 @@ export default class ProfessionalProjectsContent extends React.Component {
                     <MDBCol md="6" xl="4" className="extra-project">
                         <ProjectCard src={ testImage } alt="" title="Testing Title"
                                      location="/TestProject"
-                                     badges={[{type: 'primary', content: 'Primary'}, {type: 'secondary', content: 'Secondary'}, {type: 'danger', content: 'Danger'}]}
+                                     badges={[{name: 'Languages', content: 'Primary'}, {name: 'Engine', content: 'Secondary'}, {name: 'Platforms', content: 'Danger'}]}
                         >
                             Some super duper amazing card text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
                             Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
@@ -121,7 +122,7 @@ export default class ProfessionalProjectsContent extends React.Component {
                     <MDBCol md="6" xl="4" className="extra-project">
                         <ProjectCard src={ testImage } alt="" title="Testing Title"
                                      location="/TestProject"
-                                     badges={[{type: 'primary', content: 'Primary'}, {type: 'secondary', content: 'Secondary'}, {type: 'danger', content: 'Danger'}]}
+                                     badges={[{name: 'Languages', content: 'Primary'}, {name: 'Engine', content: 'Secondary'}, {name: 'Platforms', content: 'Danger'}]}
                         >
                             Some super duper amazing card text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
                             Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
@@ -133,7 +134,7 @@ export default class ProfessionalProjectsContent extends React.Component {
                     <MDBCol md="6" xl="4" className="extra-project">
                         <ProjectCard src={ testImage } alt="" title="Testing Title"
                                      location="/TestProject"
-                                     badges={[{type: 'primary', content: 'Primary'}, {type: 'secondary', content: 'Secondary'}, {type: 'danger', content: 'Danger'}]}
+                                     badges={[{name: 'Languages', content: 'Primary'}, {name: 'Engine', content: 'Secondary'}, {name: 'Platforms', content: 'Danger'}]}
                         >
                             Some super duper amazing card text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
                             Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
