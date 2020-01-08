@@ -26,18 +26,39 @@
     max-width: initial;
     margin: 0 calc(50% - #{($width / 2)});
 
+    position: relative;
+    min-height: 7.5rem;
+
+    h5 {
+      font-size: .8rem;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+
     @media (min-width: $breakpoint-phone) {
-      $width: 350px;
+      $width: 385px;
       width: $width;
       margin: 0 calc(50% - #{($width / 2)});
+
+      h5 {
+        font-size: .8rem;
+        margin-top: .5rem;
+        position: relative;
+      }
     }
     @media (min-width: $breakpoint-tablet) {
-      $width: 450px;
+      $width: 570px;
       width: $width;
       margin: 0 calc(50% - #{($width / 2)});
+
+      h5 {
+        font-size: 1rem;
+        margin-top: 1rem;
+      }
     }
     @media (min-width: $breakpoint-big-tablet) {
-      $width: 540px;
+      $width: 600px;
       width: $width;
       margin: 0 calc(50% - #{($width / 2)});
     }

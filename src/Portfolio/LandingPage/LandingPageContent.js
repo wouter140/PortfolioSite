@@ -29,6 +29,7 @@ export default class LandingPageContent extends React.Component {
                             <div id="landing-page-name-title" className="d-inline-block align-top">
                                 <h1 id="landing-page-name" className="mb-1">Wouter Grutter</h1>
                                 <h2 id="landing-page-title">Software Developer</h2>
+                                <h5>Looking for Internship, starting September 2020</h5>
                             </div>
 
                         </div>

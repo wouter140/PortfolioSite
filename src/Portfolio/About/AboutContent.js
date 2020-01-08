@@ -59,19 +59,23 @@ export default class AboutContent extends React.Component {
                         I have previously graduated from ROCA12 with a Game Programmer degree.
                     </div>
                     <div className="mt-2">
-                        I am currently based in Breda, the Netherlands but am able to relocate.
+                        I am currently looking for an <b>internship</b> from <i>September 2020</i>.<br/>
+                        I am based in Breda, the Netherlands but am able to relocate.
                     </div>
-                    <div className="mt-3">
-                        As most in this field do, I love video games and movies which take a significant amount of my free time.<br/>
 
+                    <div className="mt-3">
+                        I love video games and movies which take a significant amount of my free time.<br/>
                         I'm a huge enthusiast when it comes to game development and enjoy solving all kinds of problems through code.
                         I work on <Link to="personal-projects-page" href="" smooth={true} offset={-40} duration={500}>personal projects</Link> in my spare time and am always interested and eager to learn and use new technologies.<br/>
+                    </div>
+                    <div className="mt-1">
+                        I am a team-player, serious at my work and always looking to improve.
                     </div>
 
                     <div className="mt-3">
                         I am currently employed at Learning Valley where I work on their online video platform, tools, apps and other applications that are used in their products and customers.<br/>
                         With my work I learn new technologies like React, 3D rendering in the browser, integrated tools and authentication.<br/>
-                        Some of my work at Leaning Valley can be found in the <Link to="personal-projects-page" href="" smooth={true} offset={-40} duration={500}>personal projects</Link> section below with more details.
+                        Some of my work at Leaning Valley can be found in the <Link to="professional-projects-page" href="" smooth={true} offset={-40} duration={500}>professional projects</Link> section below with more details.
                     </div>
                 </MDBContainer>
 
