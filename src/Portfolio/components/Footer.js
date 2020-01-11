@@ -3,12 +3,27 @@ import {MDBBtn, MDBContainer, MDBFooter, MDBIcon} from "mdbreact";
 
 import "./Footer.scss"
 
+export function SimpleFooter(props) {
+    return (
+        <MDBFooter className="font-small mt-4">
+
+            {props.children}
+
+            <div className="footer-copyright text-center py-3">
+                <MDBContainer fluid>
+                    Copyright © 2015 - { (new Date()).getFullYear() } <a href="https://www.woutergrutter.com">Wouter Grutter</a>. All Rights Reserved
+                </MDBContainer>
+            </div>
+        </MDBFooter>
+    )
+}
+
 export default class Footer extends React.Component {
     render() {
         return (
-            <MDBFooter className="font-small pt-4 mt-4">
+            <SimpleFooter>
 
-                <div className="text-center mb-4 social-buttons-text-large">
+                <div className="text-center mb-4 social-buttons-text-large pt-4">
 
                     <MDBBtn tag="a" social="li" href="https://www.linkedin.com/in/woutergrutter/" target="_blank" rel="noopener noreferrer"
                         title="LinkedIn">
@@ -66,12 +81,7 @@ export default class Footer extends React.Component {
 
                 </div>
 
-                <div className="footer-copyright text-center py-3">
-                    <MDBContainer fluid>
-                        Copyright © 2015 - { (new Date()).getFullYear() } <a href="https://www.woutergrutter.com">Wouter Grutter</a>. All Rights Reserved
-                    </MDBContainer>
-                </div>
-            </MDBFooter>
+            </SimpleFooter>
         );
     }
 }
