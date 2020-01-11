@@ -2,7 +2,7 @@ import React from 'react';
 import ContentContainer from "../../components/ContentContainer";
 
 import {Link} from "react-scroll";
-import {MDBCard, MDBCardBody, MDBCardGroup, MDBCardText, MDBCardTitle, MDBContainer} from "mdbreact";
+import {MDBCard, MDBCardBody, MDBCardGroup, MDBCardTitle, MDBContainer} from "mdbreact";
 
 import profilepicture from "../../images/profilepicture.png";
 
@@ -84,7 +84,7 @@ export default class AboutContent extends React.Component {
                         <MDBCard className="z-index-1">
                             <MDBCardBody>
                                 <MDBCardTitle tag="h5" className="text-center">Languages</MDBCardTitle>
-                                <MDBCardText className="container d-flex justify-content-center flex-wrap">
+                                <div className="container d-flex justify-content-center flex-wrap">
                                     <ExperienceIcon src={cPlusPlusIcon} text="C++" />
                                     <ExperienceIcon src={cIcon} text="C" />
                                     <ExperienceIcon src={cSharpIcon} text="C#" />
@@ -96,26 +96,26 @@ export default class AboutContent extends React.Component {
                                     <ExperienceIcon src={htmlIcon} text="HTML" />
                                     <ExperienceIcon src={cssIcon} text="CSS" />
                                     <ExperienceIcon src={phpIcon} text="PHP" />
-                                </MDBCardText>
+                                </div>
                             </MDBCardBody>
                         </MDBCard>
                         <MDBCard className="middle-card">
                             <MDBCardBody>
                                 <MDBCardTitle tag="h5" className="text-center">Production and QA</MDBCardTitle>
-                                <MDBCardText className="d-flex justify-content-center flex-wrap">
+                                <div className="d-flex justify-content-center flex-wrap">
                                     <ExperienceIcon src={trelloIcon} text="Trello" />
                                     <ExperienceIcon src={jiraIcon} text="Jira" />
 
                                     <ExperienceIcon src={perforceIcon} text="Perforce" />
                                     <ExperienceIcon src={gitIcon} text="Git / GitHub" />
                                     <ExperienceIcon src={jenkinsIcon} text="Jenkins" />
-                                </MDBCardText>
+                                </div>
                             </MDBCardBody>
                         </MDBCard>
                         <MDBCard>
                             <MDBCardBody>
                                 <MDBCardTitle tag="h5" className="text-center">Tools</MDBCardTitle>
-                                <MDBCardText className="d-flex justify-content-center flex-wrap">
+                                <div className="d-flex justify-content-center flex-wrap">
                                     <ExperienceIcon src={unrealEngineIcon} text="Unreal Engine 4" />
                                     <ExperienceIcon src={unity3DIcon} text="Unity3D" />
 
@@ -123,7 +123,7 @@ export default class AboutContent extends React.Component {
                                     <ExperienceIcon src={phpStormIcon} text="PhpStorm" />
                                     <ExperienceIcon src={autodesk3DSMaxIcon} text="3ds Max" />
                                     <ExperienceIcon src={photoshopIcon} text="Photoshop" />
-                                </MDBCardText>
+                                </div>
                             </MDBCardBody>
                         </MDBCard>
                     </MDBCardGroup>

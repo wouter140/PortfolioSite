@@ -52,7 +52,7 @@ export default class ProjectCard extends React.Component {
                                 if(!badgeInfo)
                                     return null;
                                 return (
-                                    <Tooltip title={badgeInfo.title} aria-label={badgeInfo.title} placement="top" arrow touch>
+                                    <Tooltip key={badgeInfo.title} title={badgeInfo.title} aria-label={badgeInfo.title} placement="top" arrow>
                                         <span>
                                             <MDBBadge key={badgeInfo.type} color={badgeInfo.type || 'default'} className="mr-2 mb-2">
                                                 {badge.content}
