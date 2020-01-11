@@ -6,6 +6,8 @@ import PortfolioNavBar from "./ProjectPageNavBar";
 
 import InlineYouTubeVideo from "../../components/InlineYouTubeVideo";
 import InlineVideo from "../../components/InlineVideo";
+import Container from "@material-ui/core/Container";
+import {SimpleFooter} from "../../Portfolio/components/Footer";
 
 export default class ProjectPage extends React.Component {
 
@@ -65,13 +67,14 @@ export default class ProjectPage extends React.Component {
                             </h1>
                         </VisibilitySensor>
 
-                        <div className="text-left mt-3">
+                        <Container className="text-left mt-4">
                             { this.props.children }
-                        </div>
+                            <div style={{height: "2rem"}} />
+                        </Container>
                     </div>
                 </div>
-                {/*<div style={{height: "2rem"}} />*/}
-
+                
+                <SimpleFooter />
             </React.Fragment>
         )
     }
