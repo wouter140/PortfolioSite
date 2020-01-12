@@ -18,7 +18,7 @@ import {ReactComponent as cssIcon} from "../../images/about/languages/css-icon.s
 import {ReactComponent as phpIcon} from "../../images/about/languages/php-icon.svg";
 import {ReactComponent as unity3DIcon} from "../../images/about/languages/unity3d-icon.svg";
 import {ReactComponent as unrealEngineIcon} from "../../images/about/languages/unrealengine4-icon.svg";
-import {ReactComponent as trelloIcon} from "../../images/about/languages/trello-icon.svg";
+// import {ReactComponent as trelloIcon} from "../../images/about/languages/trello-icon.svg";
 import {ReactComponent as jiraIcon} from "../../images/about/languages/jira-icon.svg";
 import {ReactComponent as perforceIcon} from "../../images/about/languages/perforce-icon.svg";
 import {ReactComponent as gitIcon} from "../../images/about/languages/git-icon.svg";
@@ -103,7 +103,6 @@ export default class AboutContent extends React.Component {
                             <MDBCardBody>
                                 <MDBCardTitle tag="h5" className="text-center">Production and QA</MDBCardTitle>
                                 <div className="d-flex justify-content-center flex-wrap">
-                                    <ExperienceIcon src={trelloIcon} text="Trello" />
                                     <ExperienceIcon src={jiraIcon} text="Jira" />
 
                                     <ExperienceIcon src={perforceIcon} text="Perforce" />
