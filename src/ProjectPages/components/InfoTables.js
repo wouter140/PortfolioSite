@@ -35,7 +35,7 @@ export function ProjectInfoTable(props) {
                    {name: "My Roles", value: props.roles},
                    {name: "Languages Used", value: props.languages},
                    {name: "Target Platforms", value: props.targetPlatforms},
-                   {name: "Release", value: props.release}
+                   {name: "Release Status", value: props.release}
                ]}
         />
     )
