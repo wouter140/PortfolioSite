@@ -2,7 +2,7 @@ import React from 'react';
 
 import {Link} from "react-scroll/modules";
 
-import ProfilePicture from "../../images/profilepicture.png";
+import ProfilePicture from "../../images/profilepicture.jpg";
 import InlineVideo from "../../components/InlineVideo";
 
 import video from "../../content/videos/bit-buster/bit-buster-trailer.mp4";

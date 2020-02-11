@@ -4,7 +4,7 @@ import ContentContainer from "../../components/ContentContainer";
 import {Link} from "react-scroll";
 import {MDBCard, MDBCardBody, MDBCardGroup, MDBCardTitle, MDBContainer} from "mdbreact";
 
-import profilepicture from "../../images/profilepicture.png";
+import profilepicture from "../../images/profilepicture.jpg";
 
 import {ReactComponent as cPlusPlusIcon} from "../../images/about/languages/c++-icon.svg";
 import {ReactComponent as cIcon} from "../../images/about/languages/c-icon.svg";

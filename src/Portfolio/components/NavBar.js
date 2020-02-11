@@ -13,7 +13,7 @@ import {
 
 import {Link, animateScroll} from "react-scroll"
 
-import ProfilePicture from "../../images/profilepicture.png";
+import ProfilePicture from "../../images/profilepicture.jpg";
 
 import "./NavBar.scss";
 
