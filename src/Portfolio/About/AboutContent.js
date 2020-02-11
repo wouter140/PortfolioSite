@@ -34,9 +34,11 @@ function ExperienceIcon(props) {
     const Src = props.src;
     return (
         <div className="col col-12 col-md-6 col-lg-4 d-inline-block mt-4 skills-icon align-top">
-            {typeof props.src === 'string' ?
-                (<img src={props.src} alt={props.text} />) : <Src />
-            }
+            {typeof props.src === 'string' ? (
+                <img src={props.src} alt={props.text} />
+            ) : (
+                <Src />
+            ) }
             <div className="text-center">{props.text}</div>
         </div>
     );
@@ -59,7 +61,7 @@ export default class AboutContent extends React.Component {
                         I have previously graduated from ROCA12 with a Game Programmer degree.
                     </div>
                     <div className="mt-2">
-                        I am currently looking for an <b>internship</b> from <i>September 2020</i>.<br/>
+                        I am currently looking for an <b>internship from September 2020</b> .<br/>
                         I am based in Breda, the Netherlands but am able to relocate.
                     </div>
 
