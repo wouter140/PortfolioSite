@@ -56,7 +56,7 @@ export default class AboutContent extends React.Component {
 
                 <MDBContainer>
                     <img src={profilepicture} alt="Wouter Grutter"
-                         className="float-left mr-5 mb-3 d-none d-md-inline-block profile-picture"/>
+                         className="float-left mb-3 d-none d-md-inline-block profile-picture"/>
 
                     <div>
                         <b>Hey there</b> and welcome to my portfolio! I'm <i>Wouter Grutter</i> and I am a software developer, focusing on games.<br/>

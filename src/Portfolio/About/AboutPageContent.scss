@@ -12,9 +12,13 @@
   }
 
   .profile-picture {
+    margin-right: 2rem;
     border-radius: .5rem;
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: auto;
+    @media (min-width: $breakpoint-big-tablet) {
+      width: 200px;
+    }
   }
   .z-index-1 {
     z-index: 1;
@@ -28,15 +32,6 @@
   .skills-container {
 
     font-size: 0;
-    @media (min-width: $breakpoint-phone) {
-
-    }
-    @media (min-width: $breakpoint-tablet) {
-
-    }
-    @media (min-width: $breakpoint-big-tablet) {
-
-    }
     @media (min-width: $breakpoint-desktop) {
       font-size: .75rem;
     }
