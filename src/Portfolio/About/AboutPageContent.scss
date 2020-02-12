@@ -1,3 +1,5 @@
+@import "../Options";
+
 #about-page {
   margin-top: 5vh;
   padding-top: 0 !important;
@@ -23,6 +25,26 @@
     margin-bottom: 2px;
   }
 
+  .skills-container {
+
+    font-size: 0;
+    @media (min-width: $breakpoint-phone) {
+
+    }
+    @media (min-width: $breakpoint-tablet) {
+
+    }
+    @media (min-width: $breakpoint-big-tablet) {
+
+    }
+    @media (min-width: $breakpoint-desktop) {
+      font-size: .75rem;
+    }
+    @media (min-width: $breakpoint-big-desktop) {
+      font-size: .8rem;
+    }
+  }
+
   .skills-icon {
     img, svg {
       width: 100%;
@@ -35,6 +57,40 @@
         -o-filter: grayscale(75%);
         -ms-filter: grayscale(75%);
         filter: grayscale(75%);
+      }
+    }
+
+    max-width: 85px;
+    max-height: 85px;
+
+    @media (min-width: $breakpoint-phone) {
+      max-width: 100px;
+      max-height: 100px;
+    }
+    @media (min-width: $breakpoint-tablet) {
+      max-width: 125px;
+      max-height: 125px;
+    }
+  }
+
+  .card-group {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    & > .card {
+      margin-bottom: 1rem;
+      border-radius: .25rem;
+    }
+    @media (min-width: $breakpoint-big-tablet) {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      margin-bottom: 0;
+      & > .card:not(:last-child) {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+      & > .card:not(:first-child) {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
       }
     }
   }

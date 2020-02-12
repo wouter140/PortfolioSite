@@ -26,31 +26,20 @@ body {
   }
 }
 
+.container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .page-content-container {
   padding: 3rem 0;
   border-top: 1px solid #f1f1f1;
   border-bottom: 1px solid #e8e8e8;
 
   .inner-page-content {
-    width: 400px;
-    max-width: 80%;
+    width: 100%;
+    min-width: 300px;
     margin: 0 auto;
-
-    @media (min-width: $breakpoint-phone) {
-      width: 500px;
-    }
-    @media (min-width: $breakpoint-tablet) {
-      width: 650px;
-    }
-    @media (min-width: $breakpoint-big-tablet) {
-      width: 850px;
-    }
-    @media (min-width: $breakpoint-desktop) {
-      width: 1100px;
-    }
-    @media (min-width: $breakpoint-big-desktop) {
-      width: 1500px;
-    }
 
     .inner-page-content-title {
       text-align: center;

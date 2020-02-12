@@ -34,7 +34,7 @@ export default class PersonalProjectsContent extends React.Component {
                     ) }
             >
 
-                <div className="d-flex flex-wrap justify-content-start">
+                <div className="d-flex flex-wrap justify-content-start container">
                     <MDBCol md="6" xl="4" className="animated fadeIn">
                         <ProjectCard src={ testImage } alt="" title="Testing Title"
                                 location="/TestProject"

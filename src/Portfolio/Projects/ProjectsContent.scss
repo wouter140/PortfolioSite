@@ -2,7 +2,18 @@
 
 .projects {
   .container {
-    max-width: 100% !important;
+    @media (min-width: $breakpoint-phone) {
+      max-width: 540px;
+    }
+    @media (min-width: $breakpoint-tablet) {
+      max-width: 720px;
+    }
+    @media (min-width: $breakpoint-big-tablet) {
+      max-width: 960px;
+    }
+    @media (min-width: $breakpoint-desktop) {
+      max-width: 1440px;
+    }
   }
 }
 

@@ -3,6 +3,7 @@ import ContentContainer from "../../components/ContentContainer";
 
 import {Link} from "react-scroll";
 import {MDBCard, MDBCardBody, MDBCardGroup, MDBCardTitle, MDBContainer} from "mdbreact";
+import Tooltip from "@material-ui/core/Tooltip";
 
 import profilepicture from "../../images/profilepicture.jpg";
 
@@ -30,15 +31,18 @@ import {ReactComponent as photoshopIcon} from "../../images/about/languages/phot
 
 import "./AboutPageContent.scss"
 
+
 function ExperienceIcon(props) {
     const Src = props.src;
     return (
-        <div className="col col-12 col-md-6 col-lg-4 d-inline-block mt-4 skills-icon align-top">
-            {typeof props.src === 'string' ? (
-                <img src={props.src} alt={props.text} />
-            ) : (
-                <Src />
-            ) }
+        <div className="col col-12 col-md-6 col-xl-4 d-inline-block mt-4 skills-icon align-top">
+            <Tooltip title={props.text} aria-label={props.text} placement="top">
+                {typeof props.src === 'string' ? (
+                    <img src={props.src} alt={props.text} />
+                ) : (
+                    <Src />
+                ) }
+            </Tooltip>
             <div className="text-center">{props.text}</div>
         </div>
     );
@@ -81,7 +85,8 @@ export default class AboutContent extends React.Component {
                     </div>
                 </MDBContainer>
 
-                <MDBContainer className="mt-5">
+                {/*Striped background?*/}
+                <MDBContainer className="mt-5 skills-container">
                     <MDBCardGroup>
                         <MDBCard className="z-index-1">
                             <MDBCardBody>
