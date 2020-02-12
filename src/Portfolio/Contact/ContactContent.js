@@ -105,7 +105,7 @@ export default class ContactContent extends React.Component {
                               contentTitle={ <span>Contact <strong>Me</strong></span> } >
 
                 <form
-                    className="needs-validation"
+                    className="needs-validation container mx-auto"
                     onSubmit={this.submitHandler}
                     noValidate
                     ref={ this.formRef }
