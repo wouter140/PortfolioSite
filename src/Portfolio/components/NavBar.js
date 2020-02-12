@@ -42,29 +42,29 @@ export default class PortfolioNavBar extends Component {
                                       onClick={() => this.setState((state) => {return {collapse: !state.collapse}})}/>
                     <MDBCollapse isOpen={this.state.collapse} navbar>
                         <MDBNavbarNav right>
-                            <Link activeClass="active" to="about-page" className="ml-2"  spy={true} smooth={true} offset={-80} duration={1000}>
+                            <Link activeClass="active" to="about-page" spy={true} smooth={true} offset={-80} duration={1000}>
                                 <MDBNavItem>
                                     <MDBBtn color="link" className="m-0 p-2 nav-link-button nav-link">About</MDBBtn>
                                 </MDBNavItem>
                             </Link>
-                            <Link activeClass="active" to="professional-projects-page" className="ml-2" spy={true} smooth={true} offset={-40} duration={1000}>
+                            <Link activeClass="active" to="professional-projects-page" className="mr-md-2" spy={true} smooth={true} offset={-40} duration={1000}>
                                 <MDBNavItem>
                                     <MDBBtn color="link" className="m-0 p-2 nav-link-button nav-link">Professional Projects</MDBBtn>
                                 </MDBNavItem>
                             </Link>
-                            <Link activeClass="active" to="personal-projects-page" className="ml-2" spy={true} smooth={true} offset={-40} duration={1000}>
+                            <Link activeClass="active" to="personal-projects-page" className="mr-md-2" spy={true} smooth={true} offset={-40} duration={1000}>
                                 <MDBNavItem>
                                     <MDBBtn color="link" className="m-0 p-2 nav-link-button nav-link">Side Projects</MDBBtn>
                                 </MDBNavItem>
                             </Link>
-                            <Link activeClass="active" to="contact-page" className="ml-2" spy={true} smooth={true} offset={-40} duration={1000}>
+                            <Link activeClass="active" to="contact-page" className="mr-md-4" spy={true} smooth={true} offset={-40} duration={1000}>
                                 <MDBNavItem>
                                     <MDBBtn color="link" className="m-0 p-2 nav-link-button nav-link">Contact</MDBBtn>
                                 </MDBNavItem>
                             </Link>
-                            <Link activeClass="active" to="contact-page" className="ml-4">
+                            <Link activeClass="active" to="contact-page">
                                 <MDBNavItem>
-                                    <MDBBtn color="link" className="m-0 p-2 nav-link-button nav-link">Curriculum Vitae</MDBBtn>
+                                    <MDBBtn color="link" className="m-0 p-2 nav-link-button nav-link">Resume</MDBBtn>
                                 </MDBNavItem>
                             </Link>
                         </MDBNavbarNav>
