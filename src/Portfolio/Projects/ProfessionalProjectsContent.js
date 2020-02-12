@@ -65,7 +65,7 @@ export default class ProfessionalProjectsContent extends React.Component {
                                          {name: 'Duration', content: '8 Weeks'}
                                      ]}
                         >
-                            Bit-buster is a local multiplayer coop game, in which you have to pass a disk around to kill all the evil spirits.
+                            Bit-buster is a local multiplayer co-op game, in which you have to pass a disk around to kill all the evil spirits.
                             The entire game is made out of voxels to allow for mayhem and destruction of the enemies and the level!
                             The voxels also have physics support to allow for partial voxel objects to fall and break for example.<br/>
                         </ProjectCard>

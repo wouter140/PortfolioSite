@@ -16,8 +16,8 @@ export default function BitBusterProject(props) {
                 {src: video, type: "video/mp4"}
             ]}
         >
-            Bit-Buster is a cooperative 2-player (with singleplayer option) shooter where both players share a single projectile to defeat the enemies and complete the objective.<br/>
-            In Bit-Buster you get thrown into a steampunk-inspired japan, that got overrun by yokai - japanese spirits. By passing a deadly disk between each other, you can blaze through any enemy or obstacle that shows up in your way.<br/>
+            Bit-Buster is a cooperative 2-player (with single-player option) shooter where both players share a single projectile to defeat the enemies and complete the objective.<br/>
+            In Bit-Buster you get thrown into a steampunk-inspired Japan, that got overrun by yokai - Japanese spirits. By passing a deadly disk between each other, you can blaze through any enemy or obstacle that shows up in your way.<br/>
             The levels are highly destructible and built completely out of voxels to allow for complete mayhem and destruction of the levels and enemies. This, together with physics, makes for dynamic gameplay where every action in the game impacts the world in a unique way.
 
             <ProjectInfoTable
@@ -37,10 +37,10 @@ export default function BitBusterProject(props) {
             <h5 className="mt-4 font-weight-normal">UI Engine System</h5>
             <p className="mb-2">
                 In Bit-Buster, I created the UI system inside the custom engine.
-                At the point that I joined the team, the custom engine was already quite far in development, but was missing any and all in-game UI systems.
+                When I joined the team, the custom engine was already quite far in development. However, it was lacking any in-game UI systems.
             </p>
             <p>
-                For the UI system I started by creating the backbone that would handle all the input for the UI elements, focus and button presses.
+                For the UI system, I started creating the backbone that would handle all the input for the UI elements, focus and button presses.
                 This system is called the canvas and should be the parent object in the game for all the other UI elements.
                 I also implemented a base class that handles most UI element events and actions.
                 All the final UI objects eventually inherit from the base UI element to be controlled in-game through the engine.
@@ -54,23 +54,23 @@ export default function BitBusterProject(props) {
 
             <h6 className="font-weight-normal">UI Button</h6>
             <p>
-                I also created the Button UI element. Buttons are next to text very important to have in any game to be able to have user interaction with menu's.
+                I also buildt the Button UI element. Buttons are next to text very important to have in any game to be able to have user interaction with menu's.
             </p>
 
             <h6 className="font-weight-normal">UI Slider</h6>
             <p>
-                Another UI element I created is a Slider. As we had planned to implement settings in our game, a slider would be very useful for settings like audio.
+                Another UI element I developed is a Slider. As we had planned to implement settings in our game, a slider would be very useful for settings like audio.
                 To optimize the implementation time of the slider, I also made it possible to be a progress bar. These are used in-game in various places like the player HUD.
             </p>
 
             <h5 className="mt-4 font-weight-normal">UI Development Tools</h5>
             <p>
-                For the UI System I also implemented the in-engine tools for adding, controlling and editing these.
+                For the UI system, I also implemented the in-engine tools for adding, controlling and editing these.
             </p>
 
             <h5 className="mt-4 font-weight-normal">UI Implementations</h5>
             <p>
-                Next to creating the actual UI system in the engine, I also worked with it to implement various UI systems and elements in the game.
+                Next to creating the actual UI system in the engine, I also implemented various UI systems and elements in the game.
             </p>
 
         </ProjectPage>
