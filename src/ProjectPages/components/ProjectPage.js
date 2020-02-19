@@ -15,9 +15,21 @@ export default class ProjectPage extends React.Component {
         super(props);
 
         this.state = {
+            top: 0,
             titleVisible: true,
             videoReady: false,
         };
+    }
+
+    componentDidMount() {
+        document.addEventListener("scroll", this.OnScrolled.bind(this));
+    }
+    componentWillUnmount() {
+        document.removeEventListener("scroll", this.OnScrolled.bind(this));
+    }
+
+    OnScrolled(event) {
+        this.setState({top: document.documentElement.scrollTop});
     }
 
     render() {
@@ -36,6 +48,7 @@ export default class ProjectPage extends React.Component {
                              backgroundRepeat: "no-repeat",
                              backgroundPosition: "center",
                              position: "absolute",
+                             top: this.state.top / 3
                          }}
                     >
                         { this.props.videoID && (
@@ -49,11 +62,16 @@ export default class ProjectPage extends React.Component {
                         )}
                     </div>
 
+                    <div style={{
+                        position: "relative",
+                        height: "62vh",
+                        zIndex: -1,
+                    }} />
+
                     <div className="card-body text-center card-body-cascade"
                          style={{
                             display: "inline-block",
                             position: "relative",
-                            top: "62vh",
                             left: "5%",
                             width: "90%",
                             minHeight: "38vh",
