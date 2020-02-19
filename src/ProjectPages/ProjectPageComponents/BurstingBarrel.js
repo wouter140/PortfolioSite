@@ -12,6 +12,8 @@ export default function PaintProject(props) {
         <ProjectPage
             title="Bursting Barrel"
             imageURL={image}
+            brandImageURL={brandImage}
+            brandClassName="bursting-barrel-brand"
             // videoID="U-mC90Tu5SM"
             videoSource={[
                 {src: video, type: "video/mp4"}
@@ -30,7 +32,7 @@ export default function PaintProject(props) {
 
             <h4 className="text-white primary-color p-3">My Work</h4>
 
-            <h5 className="mt-4 font-weight-normal"></h5>
+            <h5 className="mt-4 font-weight-normal">Custom Controller</h5>
             <p className="mb-2">
 
             </p>

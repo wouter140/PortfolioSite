@@ -142,6 +142,24 @@
     left: 5%;
     bottom: initial;
   }
+  .project-title-brand {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-content: center;
+    img {
+      margin: auto;
+    }
+  }
+
+
+  .bursting-barrel-brand {
+    width: 50%;
+  }
 }
 
 .badge {

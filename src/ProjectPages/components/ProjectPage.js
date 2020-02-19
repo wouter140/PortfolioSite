@@ -51,6 +51,14 @@ export default class ProjectPage extends React.Component {
                              top: this.state.top / 3
                          }}
                     >
+                        {this.props.brandImageURL && (
+                            <div className="project-title-brand" style={{top: this.state.top / 6}}>
+                                <img src={this.props.brandImageURL} alt="Brand Title"
+                                     className={this.props.brandClassName}
+                                     style={this.props.brandStyle} />
+                            </div>
+                        )}
+
                         { this.props.videoID && (
                             <InlineYouTubeVideo videoID={this.props.videoID} videoRatio={this.props.videoRatio}
                                                 width={window.innerWidth} height={window.innerHeight * .7} />
