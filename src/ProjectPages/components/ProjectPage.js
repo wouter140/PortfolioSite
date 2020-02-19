@@ -58,6 +58,7 @@ export default class ProjectPage extends React.Component {
                         { this.props.videoSource && (
                             <InlineVideo className="position-relative w-100 h-100 d-flex"
                                          sources={ this.props.videoSource }
+                                         parallaxTop={ this.state.top / 3 }
                             />
                         )}
                     </div>

@@ -64,7 +64,7 @@ export default class InlineVideo extends Component {
                         })}
                     </video>
 
-                    <div className="project-video-controls">
+                    <div className="project-video-controls" style={{marginTop: this.props.parallaxTop ? -this.props.parallaxTop : ""}}>
                         { this.state.playing ? (
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className={ "pause-project-video " + this.props.pauseClassName }
                                  onClick={ () => this.video.current.pause() }>
