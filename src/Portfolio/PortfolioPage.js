@@ -55,14 +55,15 @@ export default class PortfolioPage extends Component {
 
                     <meta property="og:title" content="Wouter Grutter - Portfolio" />
                     <meta property="og:description" content="Welcome to my portfolio site! Here you will find some of my professional and personal work and projects, my resumé and contact information!" />
-                    <meta property="og:url" content="WouterGrutter.com" />
+                    <meta property="og:url" content="https://www.woutergrutter.com" />
                     <meta property="og:image" content={ProfilePicture} />
 
-                    <meta name="twitter:card" content="Portfolio of Wouter Grutter, a Game Developer" />
+                    <meta name="twitter:card" content="summary" />
                     <meta name="twitter:title" content="Wouter Grutter - Portfolio" />
                     <meta name="twitter:description" content="Welcome to my portfolio site! Here you will find some of my professional and personal work and projects, my resumé and contact information!" />
-                    <meta name="twitter:url" content="WouterGrutter.com" />
+                    <meta name="twitter:url" content="https://www.woutergrutter.com" />
                     <meta name="twitter:image" content={ProfilePicture} />
+                    <meta name="twitter:site" content="@WouterGrutter" />
                 </Helmet>
 
                 <header>
