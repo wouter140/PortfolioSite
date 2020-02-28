@@ -24,10 +24,10 @@ export default class LandingPageContent extends React.Component {
                         <div className="inner-page-content">
 
                             <div id="landing-page-profile-picture" className="d-inline-block">
-                                <img src={ ProfilePicture } alt="Wouter Grutter - Software Developer" />
+                                <img itemProp="image" src={ ProfilePicture } alt="Wouter Grutter - Software Developer" />
                             </div>
                             <div id="landing-page-name-title" className="d-inline-block align-top">
-                                <h1 id="landing-page-name" className="mb-1">Wouter Grutter</h1>
+                                <h1 itemProp="name" id="landing-page-name" className="mb-1">Wouter Grutter</h1>
                                 <h2 id="landing-page-title">Software Developer</h2>
                                 <h5>Looking for Internship, starting September 2020</h5>
                             </div>
