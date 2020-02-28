@@ -12,6 +12,7 @@ import testImage from '../../images/img (118).jpg';
 
 import bitBusterImage from "../../images/projects/bit-buster/main-face.png";
 import burstingBarrelImage from "../../images/projects/bursting-barrel/main-face.png";
+import pinballBashImage from "../../images/projects/pinball-bash/main-face.png"
 
 export default class ProfessionalProjectsContent extends React.Component {
 
@@ -88,14 +89,18 @@ export default class ProfessionalProjectsContent extends React.Component {
                     </MDBCol>
 
                     <MDBCol md="6" xl="4" className="animated fadeIn">
-                        <ProjectCard src={ testImage } alt="" title="Testing Title"
-                                     location="/TestProject"
-                                     badges={[{name: 'Languages', content: 'Primary'}, {name: 'Engine', content: 'Secondary'}, {name: 'Platforms', content: 'Danger'}]}
+                        <ProjectCard src={ pinballBashImage } alt="Pinball Bash Project" title="Pinball Bash"
+                                     location="/PinballBash"
+                                     badges={[
+                                         {name: 'Engine', content: 'Unreal Engine 4'},
+                                         {name: 'Languages', content: 'Blueprints'},
+                                         {name: 'Platforms', content: 'PC'},
+                                         {name: 'Team Size', content: '9 Person Team'},
+                                         {name: 'Duration', content: '8 Weeks'}
+                                     ]}
                         >
-                            Some super duper amazing card text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-                            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
-                            pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
-                            In enim justo, rhoncus ut
+                            Pinball Bash is a 4 player co-op game where you try to defeat the others by having deadly pin-balls hit them.
+                            You can deflect these by making walls come up from the floor to win the game.
                         </ProjectCard>
                     </MDBCol>
 
