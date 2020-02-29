@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import {BrowserRouter as Router, Redirect, Route, Switch} from "react-router-dom";
 
 import Progress from "react-progress-2";
 import "react-progress-2/main.css"
@@ -22,7 +22,8 @@ function App() {
                         <Route key={project.path} path={project.path} component={project.component}/>
                     ))}
 
-                    <Route key='default' path="/" component={PortfolioPage}/>
+                    <Route exact path="/" component={PortfolioPage}/>
+                    <Redirect to="/" />
                 </Switch>
             </Router>
 
