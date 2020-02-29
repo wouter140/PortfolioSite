@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.8.0",
-    "material-ui-dots": "^2.0.0",
     "mdbreact": "^4.23.1",
     "node-sass": "^4.13.1",
     "prop-types": "latest",
@@ -15,11 +14,8 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "^3.3.0",
     "react-scroll": "^1.7.14",
-    "react-scroll-parallax": "^2.2.0",
-    "react-slick": "^0.25.2",
     "react-visibility-sensor": "^5.1.1",
-    "react-youtube": "^7.9.0",
-    "rfs": "^8.0.4"
+    "react-youtube": "^7.9.0"
   },
   "scripts": {
     "start": "react-scripts start",

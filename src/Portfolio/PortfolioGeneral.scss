@@ -1,5 +1,3 @@
-@import "~rfs/scss";
-
 @import "./Options";
 
 #root {
@@ -50,8 +48,6 @@ body {
       strong {
         font-weight: 600;
       }
-
-      @include responsive-font-size(1.75rem, true);
     }
   }
 
