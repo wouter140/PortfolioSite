@@ -4,6 +4,7 @@ import PaintProject from "./ProjectPageComponents/PaintProject";
 import BurstingBarrelProject from "./ProjectPageComponents/BurstingBarrelProject";
 import PinballBashProject from "./ProjectPageComponents/PinballBashProject";
 import CookDontLookProject from "./ProjectPageComponents/CookDontLookProject";
+import RocketRampageProject from "./ProjectPageComponents/RocketRampageProject";
 
 export const projects = [
     {path: "/TestProject", component: TestProject},
@@ -13,4 +14,5 @@ export const projects = [
     {path: "/BurstingBarrel", component: BurstingBarrelProject},
     {path: "/PinballBash", component: PinballBashProject},
     {path: "/CookDontLook", component: CookDontLookProject},
+    {path: "/RocketRampage", component: RocketRampageProject},
 ];
