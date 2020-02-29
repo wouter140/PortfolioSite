@@ -7,7 +7,7 @@ import image from "../../images/projects/bursting-barrel/main-face.png";
 import brandImage from "../../images/projects/bursting-barrel/main-face-brand.png";
 import video from "../../content/videos/bursting-barrel/bursting-barrel-trailer.mp4";
 
-export default function PaintProject(props) {
+export default function BurstingBarrelProject(props) {
     return (
         <ProjectPage
             title="Bursting Barrel"
