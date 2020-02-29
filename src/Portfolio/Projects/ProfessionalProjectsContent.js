@@ -107,7 +107,7 @@ export default class ProfessionalProjectsContent extends React.Component {
                     </MDBCol>
 
                     <MDBCol md="6" xl="4" className="extra-project-md">
-                        <ProjectCard src={ cookDontLookImage } alt="Bursting Barrel Project" title="Bursting Barrel"
+                        <ProjectCard src={ cookDontLookImage } alt="Cook Don't Look Project" title="Cook Don't Look"
                                      location="/CookDontLook"
                                      badges={[
                                          {name: 'Engine', content: 'Unity3D'},
