@@ -1,0 +1,5 @@
+{
+    "ignoredFiles": [
+        "*.svg",                   // Are inserted into javascript and then whitespace is compressed anyway
+    ],
+}
