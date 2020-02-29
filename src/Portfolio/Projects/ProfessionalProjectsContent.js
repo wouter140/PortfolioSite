@@ -12,7 +12,11 @@ import testImage from '../../images/img (118).jpg';
 
 import bitBusterImage from "../../images/projects/bit-buster/main-face.png";
 import burstingBarrelImage from "../../images/projects/bursting-barrel/main-face.png";
-import pinballBashImage from "../../images/projects/pinball-bash/main-face.png"
+import pinballBashImage from "../../images/projects/pinball-bash/main-face.png";
+import cookDontLookImage from "../../content/cook-dont-look/images/main-face.jpg";
+
+
+import ProjectPage from "../../ProjectPages/components/ProjectPage";
 
 export default class ProfessionalProjectsContent extends React.Component {
 
@@ -105,14 +109,17 @@ export default class ProfessionalProjectsContent extends React.Component {
                     </MDBCol>
 
                     <MDBCol md="6" xl="4" className="extra-project-md">
-                        <ProjectCard src={ testImage } alt="" title="Testing Title"
-                                     location="/TestProject"
-                                     badges={[{name: 'Languages', content: 'Primary'}, {name: 'Engine', content: 'Secondary'}, {name: 'Platforms', content: 'Danger'}]}
+                        <ProjectCard src={ cookDontLookImage } alt="Bursting Barrel Project" title="Bursting Barrel"
+                                     location="/CookDontLook"
+                                     badges={[
+                                         {name: 'Engine', content: 'Unity3D'},
+                                         {name: 'Languages', content: 'C#'},
+                                         {name: 'Platforms', content: 'Gear VR'},
+                                         {name: 'Team Size', content: '9 Person Team'},
+                                         {name: 'Duration', content: '2 Weeks'}
+                                     ]}
                         >
-                            Some super duper amazing card text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-                            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
-                            pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
-                            In enim justo, rhoncus ut
+                            Cook Don't Look is Gear VR game where the player has to prepare food and make it perfect quality. To cook the food you look away from it, but have to make sure it does not overcook!
                         </ProjectCard>
                     </MDBCol>
 
