@@ -1,3 +1,5 @@
+@import "../../Portfolio/Options";
+
 .project-page-navbar {
   transition: padding .3s cubic-bezier(0, 0, 0, 1);
   padding-top: 5px;
@@ -14,25 +16,41 @@
       }
     }
   }
+  .project-page-navtitle-container {
+    width: 90vw;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
 
-  .project-title-nav {
-    top: 3.5rem;
-    transition: .3s cubic-bezier(0, 0, 0, 1);
-    position: absolute;
-    width: 85vw;
-    width: calc(90vw - 3rem);
-    text-align: center;
-    z-index: -1;
-
-    &.show {
-      top: 0 !important;
+    @media (min-width: $breakpoint-big-tablet) {
+      padding: 0 1.5rem;
     }
-    &.enlarge-padding {
-      padding-top: 7px;
-      padding-bottom: 7px;
+
+    .project-title-nav {
+      top: 3.5rem;
+      transition: .3s cubic-bezier(0, 0, 0, 1);
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      z-index: -1;
+
+      &.show {
+        top: -12px !important;
+      }
+
+      &.enlarge-padding {
+        padding-top: 7px;
+        padding-bottom: 7px;
+      }
     }
   }
 }
+
+
 
 .enlarge-padding {
   padding-top: 12px;
