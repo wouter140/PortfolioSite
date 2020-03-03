@@ -137,7 +137,7 @@ export default class ProfessionalProjectsContent extends React.Component {
                         </ProjectCard>
                     </MDBCol>
 
-                    <MDBCol md="6" xl="4" className="extra-project">
+                    <MDBCol md="6" xl="4" className="extra-project d-none">
                         <ProjectCard src={ testImage } alt="" title="Testing Title"
                                      location="/TestProject"
                                      badges={[{name: 'Languages', content: 'Primary'}, {name: 'Engine', content: 'Secondary'}, {name: 'Platforms', content: 'Danger'}]}
@@ -148,17 +148,7 @@ export default class ProfessionalProjectsContent extends React.Component {
                             In enim justo, rhoncus ut
                         </ProjectCard>
                     </MDBCol>
-
-                    <MDBCol md="6" xl="4" className="extra-project">
-                        <ProjectCard src={ testImage } alt="" title="Testing Title"
-                                     location="/TestProject"
-                                     badges={[{name: 'Languages', content: 'Primary'}, {name: 'Engine', content: 'Secondary'}, {name: 'Platforms', content: 'Danger'}]}
-                        >
-                            Some super duper amazing card text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-                            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
-                            pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
-                            In enim justo, rhoncus ut
-                        </ProjectCard>
+                    <MDBCol md="6" xl="8" className="extra-project">
                     </MDBCol>
 
                     <MDBCol className="d-flex flex-center">
