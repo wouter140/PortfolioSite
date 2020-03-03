@@ -10,6 +10,7 @@ import "./ProjectSpecific.scss";
 
 import testImage from '../../images/img (118).jpg';
 
+import paintImage from "../../content/paint/images/main_face.jpg";
 import bitBusterImage from "../../images/projects/bit-buster/main-face.png";
 import burstingBarrelImage from "../../images/projects/bursting-barrel/main-face.png";
 import pinballBashImage from "../../images/projects/pinball-bash/main-face.png";
@@ -43,7 +44,7 @@ export default class ProfessionalProjectsContent extends React.Component {
                 <div className="d-flex flex-wrap justify-content-start container">
 
                     <MDBCol lg="6" className="animated fadeIn">
-                        <ProjectCard src={ testImage } alt="" title="P.A.I.N.T."
+                        <ProjectCard src={ paintImage } alt="" title="P.A.I.N.T."
                                      location="/Paint"
                                      badges={[
                                          {name: 'Engine', content: 'Unreal Engine 4', title: "Engine"},

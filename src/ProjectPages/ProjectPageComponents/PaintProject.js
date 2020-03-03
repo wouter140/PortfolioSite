@@ -1,10 +1,10 @@
 import * as React from "react";
 
-import image from "../../images/projects/bit-buster/main-face.png";
+import image from "../../content/paint/images/main_face.jpg";
 
 import ProjectPage from "../components/ProjectPage";
 
-import video from "../../content/videos/bit-buster/bit-buster-trailer.mp4";
+// import video from "../../content/videos/bit-buster/bit-buster-trailer.mp4";
 import {ProjectInfoTable} from "../components/InfoTables";
 
 export default function PaintProject(props) {
@@ -13,9 +13,9 @@ export default function PaintProject(props) {
             title="P.A.I.N.T."
             imageURL={image}
             // videoID="U-mC90Tu5SM"
-            videoSource={[
-                {src: video, type: "video/mp4"}
-            ]}
+            // videoSource={[
+            //     {src: video, type: "video/mp4"}
+            // ]}
         >
             P.A.I.N.T. is a comedic, paintball inspired, shooter where you defeat the evil corporations that are trying to suppress color.
 
