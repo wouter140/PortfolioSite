@@ -18,7 +18,10 @@ export default class ProjectPage extends React.Component {
             top: 0,
             titleVisible: true,
             videoReady: false,
+            fullyOpened: false,
         };
+
+        this.videoComponentRef = React.createRef();
     }
 
     componentDidMount() {
@@ -33,22 +36,21 @@ export default class ProjectPage extends React.Component {
     }
 
     render() {
+        let videoHeight = "70vh";
+        if(this.videoComponentRef.current && this.videoComponentRef.current.video.current)
+            videoHeight = this.videoComponentRef.current.video.current.getBoundingClientRect().height;
+
         return (
             <React.Fragment>
                 <header className='position-absolute'>
                     <PortfolioNavBar title={ this.props.title.toUpperCase() } projectTitleVisible={ this.state.titleVisible } />
                 </header>
                 <div className="project-page-container" style={{minHeight: "100vh", marginTop: "3rem"}}>
-                    <div className="img-transition d-inline-block overflow-hidden"
+                    <div className="img-transition d-inline-block overflow-hidden position-relative"
                          style={{
                              backgroundImage: "url(\"" + this.props.imageURL + "\")",
-                             height: "70vh",
-                             width: "100%",
-                             backgroundSize: "cover",
-                             backgroundRepeat: "no-repeat",
-                             backgroundPosition: "center",
-                             position: "absolute",
-                             top: this.state.top / 3
+                             top: this.state.top / 3,
+                             height: this.state.fullyOpened? videoHeight : null,
                          }}
                     >
                         {this.props.brandImageURL && (
@@ -64,18 +66,21 @@ export default class ProjectPage extends React.Component {
                                                 width={window.innerWidth} height={window.innerHeight * .7} />
                         )}
                         { this.props.videoSource && (
-                            <InlineVideo className="position-relative w-100 h-100 d-flex"
+                            <InlineVideo ref={ this.videoComponentRef }
+                                         className="position-absolute w-100 h-100 d-flex"
                                          sources={ this.props.videoSource }
                                          parallaxTop={ this.state.top / 3 }
+                                         fullyOpened={this.state.fullyOpened}
+                                         FoldToggleOpen={ (state) => this.setState({fullyOpened: state}) }
                             />
                         )}
                     </div>
 
-                    <div style={{
-                        position: "relative",
-                        height: "62vh",
-                        zIndex: -1,
-                    }} />
+                    {/*<div style={{*/}
+                    {/*    position: "relative",*/}
+                    {/*    height: "62vh",*/}
+                    {/*    zIndex: -1,*/}
+                    {/*}} />*/}
 
                     <div className="card-body text-center card-body-cascade"
                          style={{
@@ -86,6 +91,7 @@ export default class ProjectPage extends React.Component {
                             minHeight: "38vh",
                             backgroundColor: "white",
                             boxShadow: "0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15)",
+                            top: "-1.25rem"
                         }}
                     >
                         <VisibilitySensor onChange={(visible) => this.setState({titleVisible: visible})}>
