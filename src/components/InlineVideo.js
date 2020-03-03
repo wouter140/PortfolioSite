@@ -23,6 +23,15 @@ export default class InlineVideo extends Component {
                     break;
             }
         }
+
+        document.addEventListener('fullscreenchange', () => {
+            if (document.fullscreenElement) {
+                this.setState({isFullscreen: true});
+            } else {
+                this.setState({isFullscreen: false});
+            }
+        });
+
         this.video = React.createRef();
         this.videoContainerRef = React.createRef();
     }
@@ -51,20 +60,16 @@ export default class InlineVideo extends Component {
         this.setState({playing: false});
     }
 
-    ToggleFullscreen(state) {
-        if(!state)
-            state = !this.state.isFullscreen;
+    ToggleFullscreen(openFullscreen) {
+        if(openFullscreen === undefined)
+            openFullscreen = !this.state.isFullscreen;
 
-        if(state) {
+        if(openFullscreen) {
             if(this.videoContainerRef.current) {
-                this.videoContainerRef.current.requestFullscreen().then(r => {
-                    this.setState({isFullscreen: true});
-                });
+                this.videoContainerRef.current.requestFullscreen();
             }
         } else {
-            document.exitFullscreen().then(r => {
-                this.setState({isFullscreen: false});
-            });
+            document.exitFullscreen();
         }
     }
 
