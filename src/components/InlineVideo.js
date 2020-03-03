@@ -138,17 +138,21 @@ export default class InlineVideo extends Component {
                                      onClick={ this.ToggleFullscreen.bind(this, true) }>
                                     <path d="M6 14c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1h3c.55 0 1-.45 1-1s-.45-1-1-1H7v-2c0-.55-.45-1-1-1zm0-4c.55 0 1-.45 1-1V7h2c.55 0 1-.45 1-1s-.45-1-1-1H6c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1zm11 7h-2c-.55 0-1 .45-1 1s.45 1 1 1h3c.55 0 1-.45 1-1v-3c0-.55-.45-1-1-1s-1 .45-1 1v2zM14 6c0 .55.45 1 1 1h2v2c0 .55.45 1 1 1s1-.45 1-1V6c0-.55-.45-1-1-1h-3c-.55 0-1 .45-1 1z"/>
                                 </svg>
-                                
-                                { this.props.fullyOpened ? (
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className={ "fold-close-project-video video-control-option float-right " + this.props.foldCloseClassName }
-                                         onClick={ () => this.props.FoldToggleOpen(false) }>
-                                        <path d="M8.12 19.3c.39.39 1.02.39 1.41 0L12 16.83l2.47 2.47c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41l-3.17-3.17c-.39-.39-1.02-.39-1.41 0l-3.17 3.17c-.4.38-.4 1.02-.01 1.41zm7.76-14.6c-.39-.39-1.02-.39-1.41 0L12 7.17 9.53 4.7c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.03 0 1.42l3.17 3.17c.39.39 1.02.39 1.41 0l3.17-3.17c.4-.39.4-1.03.01-1.42z"/>
-                                    </svg>
-                                ) : (
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className={ "fold-open-project-video video-control-option float-right " + this.props.foldOpenClassName }
-                                         onClick={ () => this.props.FoldToggleOpen(true) }>
-                                        <path d="M12 5.83l2.46 2.46c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L12.7 3.7c-.39-.39-1.02-.39-1.41 0L8.12 6.88c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L12 5.83zm0 12.34l-2.46-2.46c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l3.17 3.18c.39.39 1.02.39 1.41 0l3.17-3.17c.39-.39.39-1.02 0-1.41-.39-.39-1.02-.39-1.41 0L12 18.17z"/>
-                                    </svg>
+
+                                { this.props.supportsHeightOpen && (
+                                    <React.Fragment>
+                                        { this.props.fullyOpened ? (
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className={ "fold-close-project-video video-control-option float-right " + this.props.foldCloseClassName }
+                                                 onClick={ () => this.props.FoldToggleOpen(false) }>
+                                                <path d="M8.12 19.3c.39.39 1.02.39 1.41 0L12 16.83l2.47 2.47c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41l-3.17-3.17c-.39-.39-1.02-.39-1.41 0l-3.17 3.17c-.4.38-.4 1.02-.01 1.41zm7.76-14.6c-.39-.39-1.02-.39-1.41 0L12 7.17 9.53 4.7c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.03 0 1.42l3.17 3.17c.39.39 1.02.39 1.41 0l3.17-3.17c.4-.39.4-1.03.01-1.42z"/>
+                                            </svg>
+                                        ) : (
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className={ "fold-open-project-video video-control-option float-right " + this.props.foldOpenClassName }
+                                                 onClick={ () => this.props.FoldToggleOpen(true) }>
+                                                <path d="M12 5.83l2.46 2.46c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L12.7 3.7c-.39-.39-1.02-.39-1.41 0L8.12 6.88c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L12 5.83zm0 12.34l-2.46-2.46c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l3.17 3.18c.39.39 1.02.39 1.41 0l3.17-3.17c.39-.39.39-1.02 0-1.41-.39-.39-1.02-.39-1.41 0L12 18.17z"/>
+                                            </svg>
+                                        )}
+                                    </React.Fragment>
                                 )}
                             </React.Fragment>
                         )}
@@ -165,12 +169,14 @@ InlineVideo.propTypes = {
     sources: PropTypes.array.isRequired,
     pauseClassName: PropTypes.string,
     playClassName: PropTypes.string,
-    showOnCanPlay: PropTypes.bool
+    showOnCanPlay: PropTypes.bool,
+    supportsHeightOpen: PropTypes.bool,
 };
 InlineVideo.defaultProps = {
     muted: true,
     showOnCanPlay: true,
     className: "",
     pauseClassName: "",
-    playClassName: ""
+    playClassName: "",
+    supportsHeightOpen: true,
 };

@@ -18,6 +18,7 @@ export default class LandingPageContent extends React.Component {
                         sources={[
                             {src: video, type: "video/mp4"}
                         ]}
+                        supportsHeightOpen={false}
                     />
 
                     <div className='inner-page-content-container py-4'>
