@@ -7,8 +7,8 @@
 
   form {
 
-    .btn[type=submit] {
-      float: right;
+    .submit-button {
+      right: 0;
     }
 
     margin: 0;
@@ -18,8 +18,9 @@
     @media (min-width: $breakpoint-big-tablet) {
       margin: 0 10%;
 
-      .btn[type=submit] {
-        float: unset;
+      .submit-button {
+        left: 0;
+        right: unset !important;
       }
     }
   }

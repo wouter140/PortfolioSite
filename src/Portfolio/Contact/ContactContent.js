@@ -136,23 +136,25 @@ export default class ContactContent extends React.Component {
                     <div style={{height: "3.6rem"}}>
 
                         <div className="d-block position-relative">
-                            <MDBBtn color="success" type="submit" disabled={ this.state.sendingEmail }>
-                                <MDBIcon icon="paper-plane" />
-                                <span className="ml-2">Send Message</span>
-                            </MDBBtn>
-                            <Fade
-                                in={this.state.sendingEmail}
-                                style={{
-                                    transitionDelay: this.state.sendingEmail ? '200ms' : '0ms',
-                                }}
-                                unmountOnExit
-                            >
-                                {this.state.successEmail ? (
-                                    <MDBIcon icon="check" className="send-email-success" />
-                                ) : (
-                                    <CircularProgress size={24} thickness={3.6} className="send-email-loader" />
-                                ) }
-                            </Fade>
+                            <div className="d-block position-absolute submit-button">
+                                <MDBBtn color="success" type="submit" disabled={ this.state.sendingEmail }>
+                                    <MDBIcon icon="paper-plane" />
+                                    <span className="ml-2">Send Message</span>
+                                </MDBBtn>
+                                <Fade
+                                    in={this.state.sendingEmail}
+                                    style={{
+                                        transitionDelay: this.state.sendingEmail ? '200ms' : '0ms',
+                                    }}
+                                    unmountOnExit
+                                >
+                                    {this.state.successEmail ? (
+                                        <MDBIcon icon="check" className="send-email-success" />
+                                    ) : (
+                                        <CircularProgress size={24} thickness={3.6} className="send-email-loader" />
+                                    ) }
+                                </Fade>
+                            </div>
                         </div>
                     </div>
 
