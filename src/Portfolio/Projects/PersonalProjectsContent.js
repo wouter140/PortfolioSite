@@ -1,6 +1,7 @@
 import React from 'react';
 
-import {MDBBtn, MDBCol, MDBIcon} from "mdbreact";
+// import {MDBBtn, MDBCol, MDBIcon} from "mdbreact";
+import {MDBCol} from "mdbreact";
 
 import ContentContainer from "../../components/ContentContainer";
 import ProjectCard from "./components/ProjectCard";
