@@ -23,7 +23,7 @@ export default class Footer extends React.Component {
         return (
             <SimpleFooter>
 
-                <div className="text-center mb-4 social-buttons-text-large pt-4">
+                <div className="text-center py-4 social-buttons-text-large">
 
                     <MDBBtn tag="a" social="li" href="https://www.linkedin.com/in/woutergrutter/" target="_blank" rel="noopener noreferrer"
                         title="LinkedIn">
@@ -52,7 +52,7 @@ export default class Footer extends React.Component {
 
                 </div>
 
-                <div className="text-center mb-4 social-buttons-small-round">
+                <div className="text-center py-3 social-buttons-small-round">
 
                     <MDBBtn tag="a" size="lg" social="li" className="btn-floating" href="https://www.linkedin.com/in/woutergrutter/" target="_blank" rel="noopener noreferrer"
                         title="LinkedIn">
