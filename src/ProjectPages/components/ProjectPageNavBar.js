@@ -1,14 +1,14 @@
 import React from "react";
 
 import {MDBIcon, MDBNavbar, MDBNavbarBrand} from "mdbreact";
+import Fab from "@material-ui/core/Fab";
+import Tooltip from "@material-ui/core/Tooltip";
+import Zoom from "@material-ui/core/Zoom";
 
 import {Link} from "react-router-dom";
 import {animateScroll} from "react-scroll";
 
 import "./ProjectPageNavBar.scss";
-import Fab from "@material-ui/core/Fab";
-import Tooltip from "@material-ui/core/Tooltip";
-import Zoom from "@material-ui/core/Zoom";
 
 export default function PortfolioNavBar(props) {
     return (
@@ -32,18 +32,17 @@ export default function PortfolioNavBar(props) {
                     </h1>
                 </div>
             </MDBNavbar>
-                <Zoom
-                    in={!props.projectTitleVisible}
-                    timeout={500}
-                    unmountOnExit
-                >
-                    <Tooltip title="Scroll to top" aria-label="Scroll to top" placement="top" className="btn-floating floating-fixed-br">
-                        <Fab color="primary" aria-label="To top" size="medium" onClick={ () => animateScroll.scrollToTop({duration: 500}) }>
-                            <MDBIcon icon="arrow-up" />
-                        </Fab>
-                    </Tooltip>
-                </Zoom>
-
+            <Zoom
+                in={!props.projectTitleVisible}
+                timeout={500}
+                unmountOnExit
+            >
+                <Tooltip title="Scroll to top" aria-label="Scroll to top" placement="top" className="btn-floating floating-fixed-br">
+                    <Fab color="primary" aria-label="To top" size="medium" onClick={ () => animateScroll.scrollToTop({duration: 500}) }>
+                        <MDBIcon icon="arrow-up" />
+                    </Fab>
+                </Tooltip>
+            </Zoom>
         </React.Fragment>
     );
 }

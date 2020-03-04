@@ -14,6 +14,7 @@ import ContactContent from "./Contact/ContactContent";
 import ProfilePicture from "../images/profilepicture.jpg";
 
 import "./PortfolioGeneral.scss"
+import VisibilitySensor from "react-visibility-sensor";
 
 export default class PortfolioPage extends Component {
 
@@ -26,7 +27,8 @@ export default class PortfolioPage extends Component {
             imageURL: "",
             containerStyle: {},
 
-            projectOverlayTransition: false
+            projectOverlayTransition: false,
+            ladingPageVisible: false
         }
     }
 
@@ -62,9 +64,13 @@ export default class PortfolioPage extends Component {
                 </Helmet>
 
                 <header>
-                    <PortfolioNavBar />
+                    <PortfolioNavBar showScrollToTop={ !this.state.ladingPageVisible } />
 
-                    <LandingPageContent />
+                    <VisibilitySensor offset={{top: -(window.innerHeight / 2)}}
+                                      onChange={(visible) => this.setState({ladingPageVisible: visible})}
+                    >
+                        <LandingPageContent />
+                    </VisibilitySensor>
                 </header>
 
                 <AboutContent />
