@@ -3,8 +3,8 @@ import * as React from "react";
 import ProjectPage from "../components/ProjectPage";
 import {ProjectInfoTable} from "../components/InfoTables";
 
-import image from "../../images/projects/bit-buster/main-face.png";
-import video from "../../content/videos/bit-buster/bit-buster-trailer.mp4";
+import image from "../../content/bit-buster/images/main-face.png";
+import video from "../../content/bit-buster/videos/bit-buster-trailer.mp4";
 
 export default function BitBusterProject(props) {
     return (

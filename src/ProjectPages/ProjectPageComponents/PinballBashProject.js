@@ -1,10 +1,10 @@
 import * as React from "react";
 
-import image from "../../images/projects/pinball-bash/main-face.png";
+import image from "../../content/pinball-bash/images/main-face.png";
 
 import ProjectPage from "../components/ProjectPage";
 
-import video from "../../content/videos/pinball-bash/pinball-bash-trailer.mp4";
+import video from "../../content/pinball-bash/videos/pinball-bash-trailer.mp4";
 import {ProjectInfoTable} from "../components/InfoTables";
 
 export default function PinballBashProject(props) {

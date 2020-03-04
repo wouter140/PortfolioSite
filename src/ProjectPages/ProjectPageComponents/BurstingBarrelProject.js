@@ -3,9 +3,9 @@ import React from "react";
 import ProjectPage from "../components/ProjectPage";
 import {ProjectInfoTable} from "../components/InfoTables";
 
-import image from "../../images/projects/bursting-barrel/main-face.png";
-import brandImage from "../../images/projects/bursting-barrel/main-face-brand.png";
-import video from "../../content/videos/bursting-barrel/bursting-barrel-trailer.mp4";
+import image from "../../content/bursting-barrel/images/main-face.png";
+import brandImage from "../../content/bursting-barrel/images/main-face-brand.png";
+import video from "../../content/bursting-barrel/videos/bursting-barrel-trailer.mp4";
 
 export default function BurstingBarrelProject(props) {
     return (

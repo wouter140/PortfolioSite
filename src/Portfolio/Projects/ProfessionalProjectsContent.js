@@ -11,9 +11,9 @@ import "./ProjectSpecific.scss";
 import testImage from '../../images/img (118).jpg';
 
 import paintImage from "../../content/paint/images/main_face.jpg";
-import bitBusterImage from "../../images/projects/bit-buster/main-face.png";
-import burstingBarrelImage from "../../images/projects/bursting-barrel/main-face.png";
-import pinballBashImage from "../../images/projects/pinball-bash/main-face.png";
+import bitBusterImage from "../../content/bit-buster/images/main-face.png";
+import burstingBarrelImage from "../../content/bursting-barrel/images/main-face.png";
+import pinballBashImage from "../../content/pinball-bash/images/main-face.png";
 import cookDontLookImage from "../../content/cook-dont-look/images/main-face.jpg";
 import rocketRampageImage from "../../content/rocket-rampage/images/main-face.jpg";
 
