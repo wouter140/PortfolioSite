@@ -5,6 +5,7 @@ import {MDBBtn, MDBIcon, MDBInput} from "mdbreact";
 import "./ContactContent.scss"
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Fade from "@material-ui/core/Fade";
+import {bugsnagClient} from "../../Bugsnag";
 
 export default class ContactContent extends React.Component {
 
@@ -46,29 +47,12 @@ export default class ContactContent extends React.Component {
         event.preventDefault();
         this.formRef.current.className += " was-validated";
 
-        // this.setState({sendingEmail: true, successEmail: false});
-        // setTimeout(() => {
-        //     this.setState({
-        //         name: "",
-        //         email: "",
-        //         phoneNr: "",
-        //         company: "",
-        //         message: "",
-        //
-        //         successEmail: true
-        //     });
-        //     this.formRef.current.className = this.formRef.current.className.replace(" was-validated", "");
-        //     setTimeout(() => {
-        //         this.setState({
-        //             sendingEmail: false,
-        //             successEmail: false
-        //         });
-        //     }, 2500);
-        // }, 2500);
-
         // Check if the form has all valid values so we can send the mail.
         if(this.formRef.current.checkValidity()) {
             this.setState({sendingEmail: true, successEmail: false});
+
+            bugsnagClient.leaveBreadcrumb('Contact Information Send', this.state);
+
             ContactContent.postData('/API/Mail', this.state)
                 .then(data => {
                     JSON.stringify(data); // JSON-string from `response.json()` call
@@ -94,7 +78,14 @@ export default class ContactContent extends React.Component {
                 })
                 .catch(error => {
                     console.error(error);
-                    // this.setState({sendingEmail: false});
+
+                    //TODO: Error message
+
+                    setTimeout(() => {
+                        this.setState({sendingEmail: false});
+                    }, 250);
+
+                    bugsnagClient.notify("Contact request send error: " + JSON.stringify(error));
                 });
         }
     };
