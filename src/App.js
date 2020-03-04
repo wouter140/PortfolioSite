@@ -8,9 +8,11 @@ import PortfolioPage from "./Portfolio/PortfolioPage";
 import {projects} from "./ProjectPages/ProjectPages";
 import LocationChangeScrollHandler from "./components/ScrollToTop";
 
+import {ErrorBoundary} from "./Bugsnag";
+
 function App() {
     return (
-        <React.Fragment>
+        <ErrorBoundary>
             <Progress.Component thumbStyle={{background: 'rgb(75,75,179)'}}/>
 
             <Router>
@@ -24,7 +26,7 @@ function App() {
                     <Redirect to="/" />
                 </Switch>
             </Router>
-        </React.Fragment>
+        </ErrorBoundary>
     );
 }
 
