@@ -34,7 +34,7 @@ export default class ProjectCard extends React.Component {
 
         return (
             <MDBCard className={className}>
-                <div>
+                <div className="hoverable">
                     <Link to={ this.props.location }>
                         <MDBCardImage tag='div' waves src=" " overlay={false}>
                             <div className="project-image-container" ref={ this.imageRef }>
