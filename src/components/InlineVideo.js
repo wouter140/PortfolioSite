@@ -17,10 +17,6 @@ export default class InlineVideo extends Component {
                 case "none":
                     this.autoPlay = false;
                     break;
-
-                // case "wimax":
-                // case "other":
-                // case "unknown":
                 default:
                     break;
             }

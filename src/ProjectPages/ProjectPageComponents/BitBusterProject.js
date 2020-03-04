@@ -6,7 +6,7 @@ import {ProjectInfoTable} from "../components/InfoTables";
 import image from "../../content/bit-buster/images/main-face.png";
 import video from "../../content/bit-buster/videos/bit-buster-trailer.mp4";
 
-export default function BitBusterProject(props) {
+export default function BitBusterProject() {
     return (
         <ProjectPage
             title="Bit-Buster"
@@ -28,7 +28,9 @@ export default function BitBusterProject(props) {
                   languages="C++"
                   targetPlatforms="PC (Itch.io)"
                   release={(
-                      <a href="https://igad.itch.io/bitbuster" target="_blank" rel="noopener noreferrer" style={{color: "#007bff"}}>Released on Itch.io</a>
+                      <a href="https://igad.itch.io/bitbuster" target="_blank" rel="noopener noreferrer" style={{color: "#007bff"}}>
+                          Released on Itch.io
+                      </a>
                   )}
             />
 
