@@ -10,7 +10,7 @@ import "./ProjectSpecific.scss";
 
 import testImage from '../../images/img (118).jpg';
 
-import paintImage from "../../content/paint/images/main_face.jpg";
+import paintImage from "../../content/paint/images/main_face.png";
 import bitBusterImage from "../../content/bit-buster/images/main-face.png";
 import burstingBarrelImage from "../../content/bursting-barrel/images/main-face.png";
 import pinballBashImage from "../../content/pinball-bash/images/main-face.png";

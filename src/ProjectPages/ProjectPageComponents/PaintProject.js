@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import image from "../../content/paint/images/main_face.jpg";
+import image from "../../content/paint/images/main_face.png";
 
 import ProjectPage from "../components/ProjectPage";
 
