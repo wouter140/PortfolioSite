@@ -6,6 +6,25 @@ import {ProjectInfoTable} from "../components/InfoTables";
 import image from "../../content/bit-buster/images/main-face.png";
 import video from "../../content/bit-buster/videos/bit-buster-trailer.mp4";
 
+function Carousel(props) {
+    return <div className="col col-6 col-lg-5">
+        <div className="warning-color w-100 h-100 flex-center">TODO: Carousel</div>
+    </div>;
+}
+
+function WorkItemWithCarousel(props) {
+    const carouselBefore = 'carouselBefore' in props && props.carouselBefore;
+
+    return <div className="row py-3">
+        { carouselBefore && <Carousel/> }
+        <div className={"col col-6 col-lg-7 " + (carouselBefore ? "pl-2" : "pr-2")}>
+            <h5 className="mt-4 font-weight-normal">{props.title}</h5>
+            { props.children }
+        </div>
+        { !carouselBefore && <Carousel/> }
+    </div>;
+}
+
 export default function BitBusterProject() {
     return (
         <ProjectPage
@@ -16,64 +35,91 @@ export default function BitBusterProject() {
                 {src: video, type: "video/mp4"}
             ]}
         >
-            Bit-Buster is a cooperative 2-player (with single-player option) shooter where both players share a single projectile to defeat the enemies and complete the objective.<br/>
-            In Bit-Buster you get thrown into a steampunk-inspired Japan, that got overrun by yokai - Japanese spirits. By passing a deadly disk between each other, you can blaze through any enemy or obstacle that shows up in your way.<br/>
-            The levels are highly destructible and built completely out of voxels to allow for complete mayhem and destruction of the levels and enemies. This, together with physics, makes for dynamic gameplay where every action in the game impacts the world in a unique way.
+            Bit-Buster is a cooperative 2-player (with single-player option) shooter where both players share a single
+            projectile to defeat the enemies and complete the objective.<br/>
+            In Bit-Buster you get thrown into a steampunk-inspired Japan, that got overrun by yokai - Japanese spirits.
+            By passing a deadly disk between each other, you can blaze through any enemy or obstacle that shows up in
+            your way.<br/>
+            The levels are highly destructible and built completely out of voxels to allow for complete mayhem and
+            destruction of the levels and enemies. This, together with physics, makes for dynamic gameplay where every
+            action in the game impacts the world in a unique way.
 
             <ProjectInfoTable
-                  engine="Custom C++ Voxel Engine (Voxagen)"
-                  developmentTime="8 Weeks"
-                  teamSize="25 People (9 Programmer, 9 Designers, 7 Artists and a Producer)"
-                  roles="Engine Programmer, UI Programmer, Tools Programmer"
-                  languages="C++"
-                  targetPlatforms="PC (Itch.io)"
-                  release={(
-                      <a href="https://igad.itch.io/bitbuster" target="_blank" rel="noopener noreferrer" style={{color: "#007bff"}}>
-                          Released on Itch.io
-                      </a>
-                  )}
+                engine="Custom C++ Voxel Engine (Voxagen)"
+                developmentTime="8 Weeks"
+                teamSize="25 People (9 Programmer, 9 Designers, 7 Artists and a Producer)"
+                roles="Engine Programmer, UI Programmer, Tools Programmer"
+                languages="C++"
+                targetPlatforms="PC (Itch.io)"
+                release={(
+                    <a href="https://igad.itch.io/bitbuster" target="_blank" rel="noopener noreferrer"
+                       style={{color: "#007bff"}}>
+                        Released on Itch.io
+                    </a>
+                )}
             />
 
-            <h4 className="text-white primary-color p-3">My Work</h4>
+            <h4 className="text-white primary-color p-3">Contribution Highlights</h4>
+            <ul className="mt-3">
+                <li>Designed & developed the entire UI systems in the custom C++ Engine.</li>
+                <li>Created in-engine tools for adding, controlling and editing UI elements, using my UI systems.</li>
+                <li>Implemented the designed in-game UI into our game.</li>
+                <li>Helped with reviewing and fixing bugs from various parts of the engine and game.</li>
+            </ul>
 
-            <h5 className="mt-4 font-weight-normal">UI Engine System</h5>
-            <p className="mb-2">
-                In Bit-Buster, I created the UI system inside the custom engine.
-                When I joined the team, the custom engine was already quite far in development. However, it was lacking any in-game UI systems.
-            </p>
-            <p>
-                For the UI system, I started creating the backbone that would handle all the input for the UI elements, focus and button presses.
-                This system is called the canvas and should be the parent object in the game for all the other UI elements.
-                I also implemented a base class that handles most UI element events and actions.
-                All the final UI objects eventually inherit from the base UI element to be controlled in-game through the engine.
-            </p>
+            <h4 className="text-white primary-color mt-5 p-3">My Work</h4>
 
-            <h6 className="font-weight-normal">UI Text</h6>
-            <p>
-                One of the UI elements I created was text. As text is quite important in any game to communicate with the user, this was the first element I created.
+            <WorkItemWithCarousel
+                title="UI Systems"
+            >
+                <p>
+                    When I joined the Voxagen engine team we were missing UI systems in the engine.
+                    I implemented these systems to allow us to add:
+                    <ul>
+                        <li>Text, with options for font and size.</li>
+                        <li>Buttons, with callbacks for user interactions and controller navigation support</li>
+                        <li>Images</li>
+                        <li>Sliders, which doubles as a progress bar.
+                            The slider has support for a controller to change the value and callbacks for when the
+                            value has changed.
+                        </li>
+                    </ul>
+                    For the buttons and sliders I implemented functionality for navigating through a menu with a
+                    controller.
+                </p>
+            </WorkItemWithCarousel>
 
-            </p>
+            <WorkItemWithCarousel
+                title="UI Tools"
+                carouselBefore
+            >
+                <p>
+                    Voxagen also has a custom build-in editor.
+                    I developed the editor tools for adding, controlling and editing the UI systems inside the
+                    editor.
+                </p>
+                <p>
+                    My tools make sure to serialize the systems properly, using the existing serializer to save and
+                    load the
+                    settings and values in the editor and for inside the game.
+                </p>
+                <p>
+                    As with any tool that will is used by others, I worked with my team and UI designers to make
+                    sure they were
+                    able to properly use my tools.
+                    I made sure to explain how everything works, get feedback on the implementations, and iterate on
+                    the systems
+                    to improve and polish the final version.
+                </p>
+            </WorkItemWithCarousel>
 
-            <h6 className="font-weight-normal">UI Button</h6>
-            <p>
-                I also buildt the Button UI element. Buttons are next to text very important to have in any game to be able to have user interaction with menu's.
-            </p>
-
-            <h6 className="font-weight-normal">UI Slider</h6>
-            <p>
-                Another UI element I developed is a Slider. As we had planned to implement settings in our game, a slider would be very useful for settings like audio.
-                To optimize the implementation time of the slider, I also made it possible to be a progress bar. These are used in-game in various places like the player HUD.
-            </p>
-
-            <h5 className="mt-4 font-weight-normal">UI Development Tools</h5>
-            <p>
-                For the UI system, I also implemented the in-engine tools for adding, controlling and editing these.
-            </p>
-
-            <h5 className="mt-4 font-weight-normal">UI Implementations</h5>
-            <p>
-                Next to creating the actual UI system in the engine, I also implemented various UI systems and elements in the game.
-            </p>
+            <WorkItemWithCarousel
+                title="UI Implementation"
+            >
+                <p>
+                    For Bit-Buster I partially implemented the UI.
+                </p>
+            </WorkItemWithCarousel>
 
         </ProjectPage>
     )
