@@ -1,5 +1,7 @@
 import React from "react";
 
+import {useScrollPosition} from "../../hooks/ScrollHook";
+
 import {MDBIcon, MDBNavbar, MDBNavbarBrand} from "mdbreact";
 import Fab from "@material-ui/core/Fab";
 import Tooltip from "@material-ui/core/Tooltip";
@@ -11,6 +13,8 @@ import {animateScroll} from "react-scroll";
 import "./ProjectPageNavBar.scss";
 
 export default function PortfolioNavBar(props) {
+    const scrollPosition = useScrollPosition();
+
     return (
         <React.Fragment>
             <MDBNavbar color="bg-primary" className={"project-page-navbar overflow-hidden" + (!props.projectTitleVisible ? " enlarge-padding" : "")} fixed="top" light expand="md">
@@ -33,7 +37,7 @@ export default function PortfolioNavBar(props) {
                 </div>
             </MDBNavbar>
             <Zoom
-                in={!props.projectTitleVisible}
+                in={!props.projectTitleVisible && scrollPosition.y > 250}
                 timeout={500}
                 unmountOnExit
             >
