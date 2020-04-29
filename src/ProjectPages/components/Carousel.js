@@ -1,7 +1,59 @@
-import * as React from "react";
+import React from "react";
+import * as PropTypes from "prop-types";
 
-export function Carousel(props) {
-    return <div className="col col-6 col-lg-5">
-        <div className="warning-color w-100 h-100 flex-center">TODO: Carousel</div>
-    </div>;
+import {MDBCarousel, MDBCarouselInner, MDBCarouselItem} from "mdbreact";
+
+import "./Carousel.scss";
+
+function CarouselImageItem({source, index}) {
+    return (
+        <img className="d-block w-100"
+             src={source}
+             alt={"Carousel Slide " + (index + 1)}
+        />
+    )
+}
+
+function CarouselVideoItem({source}) {
+    return (
+        <video className="video-fluid d-block" autoPlay loop muted>
+            <source src={source} type="video/mp4" />
+        </video>
+    )
+}
+
+export function Carousel({contentSources, className, interval}) {
+    return (
+        <div className="w-100 flex-center">
+            <MDBCarousel activeItem={1} length={contentSources.length}
+                         showControls={true} showIndicators={false} slide={false}
+                         className={"flex-center " + className}
+                         interval={interval}
+            >
+                <MDBCarouselInner className="carousel-inner-container flex-vertical-center">
+                    {contentSources.map((source, index) => {
+                        let ContentType = CarouselImageItem;
+                        if(source.endsWith(".mp4"))
+                            ContentType = CarouselVideoItem;
+
+                        return (
+                            <MDBCarouselItem key={source} itemId={index + 1}>
+                                <ContentType source={source} index={index} />
+                            </MDBCarouselItem>
+                        )
+                    } )}
+                </MDBCarouselInner>
+            </MDBCarousel>
+        </div>
+    );
+}
+
+Carousel.propTypes = {
+    contentSources: PropTypes.arrayOf(PropTypes.string).isRequired,
+    className: PropTypes.string,
+    interval: PropTypes.number
+};
+Carousel.defaultProps = {
+    className: "",
+    interval: 10000
 }

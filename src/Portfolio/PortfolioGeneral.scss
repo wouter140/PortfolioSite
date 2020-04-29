@@ -57,6 +57,11 @@ body {
   }
 }
 
+.flex-vertical-center {
+  display: flex;
+  align-items: center;
+}
+
 .clickable {
   cursor: pointer;
 
