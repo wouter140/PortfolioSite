@@ -132,3 +132,14 @@ body {
     filter: drop-shadow(1px 1px 5px rgba(0, 0, 0, .25));
   }
 }
+
+.info-table {
+  &.table th,
+  &.table td {
+    padding-top: .6rem;
+    padding-bottom: .5rem;
+  }
+  tr:first-of-type td {
+    padding-top: 1.5rem !important;
+  }
+}

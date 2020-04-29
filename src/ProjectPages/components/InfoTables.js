@@ -13,8 +13,8 @@ export function InfoTable(props) {
                 </tr>
             </MDBTableHead>
             <MDBTableBody>
-                { infoValues && infoValues.map(value => value.value !== "" && value.value !== undefined && (
-                    <tr key={value.name}>
+                { infoValues && infoValues.map((value, index) => value.value !== "" && value.value !== undefined && (
+                    <tr key={value.name} className={index === 0 ? "first-info-table-row" : ""}>
                         <td className="font-weight-normal">{value.name}</td>
                         <td>{value.value}</td>
                     </tr>
@@ -26,7 +26,7 @@ export function InfoTable(props) {
 
 export function ProjectInfoTable(props) {
     return (
-        <InfoTable hover borderless className={(props.className || "") + " my-5"}
+        <InfoTable hover borderless className={(props.className || "") + " info-table my-5"}
                title="Project Information"
                infoValues={[
                    {name: "Engine", value: props.engine},
