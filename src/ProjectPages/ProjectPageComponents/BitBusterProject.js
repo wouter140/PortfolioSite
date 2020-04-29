@@ -2,28 +2,11 @@ import * as React from "react";
 
 import ProjectPage from "../components/ProjectPage";
 import {ProjectInfoTable} from "../components/InfoTables";
+import {WorkItemWithCarousel} from "../components/WorkItem";
 
 import image from "../../content/bit-buster/images/main-face.png";
 import video from "../../content/bit-buster/videos/bit-buster-trailer.mp4";
-
-function Carousel(props) {
-    return <div className="col col-6 col-lg-5">
-        <div className="warning-color w-100 h-100 flex-center">TODO: Carousel</div>
-    </div>;
-}
-
-function WorkItemWithCarousel(props) {
-    const carouselBefore = 'carouselBefore' in props && props.carouselBefore;
-
-    return <div className="row py-3">
-        { carouselBefore && <Carousel/> }
-        <div className={"col col-6 col-lg-7 " + (carouselBefore ? "pl-2" : "pr-2")}>
-            <h5 className="mt-4 font-weight-normal">{props.title}</h5>
-            { props.children }
-        </div>
-        { !carouselBefore && <Carousel/> }
-    </div>;
-}
+import {ContributionHighlights} from "../components/ContributionHighlights";
 
 export default function BitBusterProject() {
     return (
@@ -44,6 +27,13 @@ export default function BitBusterProject() {
             destruction of the levels and enemies. This, together with physics, makes for dynamic gameplay where every
             action in the game impacts the world in a unique way.
 
+            <ContributionHighlights>
+                <li>Designed & developed the entire UI systems in the custom C++ Engine.</li>
+                <li>Created in-engine tools for adding, controlling and editing UI elements, using my UI systems.</li>
+                <li>Implemented the designed in-game UI into our game.</li>
+                <li>Contributed to reviewing and fixing bugs from various parts of the engine and game.</li>
+            </ContributionHighlights>
+
             <ProjectInfoTable
                 engine="Custom C++ Voxel Engine (Voxagen)"
                 developmentTime="8 Weeks"
@@ -59,31 +49,24 @@ export default function BitBusterProject() {
                 )}
             />
 
-            <h4 className="text-white primary-color p-3">Contribution Highlights</h4>
-            <ul className="mt-3">
-                <li>Designed & developed the entire UI systems in the custom C++ Engine.</li>
-                <li>Created in-engine tools for adding, controlling and editing UI elements, using my UI systems.</li>
-                <li>Implemented the designed in-game UI into our game.</li>
-                <li>Helped with reviewing and fixing bugs from various parts of the engine and game.</li>
-            </ul>
-
             <h4 className="text-white primary-color mt-5 p-3">My Work</h4>
-
             <WorkItemWithCarousel
                 title="UI Systems"
             >
                 <p>
                     When I joined the Voxagen engine team we were missing UI systems in the engine.
                     I implemented these systems to allow us to add:
-                    <ul>
-                        <li>Text, with options for font and size.</li>
-                        <li>Buttons, with callbacks for user interactions and controller navigation support</li>
-                        <li>Images</li>
-                        <li>Sliders, which doubles as a progress bar.
-                            The slider has support for a controller to change the value and callbacks for when the
-                            value has changed.
-                        </li>
-                    </ul>
+                </p>
+                <ul>
+                    <li>Text, with options for font and size.</li>
+                    <li>Buttons, with callbacks for user interactions and controller navigation support.</li>
+                    <li>Images.</li>
+                    <li>Sliders, which doubles as a progress bar.
+                        The slider has support for a controller to change the value and callbacks for when the
+                        value has changed.
+                    </li>
+                </ul>
+                <p>
                     For the buttons and sliders I implemented functionality for navigating through a menu with a
                     controller.
                 </p>
@@ -117,8 +100,18 @@ export default function BitBusterProject() {
                 title="UI Implementation"
             >
                 <p>
-                    For Bit-Buster I partially implemented the UI.
+                    For Bit-Buster I partially implemented the UI into the game, using the systems I developed.
+                    I worked on the functionality and implementations of the following UI elements and menu's:
                 </p>
+                <ul>
+                    <li>Splash screen.</li>
+                    <li>Main Menu, including character and level selection.</li>
+                    <li>Controls Menu.</li>
+                    <li>Loading Screens.</li>
+                    <li>OnBoarding.</li>
+                    <li>In Game UI.</li>
+                    <li>Pause Menu.</li>
+                </ul>
             </WorkItemWithCarousel>
 
         </ProjectPage>
