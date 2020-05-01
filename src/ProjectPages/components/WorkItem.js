@@ -28,14 +28,14 @@ export function WorkItemWithCarousel(props) {
 
     return <div className="row py-3 work-item-row">
         { carouselBefore && (
-            <MDBCol size="6" lg="5">
+            <MDBCol size="6" lg="5" className="px-0">
                 <Carousel className="work-item-carousel"
                     contentSources={props.sources}
                 />
             </MDBCol>
         ) }
 
-        <div className={"col col-6 col-lg-7 flex-vertical-center " + (carouselBefore ? "pl-2" : "pr-2")}>
+        <div className={"col col-6 col-lg-7 flex-vertical-center " + (carouselBefore ? "pl-3" : "pr-3")}>
             <div>
                 {props.title.length > 0 && (
                     <h5 className="mt-4 font-weight-normal">{props.title}</h5>
@@ -45,7 +45,7 @@ export function WorkItemWithCarousel(props) {
         </div>
 
         { !carouselBefore && (
-            <MDBCol size="6" lg="5">
+            <MDBCol size="6" lg="5" className="px-0">
                 <Carousel className="work-item-carousel"
                           contentSources={props.sources}
                 />
