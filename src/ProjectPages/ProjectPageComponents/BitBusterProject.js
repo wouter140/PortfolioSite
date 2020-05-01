@@ -2,11 +2,14 @@ import * as React from "react";
 
 import ProjectPage from "../components/ProjectPage";
 import {ProjectInfoTable} from "../components/InfoTables";
+import {ContributionHighlights} from "../components/ContributionHighlights";
 import {WorkItemWithCarousel} from "../components/WorkItem";
 
 import image from "../../content/bit-buster/images/main-face.png";
 import video from "../../content/bit-buster/videos/bit-buster-trailer.mp4";
-import {ContributionHighlights} from "../components/ContributionHighlights";
+import mainMenuVideo from "../../content/bit-buster/videos/BitBuster-MainMenu.mp4";
+import splashScreenVideo from "../../content/bit-buster/videos/BitBuster-StartupLogos.mp4";
+import controlsMenuImage from "../../content/bit-buster/images/BitBuster-ControlsMenu.png";
 
 export default function BitBusterProject() {
     return (
@@ -31,7 +34,7 @@ export default function BitBusterProject() {
                 <li>Designed & developed the entire UI systems in the custom C++ Engine.</li>
                 <li>Created in-engine tools for adding, controlling and editing UI elements, using my UI systems.</li>
                 <li>Implemented the designed in-game UI into our game.</li>
-                <li>Contributed to reviewing and fixing bugs from various parts of the engine and game.</li>
+                <li>Contributed to reviewing and fixing bugs from various parts of the engine and gameplay.</li>
             </ContributionHighlights>
 
             <ProjectInfoTable
@@ -52,6 +55,11 @@ export default function BitBusterProject() {
             <h4 className="text-white primary-color mt-5 p-3">My Work</h4>
             <WorkItemWithCarousel
                 title="UI Systems"
+                sources={[
+                    "https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg",
+                    mainMenuVideo,
+                    "https://mdbootstrap.com/img/Photos/Slides/img%20(99).jpg"
+                ]}
             >
                 <p>
                     When I joined the Voxagen engine team we were missing UI systems in the engine.
@@ -75,6 +83,11 @@ export default function BitBusterProject() {
             <WorkItemWithCarousel
                 title="UI Tools"
                 carouselBefore
+                sources={[
+                    "https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg",
+                    "https://mdbootstrap.com/img/video/Tropical.mp4",
+                    "https://mdbootstrap.com/img/Photos/Slides/img%20(99).jpg"
+                ]}
             >
                 <p>
                     Voxagen also has a custom build-in editor.
@@ -98,6 +111,11 @@ export default function BitBusterProject() {
 
             <WorkItemWithCarousel
                 title="UI Implementation"
+                sources={[
+                    mainMenuVideo,
+                    splashScreenVideo,
+                    controlsMenuImage
+                ]}
             >
                 <p>
                     For Bit-Buster I partially implemented the UI into the game, using the systems I developed.
