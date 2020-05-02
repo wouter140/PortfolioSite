@@ -103,7 +103,7 @@ export default class ContactContent extends React.Component {
                 >
 
                     <div className="pt-4">
-                        Do you have any questions or an amazing opportunity, you can always contact me using the form below or send me an email directly to <a href="mailto:info@woutergrutter.com">info@woutergrutter.com</a>
+                        Do you have any questions or a cool opportunity, you can always contact me using the form below or send me an email directly to <a href="mailto:info@woutergrutter.com">info@woutergrutter.com</a>
                     </div>
 
                     <MDBInput label="Name"
