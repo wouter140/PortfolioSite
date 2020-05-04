@@ -6,6 +6,7 @@ import PinballBashProject from "./ProjectPageComponents/PinballBashProject";
 import CookDontLookProject from "./ProjectPageComponents/CookDontLookProject";
 import RocketRampageProject from "./ProjectPageComponents/RocketRampageProject";
 import P2GOPlayerProject from "./ProjectPageComponents/P2GOPlayerProject";
+import DiscordPresencePlugin from "./ProjectPageComponents/DiscordPresencePlugin";
 
 export const projects = [
     {path: "/TestProject", component: TestProject},
@@ -17,4 +18,5 @@ export const projects = [
     {path: "/CookDontLook", component: CookDontLookProject},
     {path: "/RocketRampage", component: RocketRampageProject},
     {path: "/P2GOPlayer", component: P2GOPlayerProject},
+    {path: "/DiscordPresencePlugin", component: DiscordPresencePlugin},
 ];

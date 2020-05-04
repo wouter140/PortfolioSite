@@ -8,14 +8,11 @@ import ProjectCard from "./components/ProjectCard";
 import "./ProjectsContent.scss";
 import "./ProjectSpecific.scss";
 
-import testImage from '../../images/img (118).jpg';
-
 import paintImage from "../../content/paint/images/main_face.png";
 import bitBusterImage from "../../content/bit-buster/images/main-face.png";
-import burstingBarrelImage from "../../content/bursting-barrel/images/main-face.png";
 import pinballBashImage from "../../content/pinball-bash/images/main-face.png";
 import cookDontLookImage from "../../content/cook-dont-look/images/main-face.jpg";
-import rocketRampageImage from "../../content/rocket-rampage/images/main-face.jpg";
+import p2goPlayerImage from "../../content/p2go-player/images/main-face.png";
 
 export default class ProfessionalProjectsContent extends React.Component {
 
@@ -77,21 +74,6 @@ export default class ProfessionalProjectsContent extends React.Component {
                     </MDBCol>
 
                     <MDBCol md="6" xl="4" className="animated fadeIn">
-                        <ProjectCard src={ burstingBarrelImage } alt="Bursting Barrel Project" title="Bursting Barrel"
-                                     location="/BurstingBarrel"
-                                     badges={[
-                                         {name: 'Engine', content: 'Unreal Engine 4'},
-                                         {name: 'Languages', content: 'C & Blueprints'},
-                                         {name: 'Platforms', content: 'PC'},
-                                         {name: 'Team Size', content: '9 Person Team'},
-                                         {name: 'Duration', content: '2.5 Weeks'}
-                                     ]}
-                        >
-                            Bursting barrel is a party game where the goal is to stop the barrel from leaking and the octopus from escaping by using the physical, keg shaped custom controller.
-                        </ProjectCard>
-                    </MDBCol>
-
-                    <MDBCol md="6" xl="4" className="animated fadeIn">
                         <ProjectCard src={ pinballBashImage } alt="Pinball Bash Project" title="Pinball Bash"
                                      location="/PinballBash"
                                      badges={[
@@ -104,6 +86,20 @@ export default class ProfessionalProjectsContent extends React.Component {
                         >
                             Pinball Bash is a 4 player co-op game where you try to defeat the others by having deadly pin-balls hit them.
                             You can deflect these by making walls come up from the floor to win the game.
+                        </ProjectCard>
+                    </MDBCol>
+
+                    <MDBCol md="6" xl="4" className="animated fadeIn">
+                        <ProjectCard src={ p2goPlayerImage } alt="Web Video Player" title="Web Video Player"
+                                     location="/P2GOPlayer"
+                                     badges={[
+                                         {name: 'Languages', content: 'Javascript ES6, React, CSS3, HTML5'},
+                                         {name: 'Platforms', content: 'Web'}
+                                     ]}
+                        >
+                            For the company Learning Valley and Presentations 2Go, I have worked on their Web video
+                            platform. The video player supports rich media, commenting, multiple video types like dash
+                            and hls, playlists, and 360 videos with support for VR.
                         </ProjectCard>
                     </MDBCol>
 
@@ -122,37 +118,22 @@ export default class ProfessionalProjectsContent extends React.Component {
                         </ProjectCard>
                     </MDBCol>
 
-                    <MDBCol md="6" xl="4" className="extra-project">
-                        <ProjectCard src={ rocketRampageImage } alt="Rocket Rampage Project" title="Rocket Rampage"
-                                     location="/RocketRampage"
-                                     badges={[
-                                         {name: 'Engine', content: 'Unreal Engine 4'},
-                                         {name: 'Languages', content: 'Blueprints'},
-                                         {name: 'Platforms', content: 'PC'},
-                                         {name: 'Team Size', content: '9 Person Team'},
-                                         {name: 'Duration', content: '2 Weeks'}
-                                     ]}
-                        >
-                            Rocket Rampage is a game where your try to survive to Mars.
-                            You have to manage your resources inside the space ship, react to incoming threads and survive until you reach Mars!
-                        </ProjectCard>
-                    </MDBCol>
-
-                    <MDBCol md="6" xl="4" className="extra-project d-none">
-                        <ProjectCard src={ testImage } alt="" title="Testing Title"
-                                     location="/TestProject"
-                                     badges={[{name: 'Languages', content: 'Primary'}, {name: 'Engine', content: 'Secondary'}, {name: 'Platforms', content: 'Danger'}]}
-                        >
-                            Some super duper amazing card text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-                            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
-                            pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
-                            In enim justo, rhoncus ut
-                        </ProjectCard>
-                    </MDBCol>
                     <MDBCol md="6" xl="8" className="extra-project">
                     </MDBCol>
 
-                    <MDBCol className="d-flex flex-center">
+                    {/*<MDBCol md="6" xl="4" className="extra-project d-none">*/}
+                    {/*    <ProjectCard src={ testImage } alt="" title="Testing Title"*/}
+                    {/*                 location="/TestProject"*/}
+                    {/*                 badges={[{name: 'Languages', content: 'Primary'}, {name: 'Engine', content: 'Secondary'}, {name: 'Platforms', content: 'Danger'}]}*/}
+                    {/*    >*/}
+                    {/*        Some super duper amazing card text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.*/}
+                    {/*        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,*/}
+                    {/*        pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.*/}
+                    {/*        In enim justo, rhoncus ut*/}
+                    {/*    </ProjectCard>*/}
+                    {/*</MDBCol>*/}
+
+                    <MDBCol className="d-xl-none d-flex flex-center">
                         <MDBBtn color="indigo" className="m-0 expand-projects-btn"
                                 onClick={ () => this.setState((state) => { return {expandProjects: !state.expandProjects} }) }
                         >

@@ -1,6 +1,5 @@
 import React from 'react';
 
-// import {MDBBtn, MDBCol, MDBIcon} from "mdbreact";
 import {MDBCol} from "mdbreact";
 
 import ContentContainer from "../../components/ContentContainer";
@@ -9,7 +8,7 @@ import ProjectCard from "./components/ProjectCard";
 import "./ProjectsContent.scss";
 import "./ProjectSpecific.scss";
 
-import testImage from '../../images/img (118).jpg';
+import burstingBarrelImage from "../../content/bursting-barrel/images/main-face.png";
 
 export default class PersonalProjectsContent extends React.Component {
 
@@ -37,54 +36,67 @@ export default class PersonalProjectsContent extends React.Component {
 
                 <div className="d-flex flex-wrap justify-content-start container">
                     <MDBCol md="6" xl="4" className="animated fadeIn">
-                        <ProjectCard src={ testImage } alt="" title="Testing Title"
-                                location="/TestProject"
-                                badges={[{type: 'primary', content: 'Primary'}, {type: 'secondary', content: 'Secondary'}, {type: 'danger', content: 'Danger'}]}
+                        <ProjectCard src={ burstingBarrelImage } alt="Discord Rich Presence Unreal Plugin" title="Discord Presence Unreal Plugin"
+                                     location="/DiscordPresencePlugin"
+                                     badges={[
+                                         {name: 'Engine', content: 'Unreal Engine 4'},
+                                         {name: 'Languages', content: 'C++ & Blueprints'},
+                                         {name: 'Platforms', content: 'PC & Discord'}
+                                     ]}
                         >
-                            Some super duper amazing card text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-                            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
-                            pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
-                            In enim justo, rhoncus ut
+                            I developed a plugin to integrate Discord rich presence into any Unreal project.
+                            With this plugin it is simple to update the current game presence for the current user.
                         </ProjectCard>
                     </MDBCol>
+
 
                     <MDBCol md="6" xl="4" className="animated fadeIn">
-                        <ProjectCard src={ testImage } alt="" title="Testing Title"
-                                     location="/TestProject"
-                                     badges={[{type: 'primary', content: 'Primary'}, {type: 'secondary', content: 'Secondary'}, {type: 'danger', content: 'Danger'}]}
+                        <ProjectCard src={ burstingBarrelImage } alt="Bursting Barrel Project" title="Bursting Barrel"
+                                     location="/BurstingBarrel"
+                                     badges={[
+                                         {name: 'Engine', content: 'Unreal Engine 4'},
+                                         {name: 'Languages', content: 'C & Blueprints'},
+                                         {name: 'Platforms', content: 'PC'},
+                                         {name: 'Team Size', content: '9 Person Team'},
+                                         {name: 'Duration', content: '2.5 Weeks'}
+                                     ]}
                         >
-                            Some super duper amazing card text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-                            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, 
-                            pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. 
-                            In enim justo, rhoncus ut
+                            Bursting barrel is a party game where the goal is to stop the barrel from leaking and the octopus from escaping by using the physical, keg shaped custom controller.
                         </ProjectCard>
                     </MDBCol>
 
-                    <MDBCol md="6" xl="4" className="extra-project-md">
-                        <ProjectCard src={ testImage } alt="" title="Testing Title"
-                                     location="/TestProject"
-                                     badges={[{type: 'primary', content: 'Primary'}, {type: 'secondary', content: 'Secondary'}, {type: 'danger', content: 'Danger'}]}
-                        >
-                            Some super duper amazing card text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-                            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, 
-                            pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. 
-                            In enim justo, rhoncus ut
-                        </ProjectCard>
-                    </MDBCol>
+                    {/*<MDBCol md="6" xl="4" className="extra-project-md">*/}
+                    {/*    <ProjectCard src={ rocketRampageImage } alt="Rocket Rampage Project" title="Rocket Rampage"*/}
+                    {/*                 location="/RocketRampage"*/}
+                    {/*                 badges={[*/}
+                    {/*                     {name: 'Engine', content: 'Unreal Engine 4'},*/}
+                    {/*                     {name: 'Languages', content: 'Blueprints'},*/}
+                    {/*                     {name: 'Platforms', content: 'PC'},*/}
+                    {/*                     {name: 'Team Size', content: '9 Person Team'},*/}
+                    {/*                     {name: 'Duration', content: '2 Weeks'}*/}
+                    {/*                 ]}*/}
+                    {/*    >*/}
+                    {/*        Rocket Rampage is a game where your try to survive to Mars.*/}
+                    {/*        You have to manage your resources inside the space ship, react to incoming threads and survive until you reach Mars!*/}
+                    {/*    </ProjectCard>*/}
+                    {/*</MDBCol>*/}
 
-                    <MDBCol md="6" xl="4" className="extra-project d-none">
-                        <ProjectCard src={ testImage } alt="" title="Testing Title"
-                                     location="/TestProject"
-                                     badges={[{type: 'primary', content: 'Primary'}, {type: 'secondary', content: 'Secondary'}, {type: 'danger', content: 'Danger'}]}
-                        >
-                            Some super duper amazing card text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-                            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, 
-                            pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. 
-                            In enim justo, rhoncus ut
-                        </ProjectCard>
-                    </MDBCol>
+                    {/*<MDBCol md="6" xl="8" className="extra-project">*/}
+                    {/*</MDBCol>*/}
 
-                    {/*<MDBCol className="d-flex flex-center">*/}
+                    {/*<MDBCol md="6" xl="4" className="extra-project d-none">*/}
+                    {/*    <ProjectCard src={ testImage } alt="" title="Testing Title"*/}
+                    {/*                 location="/TestProject"*/}
+                    {/*                 badges={[{name: 'Languages', content: 'Primary'}, {name: 'Engine', content: 'Secondary'}, {name: 'Platforms', content: 'Danger'}]}*/}
+                    {/*    >*/}
+                    {/*        Some super duper amazing card text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.*/}
+                    {/*        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,*/}
+                    {/*        pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.*/}
+                    {/*        In enim justo, rhoncus ut*/}
+                    {/*    </ProjectCard>*/}
+                    {/*</MDBCol>*/}
+
+                    {/*<MDBCol className="d-xl-none d-flex flex-center">*/}
                     {/*    <MDBBtn color="indigo" className="m-0 expand-projects-btn"*/}
                     {/*            onClick={ () => this.setState((state) => { return {expandProjects: !state.expandProjects} }) }*/}
                     {/*    >*/}

@@ -1,6 +1,4 @@
-import * as React from "react";
-
-import {MDBCol, MDBRow} from "mdbreact";
+import React from "react";
 
 import ProjectPage from "../components/ProjectPage";
 import {ProjectInfoTable} from "../components/InfoTables";
