@@ -75,17 +75,19 @@ export default class InlineVideo extends Component {
         return (
             <React.Fragment>
                 { this.props.thumbnail && (
-                    <img className={"project-video-thumbnail project-video" + (this.state.videoReady ? " hidden" : "")} src={ this.props.thumbnail } alt=""/>
+                    <img className={"project-video-thumbnail" + (this.state.videoReady || !this.props.thumbnail ? " hidden" : "") + this.props.className} src={ this.props.thumbnail } alt=""/>
                 )}
 
                 <div ref={ this.videoContainerRef }
-                    className={"project-video " + (this.state.videoReady ? "" : "hidden ") + this.props.className}>
+                    className={(this.state.videoReady || !this.props.thumbnail ? "" : "hidden ") + this.props.className}>
                     <video ref={this.video}
                         muted={ this.state.muted }
                         loop={ true }
                         autoPlay={ !this.onMobileInternet }
                         playsInline
                         preload="auto"
+
+                        className={this.props.videoClassName}
 
                         onCanPlay={ this.onCanPlay.bind(this) }
                         onCanPlayThrough={ this.onCanPlayThrough.bind(this) }
@@ -103,7 +105,7 @@ export default class InlineVideo extends Component {
                     >
                         {(!this.onMobileInternet ? this.props.sources : this.props.smallSources)
                             .map((source, index) => {
-                                return <source key={ index } src={ source.src } type={ source.type } media={ source.media || null } />
+                                return <source key={ index } src={ source.src } type={ source.type } />
                             })
                         }
                     </video>
@@ -156,7 +158,7 @@ export default class InlineVideo extends Component {
                                     </svg>
                                 </Tooltip>
 
-                                { this.props.supportsHeightOpen && (
+                                { this.props.supportsHeightOpen && this.props.FoldToggleOpen && (
                                     <React.Fragment>
                                         { this.props.fullyOpened ? (
                                             <Tooltip title="Show Less" aria-label="Show Less of Video" placement="top">
@@ -191,6 +193,7 @@ InlineVideo.propTypes = {
     smallSources: PropTypes.array,
     pauseClassName: PropTypes.string,
     playClassName: PropTypes.string,
+    videoClassName: PropTypes.string,
     showOnCanPlay: PropTypes.bool,
     supportsHeightOpen: PropTypes.bool,
 };
@@ -200,6 +203,7 @@ InlineVideo.defaultProps = {
     className: "",
     pauseClassName: "",
     playClassName: "",
-    supportsHeightOpen: true,
+    videoClassName: "",
+    supportsHeightOpen: false,
     smallSources: [],
 };

@@ -67,12 +67,13 @@ export default class ProjectPage extends React.Component {
                         )}
                         { this.props.videoSource && (
                             <InlineVideo ref={ this.videoComponentRef }
-                                         className="position-absolute w-100 h-100 d-flex"
+                                         className="project-video position-absolute w-100 h-100 d-flex"
                                          sources={ this.props.videoSource }
                                          smallSources={ this.props.smallVideoSource }
                                          parallaxTop={ this.state.top / 3 }
                                          fullyOpened={this.state.fullyOpened}
                                          FoldToggleOpen={ (state) => this.setState({fullyOpened: state}) }
+                                         supportsHeightOpen
                             />
                         )}
                     </div>

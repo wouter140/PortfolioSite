@@ -14,11 +14,10 @@ export default class LandingPageContent extends React.Component {
         return (
             <React.Fragment>
                 <div id="landing-page" className="page-content-container w-100 overflow-hidden">
-                    <InlineVideo className="position-relative w-100 h-100 d-flex"
+                    <InlineVideo className="project-video position-relative w-100 h-100 d-flex"
                         sources={[
                             {src: video, type: "video/mp4"}
                         ]}
-                        supportsHeightOpen={false}
                     />
 
                     <div className='inner-page-content-container py-4'>
