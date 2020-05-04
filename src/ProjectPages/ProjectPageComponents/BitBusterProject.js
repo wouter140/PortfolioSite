@@ -8,7 +8,8 @@ import {ContributionHighlights} from "../components/ContributionHighlights";
 import {WorkItemWithCarousel} from "../components/WorkItem";
 
 import image from "../../content/bit-buster/images/main-face.png";
-import video from "../../content/bit-buster/videos/BitBuster-Trailer.mp4";
+import largeTrailer from "../../content/bit-buster/videos/BitBuster-Trailer.mp4";
+import smallTrailer from "../../content/bit-buster/videos/BitBuster-Trailer-small.mp4";
 import mainMenuVideo from "../../content/bit-buster/videos/BitBuster-MainMenu.mp4";
 import splashScreenVideo from "../../content/bit-buster/videos/BitBuster-StartupLogos.mp4";
 import sliderToolsVideo from "../../content/bit-buster/videos/BitBuster-SliderTools.mp4";
@@ -22,7 +23,10 @@ export default function BitBusterProject() {
             imageURL={image}
             // videoID="U-mC90Tu5SM"
             videoSource={[
-                {src: video, type: "video/mp4"}
+                {src: largeTrailer, type: "video/mp4"}
+            ]}
+            smallVideoSource={[
+                {src: smallTrailer, type: "video/mp4"}
             ]}
         >
             Bit-Buster is a cooperative 2-player (with single-player option) shooter where both players share a single

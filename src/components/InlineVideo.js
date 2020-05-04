@@ -8,14 +8,14 @@ export default class InlineVideo extends Component {
     constructor(props) {
         super(props);
 
-        this.autoPlay = true;
+        this.onMobileInternet = false;
         const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
         if (connection) {
             switch(connection.type) {
                 case "bluetooth":
                 case "cellular":
                 case "none":
-                    this.autoPlay = false;
+                    this.onMobileInternet = true;
                     break;
                 default:
                     break;
@@ -83,7 +83,7 @@ export default class InlineVideo extends Component {
                     <video ref={this.video}
                         muted={ this.state.muted }
                         loop={ true }
-                        autoPlay={ this.autoPlay }
+                        autoPlay={ !this.onMobileInternet }
                         playsInline
                         preload="auto"
 
@@ -101,9 +101,11 @@ export default class InlineVideo extends Component {
                             }
                         }}
                     >
-                        { this.props.sources.map((source, index) => {
-                            return <source key={ index } src={ source.src } type={ source.type } />
-                        })}
+                        {(!this.onMobileInternet ? this.props.sources : this.props.smallSources)
+                            .map((source, index) => {
+                                return <source key={ index } src={ source.src } type={ source.type } media={ source.media || null } />
+                            })
+                        }
                     </video>
 
                     <div className="project-video-controls" style={{marginBottom: this.props.parallaxTop && !this.state.isFullscreen ? this.props.parallaxTop : ""}}>
@@ -186,6 +188,7 @@ InlineVideo.propTypes = {
     className: PropTypes.string,
     muted: PropTypes.bool,
     sources: PropTypes.array.isRequired,
+    smallSources: PropTypes.array,
     pauseClassName: PropTypes.string,
     playClassName: PropTypes.string,
     showOnCanPlay: PropTypes.bool,
@@ -198,4 +201,5 @@ InlineVideo.defaultProps = {
     pauseClassName: "",
     playClassName: "",
     supportsHeightOpen: true,
+    smallSources: [],
 };
