@@ -5,7 +5,7 @@ import {Link} from "react-scroll/modules";
 import ProfilePicture from "../../images/profilepicture.jpg";
 import InlineVideo from "../../components/InlineVideo";
 
-import video from "../../content/bit-buster/videos/bit-buster-trailer.mp4";
+import video from "../../content/bit-buster/videos/BitBuster-Trailer.mp4";
 
 import "./LandingPageContent.scss";
 
