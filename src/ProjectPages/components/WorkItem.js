@@ -35,7 +35,7 @@ export function WorkItemWithCarousel(props) {
             </MDBCol>
         ) }
 
-        <div className={"col col-6 col-lg-7 flex-vertical-center " + (carouselBefore ? "pl-3" : "pr-3")}>
+        <div className={"col col-12 col-lg-6 col-xl-7 flex-vertical-center " + (carouselBefore ? "pl-3" : "pr-3")}>
             <div>
                 {props.title.length > 0 && (
                     <h5 className="mt-4 font-weight-normal">{props.title}</h5>
@@ -45,7 +45,7 @@ export function WorkItemWithCarousel(props) {
         </div>
 
         { !carouselBefore && (
-            <MDBCol size="6" lg="5" className="px-0">
+            <MDBCol size="12" lg="6" xl="5" className="px-0">
                 <Carousel className="work-item-carousel"
                           contentSources={props.sources}
                 />

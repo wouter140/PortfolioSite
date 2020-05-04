@@ -8,8 +8,7 @@ export function InfoTable(props) {
         <MDBTable {...other}>
             <MDBTableHead color="primary-color" textWhite>
                 <tr>
-                    <th className="h4 p-3">{title}</th>
-                    <th/>
+                    <th className="h4 p-3" colSpan={2}>{title}</th>
                 </tr>
             </MDBTableHead>
             <MDBTableBody>

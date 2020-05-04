@@ -16,7 +16,7 @@ function CarouselImageItem({source, index}) {
 
 function CarouselVideoItem({source}) {
     return (
-        <video className="video-fluid d-block" autoPlay loop muted>
+        <video className="video-fluid d-block" autoPlay loop muted playsInline>
             <source src={source} type="video/mp4" />
         </video>
     )
