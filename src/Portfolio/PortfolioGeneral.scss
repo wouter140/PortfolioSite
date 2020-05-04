@@ -147,4 +147,13 @@ body {
   tr:first-of-type td {
     padding-top: 1.5rem !important;
   }
+  tr td:first-of-type {
+    width: 40%;
+    @media (min-width: $breakpoint-big-tablet) {
+      width: 50%;
+    }
+    @media (min-width: $breakpoint-desktop) {
+      width: 40%;
+    }
+  }
 }

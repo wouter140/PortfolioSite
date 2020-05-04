@@ -8,6 +8,7 @@ import ProjectPage from "../components/ProjectPage";
 import {ProjectInfoTable} from "../components/InfoTables";
 import {ContributionHighlights} from "../components/ContributionHighlights";
 import {WorkItem, WorkItemWithCarousel} from "../components/WorkItem";
+import ProjectStartLayout from "../components/ProjectStartLayout";
 
 export default function PaintProject(props) {
     return (
@@ -19,27 +20,30 @@ export default function PaintProject(props) {
             //     {src: video, type: "video/mp4"}
             // ]}
         >
-            P.A.I.N.T. is a comedic, paintball inspired, shooter where you defeat the evil corporations that are trying to suppress color.
+            P.A.I.N.T. is a comedic, paintball inspired, shooter where you defeat the evil corporations that are trying
+            to suppress color.
 
-            <ContributionHighlights>
-                <li>Scrum Master</li>
+            <ProjectStartLayout>
+                <ContributionHighlights>
+                    <li>Scrum Master</li>
 
-                <li>Tools that are used by the entire team</li>
-                <li>Dynamic Split-Screen</li>
-                <li>Input device detection</li>
-            </ContributionHighlights>
+                    <li>Tools that are used by the entire team</li>
+                    <li>Dynamic Split-Screen</li>
+                    <li>Input device detection</li>
+                </ContributionHighlights>
 
-            <ProjectInfoTable
-                engine="Unreal Engine 4"
-                developmentTime="40 Weeks"
-                teamSize="~25 People (5-6 Programmer, 7-10 Designers, 6-7 Artists and a Producer)"
-                roles="Scrum Master, Engine Programmer, Tools Programmer and Gameplay Programmer"
-                languages="C++, Blueprints & Python"
-                targetPlatforms="PC (Steam) and PS4"
-                release={(
-                    "Preparation for release on Steam"
-                )}
-            />
+                <ProjectInfoTable
+                    engine="Unreal Engine 4"
+                    developmentTime="40 Weeks"
+                    teamSize="~25 People (5-6 Programmer, 7-10 Designers, 6-7 Artists and a Producer)"
+                    roles="Scrum Master, Engine Programmer, Tools Programmer and Gameplay Programmer"
+                    languages="C++, Blueprints & Python"
+                    targetPlatforms="PC (Steam) and PS4"
+                    release={(
+                        "Preparation for release on Steam"
+                    )}
+                />
+            </ProjectStartLayout>
 
             <h4 className="text-white primary-color mt-5 p-3">My Work</h4>
             <WorkItem
@@ -72,10 +76,12 @@ export default function PaintProject(props) {
                     <li>Simple way to create Google Calendar event.</li>
                     <li>Add members to the meeting through Discord mentions or emails.</li>
                     <li>Invitees are able to respond to the meeting, both in Discord and externally in Google and both
-                        platforms will update the event state.</li>
+                        platforms will update the event state.
+                    </li>
                     <li>Team members are able to add or remove themselves from the meeting inside Discord</li>
                     <li>As the meeting is in Google Calendar, responding to the event with attending, adds the event
-                        in that users' Google calendar, which syncs with their phone, windows and other places</li>
+                        in that users' Google calendar, which syncs with their phone, windows and other places
+                    </li>
                     <li>Reminders are send through Google before the meeting starts.</li>
                 </ul>
             </WorkItemWithCarousel>
@@ -97,7 +103,8 @@ export default function PaintProject(props) {
                     <li>View which build is on each Steam branch.</li>
                     <li>Change the current build per Steam branch</li>
                     <li>Support our release and testing workflow to upgrade builds from one Steam branch to the
-                        next in our workflow.</li>
+                        next in our workflow.
+                    </li>
                 </ul>
             </WorkItemWithCarousel>
 
@@ -112,7 +119,8 @@ export default function PaintProject(props) {
             >
                 <p>
                     As a partly coop game, we investigated other ways of implementing split-screen.
-                    I researched some different split-screen implementations to find the best functioning and performing option.
+                    I researched some different split-screen implementations to find the best functioning and performing
+                    option.
                     The different types of split-screen I researched are:
                 </p>
                 <ul>
@@ -131,9 +139,12 @@ export default function PaintProject(props) {
                 ]}
             >
                 <p>
-                    With Coop in mind during the development of our game, I worked on a system to detect new input devices.
-                    When a new input device is detected, either a new player is added, or an existing player changes input device.
-                    When a input device is disconnected, the player associated to that player is either removed or changed to a new input device.
+                    With Coop in mind during the development of our game, I worked on a system to detect new input
+                    devices.
+                    When a new input device is detected, either a new player is added, or an existing player changes
+                    input device.
+                    When a input device is disconnected, the player associated to that player is either removed or
+                    changed to a new input device.
                     With this system we are able to intuitively add, remove and change local players during gameplay.
                 </p>
             </WorkItemWithCarousel>

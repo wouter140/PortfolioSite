@@ -15,6 +15,7 @@ import splashScreenVideo from "../../content/bit-buster/videos/BitBuster-Startup
 import sliderToolsVideo from "../../content/bit-buster/videos/BitBuster-SliderTools.mp4";
 import uiOptionsExampleVideo from "../../content/bit-buster/videos/BitBuster-UIOptionsExample.mp4";
 import controlsMenuImage from "../../content/bit-buster/images/BitBuster-ControlsMenu.png";
+import ProjectStartLayout from "../components/ProjectStartLayout";
 
 export default function BitBusterProject() {
     return (
@@ -38,33 +39,29 @@ export default function BitBusterProject() {
             destruction of the levels and enemies. This, together with physics, makes for dynamic gameplay where every
             action in the game impacts the world in a unique way.
 
-            <MDBRow>
-                <MDBCol size="12" lg="6">
-                    <ContributionHighlights>
-                        <li>Designed & developed the entire UI systems in the custom C++ Engine.</li>
-                        <li>Created in-engine tools for adding, controlling and editing UI elements, using my UI systems.</li>
-                        <li>Implemented the designed in-game UI into our game.</li>
-                        <li>Contributed to reviewing and fixing bugs from various parts of the engine and gameplay.</li>
-                    </ContributionHighlights>
-                </MDBCol>
+            <ProjectStartLayout>
+                <ContributionHighlights>
+                    <li>Designed & developed the entire UI systems in the custom C++ Engine.</li>
+                    <li>Created in-engine tools for adding, controlling and editing UI elements, using my UI systems.</li>
+                    <li>Implemented the designed in-game UI into our game.</li>
+                    <li>Contributed to reviewing and fixing bugs from various parts of the engine and gameplay.</li>
+                </ContributionHighlights>
 
-                <MDBCol size="12" lg="6">
-                    <ProjectInfoTable
-                        engine="Custom C++ Voxel Engine (Voxagen)"
-                        developmentTime="8 Weeks"
-                        teamSize="25 People (9 Programmer, 9 Designers, 7 Artists and a Producer)"
-                        roles="Engine Programmer, UI Programmer, Tools Programmer"
-                        languages="C++"
-                        targetPlatforms="PC (Itch.io)"
-                        release={(
-                            <a href="https://igad.itch.io/bitbuster" target="_blank" rel="noopener noreferrer"
-                               style={{color: "#007bff"}}>
-                                Released on Itch.io
-                            </a>
-                        )}
-                    />
-                </MDBCol>
-            </MDBRow>
+                <ProjectInfoTable
+                    engine="Custom C++ Voxel Engine (Voxagen)"
+                    developmentTime="8 Weeks"
+                    teamSize="25 People (9 Programmer, 9 Designers, 7 Artists and a Producer)"
+                    roles="Engine Programmer, UI Programmer, Tools Programmer"
+                    languages="C++"
+                    targetPlatforms="PC (Itch.io)"
+                    release={(
+                        <a href="https://igad.itch.io/bitbuster" target="_blank" rel="noopener noreferrer"
+                           style={{color: "#007bff"}}>
+                            Released on Itch.io
+                        </a>
+                    )}
+                />
+            </ProjectStartLayout>
 
             <h4 className="text-white primary-color mt-5 p-3">My Work</h4>
             <WorkItemWithCarousel
@@ -72,7 +69,6 @@ export default function BitBusterProject() {
                 sources={[
                     uiOptionsExampleVideo,
                     mainMenuVideo,
-                    "https://mdbootstrap.com/img/Photos/Slides/img%20(99).jpg"
                 ]}
             >
                 <p>
@@ -100,7 +96,6 @@ export default function BitBusterProject() {
                 sources={[
                     sliderToolsVideo,
                     uiOptionsExampleVideo,
-                    "https://mdbootstrap.com/img/Photos/Slides/img%20(99).jpg"
                 ]}
             >
                 <p>
