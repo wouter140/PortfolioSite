@@ -9,6 +9,7 @@ import "./ProjectsContent.scss";
 import "./ProjectSpecific.scss";
 
 import burstingBarrelImage from "../../content/bursting-barrel/images/main-face.png";
+import discordPresenceImage from "../../content/discord-presence-plugin/images/main-face.png";
 
 export default class PersonalProjectsContent extends React.Component {
 
@@ -36,7 +37,7 @@ export default class PersonalProjectsContent extends React.Component {
 
                 <div className="d-flex flex-wrap justify-content-start container">
                     <MDBCol md="6" xl="4" className="animated fadeIn">
-                        <ProjectCard src={ burstingBarrelImage } alt="Discord Rich Presence Unreal Plugin" title="Discord Presence Unreal Plugin"
+                        <ProjectCard src={ discordPresenceImage } alt="Discord Rich Presence Unreal Plugin" title="Discord Presence Unreal Plugin"
                                      location="/DiscordPresencePlugin"
                                      badges={[
                                          {name: 'Engine', content: 'Unreal Engine 4'},
