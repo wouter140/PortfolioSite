@@ -73,7 +73,7 @@ export default class ProfessionalProjectsContent extends React.Component {
                         </ProjectCard>
                     </MDBCol>
 
-                    <MDBCol md="6" xl="4" className="animated fadeIn">
+                    <MDBCol md="6" className="animated fadeIn">
                         <ProjectCard src={ pinballBashImage } alt="Pinball Bash Project" title="Pinball Bash"
                                      location="/PinballBash"
                                      badges={[
@@ -89,7 +89,7 @@ export default class ProfessionalProjectsContent extends React.Component {
                         </ProjectCard>
                     </MDBCol>
 
-                    <MDBCol md="6" xl="4" className="animated fadeIn">
+                    <MDBCol md="6" className="animated fadeIn">
                         <ProjectCard src={ p2goPlayerImage } alt="Web Video Player" title="Web Video Player"
                                      location="/P2GOPlayer"
                                      badges={[
@@ -103,23 +103,8 @@ export default class ProfessionalProjectsContent extends React.Component {
                         </ProjectCard>
                     </MDBCol>
 
-                    <MDBCol md="6" xl="4" className="extra-project-md">
-                        <ProjectCard src={ cookDontLookImage } alt="Cook Don't Look Project" title="Cook Don't Look"
-                                     location="/CookDontLook"
-                                     badges={[
-                                         {name: 'Engine', content: 'Unity3D'},
-                                         {name: 'Languages', content: 'C#'},
-                                         {name: 'Platforms', content: 'Gear VR'},
-                                         {name: 'Team Size', content: '9 Person Team'},
-                                         {name: 'Duration', content: '2 Weeks'}
-                                     ]}
-                        >
-                            Cook Don't Look is Gear VR game where the player has to prepare food and make it perfect quality. To cook the food you look away from it, but have to make sure it does not overcook!
-                        </ProjectCard>
-                    </MDBCol>
-
-                    <MDBCol md="6" xl="8" className="extra-project">
-                    </MDBCol>
+                    {/*<MDBCol md="6" xl="8" className="extra-project">*/}
+                    {/*</MDBCol>*/}
 
                     {/*<MDBCol md="6" xl="4" className="extra-project d-none">*/}
                     {/*    <ProjectCard src={ testImage } alt="" title="Testing Title"*/}

@@ -11,11 +11,13 @@ import ProjectStartLayout from "../components/ProjectStartLayout";
 export default function DiscordPresencePlugin() {
     return (
         <ProjectPage
-            title="Discord Presence Unreal Plugin"
+            title="Discord Rich Presence Plugin"
             imageURL={image}
         >
             I developed an Unreal Engine 4 plugin that helps developers connect with Discord to easily update the
-            players' presence from the game.
+            players' presence from the game.<br/>
+            Internally I used the Discord GameSDK. This also allows the plugin to implement the request to join, join
+            and spectate events.
 
             <ProjectStartLayout>
                 <ContributionHighlights>
@@ -28,7 +30,7 @@ export default function DiscordPresencePlugin() {
                 <ProjectInfoTable
                     engine="Unreal Engine 4"
                     languages="C++ & Blueprints"
-                    targetPlatforms="PC & Discord"
+                    targetPlatforms="PC with Discord"
                     // release={(
                     //     <a href="https://igad.itch.io/bitbuster" target="_blank" rel="noopener noreferrer"
                     //        style={{color: "#007bff"}}>

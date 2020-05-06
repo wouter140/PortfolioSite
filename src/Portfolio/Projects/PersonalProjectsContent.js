@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {MDBCol} from "mdbreact";
+import {MDBBtn, MDBCol, MDBIcon} from "mdbreact";
 
 import ContentContainer from "../../components/ContentContainer";
 import ProjectCard from "./components/ProjectCard";
@@ -10,6 +10,7 @@ import "./ProjectSpecific.scss";
 
 import burstingBarrelImage from "../../content/bursting-barrel/images/main-face.png";
 import discordPresenceImage from "../../content/discord-presence-plugin/images/main-face.png";
+import cookDontLookImage from "../../content/cook-dont-look/images/main-face.jpg";
 
 export default class PersonalProjectsContent extends React.Component {
 
@@ -37,12 +38,12 @@ export default class PersonalProjectsContent extends React.Component {
 
                 <div className="d-flex flex-wrap justify-content-start container">
                     <MDBCol md="6" xl="4" className="animated fadeIn">
-                        <ProjectCard src={ discordPresenceImage } alt="Discord Rich Presence Unreal Plugin" title="Discord Presence Unreal Plugin"
+                        <ProjectCard src={ discordPresenceImage } alt="Discord Rich Presence Unreal Plugin" title="Discord Rich Presence Plugin"
                                      location="/DiscordPresencePlugin"
                                      badges={[
                                          {name: 'Engine', content: 'Unreal Engine 4'},
                                          {name: 'Languages', content: 'C++ & Blueprints'},
-                                         {name: 'Platforms', content: 'PC & Discord'}
+                                         {name: 'Platforms', content: 'PC with Discord'}
                                      ]}
                         >
                             I developed a plugin to integrate Discord rich presence into any Unreal project.
@@ -66,6 +67,24 @@ export default class PersonalProjectsContent extends React.Component {
                         </ProjectCard>
                     </MDBCol>
 
+                    <MDBCol md="6" xl="4" className="extra-project-md">
+                        <ProjectCard src={ cookDontLookImage } alt="Cook Don't Look Project" title="Cook Don't Look"
+                                     location="/CookDontLook"
+                                     badges={[
+                                         {name: 'Engine', content: 'Unity3D'},
+                                         {name: 'Languages', content: 'C#'},
+                                         {name: 'Platforms', content: 'Gear VR'},
+                                         {name: 'Team Size', content: '9 Person Team'},
+                                         {name: 'Duration', content: '2 Weeks'}
+                                     ]}
+                        >
+                            Cook Don't Look is Gear VR game where the player has to prepare food and make it perfect quality. To cook the food you look away from it, but have to make sure it does not overcook!
+                        </ProjectCard>
+                    </MDBCol>
+
+                    <MDBCol md="6" xl="8" className="extra-project">
+                    </MDBCol>
+
                     {/*<MDBCol md="6" xl="4" className="extra-project-md">*/}
                     {/*    <ProjectCard src={ rocketRampageImage } alt="Rocket Rampage Project" title="Rocket Rampage"*/}
                     {/*                 location="/RocketRampage"*/}
@@ -82,9 +101,6 @@ export default class PersonalProjectsContent extends React.Component {
                     {/*    </ProjectCard>*/}
                     {/*</MDBCol>*/}
 
-                    {/*<MDBCol md="6" xl="8" className="extra-project">*/}
-                    {/*</MDBCol>*/}
-
                     {/*<MDBCol md="6" xl="4" className="extra-project d-none">*/}
                     {/*    <ProjectCard src={ testImage } alt="" title="Testing Title"*/}
                     {/*                 location="/TestProject"*/}
@@ -97,18 +113,18 @@ export default class PersonalProjectsContent extends React.Component {
                     {/*    </ProjectCard>*/}
                     {/*</MDBCol>*/}
 
-                    {/*<MDBCol className="d-xl-none d-flex flex-center">*/}
-                    {/*    <MDBBtn color="indigo" className="m-0 expand-projects-btn"*/}
-                    {/*            onClick={ () => this.setState((state) => { return {expandProjects: !state.expandProjects} }) }*/}
-                    {/*    >*/}
-                    {/*        { this.state.expandProjects ? (*/}
-                    {/*            <span>Hide extra</span>*/}
-                    {/*        ) : (*/}
-                    {/*            <span>Show More</span>*/}
-                    {/*        )}*/}
-                    {/*        <MDBIcon icon="angle-down ml-2" />*/}
-                    {/*    </MDBBtn>*/}
-                    {/*</MDBCol>*/}
+                    <MDBCol className="d-xl-none d-flex flex-center">
+                        <MDBBtn color="indigo" className="m-0 expand-projects-btn"
+                                onClick={ () => this.setState((state) => { return {expandProjects: !state.expandProjects} }) }
+                        >
+                            { this.state.expandProjects ? (
+                                <span>Hide extra</span>
+                            ) : (
+                                <span>Show More</span>
+                            )}
+                            <MDBIcon icon="angle-down ml-2" />
+                        </MDBBtn>
+                    </MDBCol>
 
                 </div>
             </ContentContainer>
