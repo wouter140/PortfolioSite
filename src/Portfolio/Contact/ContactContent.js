@@ -40,10 +40,20 @@ export default class ContactContent extends React.Component {
             }
         });
     }
-    recaptchaErrorTimeout(e) {
-        this.setState({recaptchaVerified: false, sendingEmail: false, errorMessage: "There was an issue with " +
-                "ReCAPTCHA. Please make sure you are connected to the internet and are not blocking google.com. You " +
-                "can also contact me using the email above!"});
+    recaptchaError(e) {
+        this.setState({
+            recaptchaVerified: false,
+            sendingEmail: false,
+            errorMessage: "There was an issue with ReCAPTCHA. Please make sure you are connected to the internet and " +
+                "are not blocking google.com. You can also contact me using the email above!"});
+        bugsnagClient.notify("ReCAPTCHA error: " + JSON.stringify(e));
+    }
+    recaptchaTimeout() {
+        this.setState({
+            recaptchaVerified: false,
+            sendingEmail: false,
+            errorMessage: "ReCAPTCHA timed out, please submit again!"
+        });
     }
 
     submitHandler = event => {
@@ -150,8 +160,8 @@ export default class ContactContent extends React.Component {
                             ref={this.recaptchaRef}
                             sitekey={process.env.REACT_APP_RECAPTCHA_SITEKEY}
                             onChange={this.recaptchaChange.bind(this)}
-                            onErrored={this.recaptchaErrorTimeout.bind(this)}
-                            onExpired={this.recaptchaErrorTimeout.bind(this)}
+                            onErrored={this.recaptchaError.bind(this)}
+                            onExpired={this.recaptchaTimeout.bind(this)}
                             size="invisible"
                         />
 
