@@ -11,7 +11,6 @@ import "./ProjectSpecific.scss";
 import paintImage from "../../content/paint/images/main_face.png";
 import bitBusterImage from "../../content/bit-buster/images/main-face.png";
 import pinballBashImage from "../../content/pinball-bash/images/main-face.png";
-import cookDontLookImage from "../../content/cook-dont-look/images/main-face.jpg";
 import p2goPlayerImage from "../../content/p2go-player/images/main-face.png";
 
 export default class ProfessionalProjectsContent extends React.Component {
