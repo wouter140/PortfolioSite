@@ -41,7 +41,9 @@ export default class ContactContent extends React.Component {
         });
     }
     recaptchaErrorTimeout(e) {
-        this.setState({recaptchaVerified: false, sendingEmail: false});
+        this.setState({recaptchaVerified: false, sendingEmail: false, errorMessage: "There was an issue with " +
+                "ReCAPTCHA. Please make sure you are connected to the internet and are not blocking google.com. You " +
+                "can also contact me using the email above!"});
     }
 
     submitHandler = event => {
