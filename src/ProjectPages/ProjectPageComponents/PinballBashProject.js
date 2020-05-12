@@ -4,10 +4,17 @@ import image from "../../content/pinball-bash/images/main-face.png";
 
 import ProjectPage from "../components/ProjectPage";
 
-import video from "../../content/pinball-bash/videos/pinball-bash-trailer.mp4";
 import {ProjectInfoTable} from "../components/InfoTables";
 import {ContributionHighlights} from "../components/ContributionHighlights";
 import ProjectStartLayout from "../components/ProjectStartLayout";
+import {WorkItemWithCarousel} from "../components/WorkItem";
+
+import video from "../../content/pinball-bash/videos/pinball-bash-trailer.mp4";
+import effects from "../../content/pinball-bash/videos/pinball-bash-effects.mp4";
+import gameplay from "../../content/pinball-bash/videos/pinball-bash-gameplay.mp4";
+import littleGameplay from "../../content/pinball-bash/videos/pinball-bash-little-gameplay.mp4";
+import playerAnimations from "../../content/pinball-bash/videos/pinball-bash-player-animations.mp4";
+import walls from "../../content/pinball-bash/videos/pinball-bash-walls.mp4";
 
 export default function PinballBashProject(props) {
     return (
@@ -25,10 +32,11 @@ export default function PinballBashProject(props) {
 
             <ProjectStartLayout>
                 <ContributionHighlights>
-                    <li>Prototyping & Developing Gameplay</li>
-                    <li>Implementing Animation</li>
-                    <li>Implementing Effects</li>
+                    <li>Prototyping</li>
+                    <li>Created the Player</li>
                     <li>Developed pinball movement system</li>
+                    <li>Implementing Animations</li>
+                    <li>Implementing Effects</li>
                 </ContributionHighlights>
 
                 <ProjectInfoTable
@@ -41,12 +49,76 @@ export default function PinballBashProject(props) {
                 />
             </ProjectStartLayout>
 
-            <h4 className="text-white primary-color p-3">My Work</h4>
+            <h4 className="text-white primary-color mt-5 p-3">My Work</h4>
+            <WorkItemWithCarousel
+                title="Player"
+                sources={[
+                    gameplay,
+                    effects,
+                    playerAnimations
+                ]}
+            >
+                <p>
+                    During the project, I developed and iterated on the player.<br/>
+                    In the player, I worked on and implemented the following features:
+                </p>
+                <ul>
+                    <li>Implement movement</li>
+                    <li>Integrate animations</li>
+                    <li>Integrate effects and particles</li>
+                    <li>Implement the HUD</li>
+                </ul>
+            </WorkItemWithCarousel>
 
-            <h5 className="mt-4 font-weight-normal">The Pinball</h5>
-            <p className="mb-2">
+            <WorkItemWithCarousel
+                title="Pinball"
+                carouselBefore
+                sources={[
+                    littleGameplay
+                ]}
+            >
+                <p>
+                    In the project I created the pinball fairly early on in development, and proved to become the
+                    integral element of our gameplay. I iterated multiple times on it's implementation to get to the
+                    final state.
+                </p>
+                <p>
+                    I implemented the effects on the pinball like freeze and accelerate when hitting a bumper to make
+                    the bumper feel more powerful.<br/>
+                    I also worked on the player being able to pick the ball up and throw it back in a new direction.
+                </p>
+                <p>
+                    I also worked on other subtle effect on the pinball like the reflection when hitting a wall. The
+                    ball does not reflect perfectly which helps the gameplay by preventing the ball from getting stuck
+                    while bouncing between 2 walls.
+                </p>
+            </WorkItemWithCarousel>
 
-            </p>
+            <WorkItemWithCarousel
+                title="Level"
+                sources={[
+                    walls
+                ]}
+            >
+                <p>
+                    A big part of our levels are the walls and bumpers that move up and down inside the level. I
+                    developed the systems behind the walls and the tools to create sequences where the walls move up
+                    on their own during the game.
+                </p>
+                <p>
+                    The walls are also controlled by the player. The player is able to move the walls up in the
+                    direction they are facing. When they do this, the walls they move up also become their color.
+                </p>
+                <p>
+                    The bumper wall, also has an animation when it has moved in the up state and is the only wall type
+                    that can accelerate the pinball when hit.
+                </p>
+                <p>
+                    Before the walls move up on their own, there is an effect on the light intensity on the edges of
+                    the wall, to signal they will change to the player. The player able to use this effect to their
+                    advantage.
+                </p>
+            </WorkItemWithCarousel>
 
         </ProjectPage>
     )
