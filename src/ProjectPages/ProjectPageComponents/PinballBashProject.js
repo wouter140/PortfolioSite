@@ -53,9 +53,9 @@ export default function PinballBashProject(props) {
             <WorkItemWithCarousel
                 title="Player"
                 sources={[
+                    playerAnimations,
                     gameplay,
-                    effects,
-                    playerAnimations
+                    effects
                 ]}
             >
                 <p>
@@ -97,7 +97,8 @@ export default function PinballBashProject(props) {
             <WorkItemWithCarousel
                 title="Level"
                 sources={[
-                    walls
+                    walls,
+                    gameplay
                 ]}
             >
                 <p>
