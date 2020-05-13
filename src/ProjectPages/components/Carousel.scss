@@ -1,6 +1,13 @@
+$carousel-height: 300px;
 
 
-.carousel-inner-container .carousel-item {
-  top: initial !important;
-  height: auto !important;
+.carousel-inner-container {
+  .carousel-item {
+    top: initial !important;
+    height: auto !important;
+
+    img {
+      height: $carousel-height;
+    }
+  }
 }

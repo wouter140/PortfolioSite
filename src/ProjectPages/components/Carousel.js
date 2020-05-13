@@ -26,7 +26,7 @@ export function Carousel({contentSources, className, interval}) {
     return (
         <div className="w-100 flex-center">
             <MDBCarousel activeItem={1} length={contentSources.length}
-                         showControls={true} showIndicators={false} slide={false}
+                         showControls={contentSources.length > 1} showIndicators={contentSources.length > 1} slide={false}
                          className={"flex-center " + className}
                          interval={interval}
             >
@@ -55,5 +55,5 @@ Carousel.propTypes = {
 };
 Carousel.defaultProps = {
     className: "",
-    interval: 10000
+    interval: 12000
 }
