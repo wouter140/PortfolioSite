@@ -42,7 +42,7 @@ export default function PinballBashProject(props) {
                 <ProjectInfoTable
                     engine="Unreal Engine 4"
                     developmentTime="8 Weeks"
-                    teamSize="9 People (2 Programmer, 2 Designers and 5 Artists)"
+                    teamSize="3 - 9 People (2 Programmer, 2 Designers and 5 Artists)"
                     roles="Gameplay Programmer"
                     languages="Unreal Blueprints"
                     targetPlatforms="PC"
