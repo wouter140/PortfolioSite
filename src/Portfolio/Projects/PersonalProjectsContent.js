@@ -67,23 +67,23 @@ export default class PersonalProjectsContent extends React.Component {
                         </ProjectCard>
                     </MDBCol>
 
-                    <MDBCol md="6" xl="4" className="extra-project-md">
-                        <ProjectCard src={ cookDontLookImage } alt="Cook Don't Look Project" title="Cook Don't Look"
-                                     location="/CookDontLook"
-                                     badges={[
-                                         {name: 'Engine', content: 'Unity3D'},
-                                         {name: 'Languages', content: 'C#'},
-                                         {name: 'Platforms', content: 'Gear VR'},
-                                         {name: 'Team Size', content: '9 Person Team'},
-                                         {name: 'Duration', content: '2 Weeks'}
-                                     ]}
-                        >
-                            Cook Don't Look is Gear VR game where the player has to prepare food and make it perfect quality. To cook the food you look away from it, but have to make sure it does not overcook!
-                        </ProjectCard>
-                    </MDBCol>
+                    {/*<MDBCol md="6" xl="4" className="extra-project-md">*/}
+                    {/*    <ProjectCard src={ cookDontLookImage } alt="Cook Don't Look Project" title="Cook Don't Look"*/}
+                    {/*                 location="/CookDontLook"*/}
+                    {/*                 badges={[*/}
+                    {/*                     {name: 'Engine', content: 'Unity3D'},*/}
+                    {/*                     {name: 'Languages', content: 'C#'},*/}
+                    {/*                     {name: 'Platforms', content: 'Gear VR'},*/}
+                    {/*                     {name: 'Team Size', content: '9 Person Team'},*/}
+                    {/*                     {name: 'Duration', content: '2 Weeks'}*/}
+                    {/*                 ]}*/}
+                    {/*    >*/}
+                    {/*        Cook Don't Look is Gear VR game where the player has to prepare food and make it perfect quality. To cook the food you look away from it, but have to make sure it does not overcook!*/}
+                    {/*    </ProjectCard>*/}
+                    {/*</MDBCol>*/}
 
-                    <MDBCol md="6" xl="8" className="extra-project">
-                    </MDBCol>
+                    {/*<MDBCol md="6" xl="8" className="extra-project">*/}
+                    {/*</MDBCol>*/}
 
                     {/*<MDBCol md="6" xl="4" className="extra-project-md">*/}
                     {/*    <ProjectCard src={ rocketRampageImage } alt="Rocket Rampage Project" title="Rocket Rampage"*/}
@@ -101,30 +101,18 @@ export default class PersonalProjectsContent extends React.Component {
                     {/*    </ProjectCard>*/}
                     {/*</MDBCol>*/}
 
-                    {/*<MDBCol md="6" xl="4" className="extra-project d-none">*/}
-                    {/*    <ProjectCard src={ testImage } alt="" title="Testing Title"*/}
-                    {/*                 location="/TestProject"*/}
-                    {/*                 badges={[{name: 'Languages', content: 'Primary'}, {name: 'Engine', content: 'Secondary'}, {name: 'Platforms', content: 'Danger'}]}*/}
+                    {/*<MDBCol className="d-xl-none d-flex flex-center">*/}
+                    {/*    <MDBBtn color="indigo" className="m-0 expand-projects-btn"*/}
+                    {/*            onClick={ () => this.setState((state) => { return {expandProjects: !state.expandProjects} }) }*/}
                     {/*    >*/}
-                    {/*        Some super duper amazing card text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.*/}
-                    {/*        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,*/}
-                    {/*        pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.*/}
-                    {/*        In enim justo, rhoncus ut*/}
-                    {/*    </ProjectCard>*/}
+                    {/*        { this.state.expandProjects ? (*/}
+                    {/*            <span>Hide extra</span>*/}
+                    {/*        ) : (*/}
+                    {/*            <span>Show More</span>*/}
+                    {/*        )}*/}
+                    {/*        <MDBIcon icon="angle-down ml-2" />*/}
+                    {/*    </MDBBtn>*/}
                     {/*</MDBCol>*/}
-
-                    <MDBCol className="d-xl-none d-flex flex-center">
-                        <MDBBtn color="indigo" className="m-0 expand-projects-btn"
-                                onClick={ () => this.setState((state) => { return {expandProjects: !state.expandProjects} }) }
-                        >
-                            { this.state.expandProjects ? (
-                                <span>Hide extra</span>
-                            ) : (
-                                <span>Show More</span>
-                            )}
-                            <MDBIcon icon="angle-down ml-2" />
-                        </MDBBtn>
-                    </MDBCol>
 
                 </div>
             </ContentContainer>
