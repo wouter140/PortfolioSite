@@ -10,6 +10,10 @@ import image from "../../content/bursting-barrel/images/main-face.png";
 import brandImage from "../../content/bursting-barrel/images/main-face-brand.png";
 import video from "../../content/bursting-barrel/videos/bursting-barrel-trailer.mp4";
 
+import controllerDiagram from "../../content/bursting-barrel/images/diagram.png";
+import controllerInside from "../../content/bursting-barrel/images/controller-inside.png";
+import controllerOutside from "../../content/bursting-barrel/images/controller-outside.png";
+
 export default function BurstingBarrelProject() {
     return (
         <ProjectPage
@@ -17,18 +21,20 @@ export default function BurstingBarrelProject() {
             imageURL={image}
             brandImageURL={brandImage}
             brandClassName="bursting-barrel-brand"
-            // videoID="U-mC90Tu5SM"
             videoSource={[
                 {src: video, type: "video/mp4"}
             ]}
         >
-            Bursting barrel is a party game where the goal is to stop the barrel from leaking and the octopus from escaping by using the physical, keg shaped custom controller.
+            Bursting barrel is a party game where the goal is to stop the barrel from leaking and the octopus from
+            escaping by using the physical, keg shaped custom controller, to plug all the holes and force the octopus
+            back into the barrel.
 
             <ProjectStartLayout>
                 <ContributionHighlights>
-                    <li>Custom Controller</li>
-                    <li>Custom Controller Programming.</li>
+                    <li>Custom controller</li>
+                    <li>Custom controller programming.</li>
                     <li>Gameplay implementation.</li>
+                    <li>HUD implementation</li>
                 </ContributionHighlights>
 
                 <ProjectInfoTable
@@ -45,18 +51,24 @@ export default function BurstingBarrelProject() {
             <WorkItemWithCarousel
                 title="Custom Controller"
                 sources={[
-                    "https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg",
-                    "https://mdbootstrap.com/img/Photos/Slides/img%20(99).jpg",
+                    controllerInside,
+                    controllerDiagram,
+                    controllerOutside
                 ]}
             >
                 <p>
                     One of the tasks I worked on in this project was the creation of our custom controller.
                 </p>
                 <p>
-                    The gameplay we designed required to have buttons around a barrel, in our case a trash can. I
+                    The gameplay we designed required to have buttons around a barrel, in our case a simple trash can. I
                     attached every button on the controller and soldered everything together according to the electronic
-                    design I made beforehand. With the limitations of the TeencyLC, which is our controller board, I
-                    hooked the buttons and gyro sensors up.
+                    design I made. With the limitations of the controller board, the TeencyLC, I hooked the buttons and
+                    gyro sensors up according to our design diagram so the programming could be worked on at the same
+                    time.
+                </p>
+                <p>
+                    For the gameplay, I also implemented the controller calibration since we require the controller to
+                    be in a specific rotation for the gameplay to make sense.
                 </p>
             </WorkItemWithCarousel>
 
@@ -64,8 +76,8 @@ export default function BurstingBarrelProject() {
                 title="Custom Controller Programming"
                 carouselBefore
                 sources={[
-                    "https://mdbootstrap.com/img/Photos/Slides/img%20(99).jpg",
-                    "https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg",
+                    controllerOutside,
+                    video
                 ]}
             >
                 <p>
