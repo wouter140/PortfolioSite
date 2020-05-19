@@ -88,19 +88,19 @@ export default class ProfessionalProjectsContent extends React.Component {
                         </ProjectCard>
                     </MDBCol>
 
-                    <MDBCol md="6" className="animated fadeIn">
-                        <ProjectCard src={ p2goPlayerImage } alt="Web Video Player" title="Web Video Player"
-                                     location="/P2GOPlayer"
-                                     badges={[
-                                         {name: 'Languages', content: 'Javascript ES6, React, CSS3, HTML5'},
-                                         {name: 'Platforms', content: 'Web'}
-                                     ]}
-                        >
-                            For the company Learning Valley and Presentations 2Go, I have worked on their Web video
-                            platform. The video player supports rich media, commenting, multiple video types like dash
-                            and hls, playlists, and 360 videos with support for VR.
-                        </ProjectCard>
-                    </MDBCol>
+                    {/*<MDBCol md="6" className="animated fadeIn">*/}
+                    {/*    <ProjectCard src={ p2goPlayerImage } alt="Web Video Player" title="Web Video Player"*/}
+                    {/*                 location="/P2GOPlayer"*/}
+                    {/*                 badges={[*/}
+                    {/*                     {name: 'Languages', content: 'Javascript ES6, React, CSS3, HTML5'},*/}
+                    {/*                     {name: 'Platforms', content: 'Web'}*/}
+                    {/*                 ]}*/}
+                    {/*    >*/}
+                    {/*        For the company Learning Valley and Presentations 2Go, I have worked on their Web video*/}
+                    {/*        platform. The video player supports rich media, commenting, multiple video types like dash*/}
+                    {/*        and hls, playlists, and 360 videos with support for VR.*/}
+                    {/*    </ProjectCard>*/}
+                    {/*</MDBCol>*/}
 
                     {/*<MDBCol md="6" xl="8" className="extra-project">*/}
                     {/*</MDBCol>*/}
