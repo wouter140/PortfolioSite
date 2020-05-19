@@ -26,10 +26,14 @@ export default function PaintProject(props) {
             <ProjectStartLayout>
                 <ContributionHighlights>
                     <li>Scrum Master</li>
-
+                    <li>Player</li>
+                    <li>Weapons</li>
+                    <li>Pickups</li>
+                    <li>Audio</li>
+                    <li>Optimizations</li>
+                    <li>Online Presence</li>
                     <li>Tools that are used by the entire team</li>
                     <li>Dynamic Split-Screen</li>
-                    <li>Input device detection</li>
                 </ContributionHighlights>
 
                 <ProjectInfoTable
@@ -53,6 +57,76 @@ export default function PaintProject(props) {
 
                 </p>
             </WorkItem>
+
+            <WorkItemWithCarousel
+                title="Gameplay"
+                carouselBefore
+                sources={[
+                    "https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg",
+                    "https://mdbootstrap.com/img/video/Tropical.mp4",
+                    "https://mdbootstrap.com/img/Photos/Slides/img%20(99).jpg"
+                ]}
+            >
+                <p>
+                    TODO
+                </p>
+                <ul>
+                    <li>Player Movement</li>
+                    <li>Player Effects</li>
+                    <li>Weapons</li>
+                    <li>Pickups</li>
+                </ul>
+            </WorkItemWithCarousel>
+
+            <WorkItemWithCarousel
+                title="Audio"
+                sources={[
+                    "https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg",
+                    "https://mdbootstrap.com/img/video/Tropical.mp4",
+                    "https://mdbootstrap.com/img/Photos/Slides/img%20(99).jpg"
+                ]}
+            >
+                <p>
+                    TODO
+                </p>
+                <ul>
+                    <li>Sound System Setup</li>
+                    <li>Volume Controls</li>
+                    <li>Attenuation</li>
+                    <li>Reverb</li>
+                </ul>
+            </WorkItemWithCarousel>
+
+            <WorkItemWithCarousel
+                title="Optimizations"
+                carouselBefore
+                sources={[
+                    "https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg",
+                    "https://mdbootstrap.com/img/video/Tropical.mp4",
+                    "https://mdbootstrap.com/img/Photos/Slides/img%20(99).jpg"
+                ]}
+            >
+                <p>
+                    TODO
+                </p>
+            </WorkItemWithCarousel>
+
+
+            <WorkItemWithCarousel
+                title="Online Presence"
+                sources={[
+                    "https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg",
+                    "https://mdbootstrap.com/img/video/Tropical.mp4",
+                    "https://mdbootstrap.com/img/Photos/Slides/img%20(99).jpg"
+                ]}
+            >
+                <p>
+                    Steam Presence
+                </p>
+                <p>
+                    Discord Presence
+                </p>
+            </WorkItemWithCarousel>
 
             <WorkItemWithCarousel
                 title="Discord Meeting Tool"
@@ -139,7 +213,7 @@ export default function PaintProject(props) {
                 ]}
             >
                 <p>
-                    With Coop in mind during the development of our game, I worked on a system to detect new input
+                    With coop gameplay in mind during the development of our game, I worked on a system to detect new input
                     devices.
                     When a new input device is detected, either a new player is added, or an existing player changes
                     input device.
