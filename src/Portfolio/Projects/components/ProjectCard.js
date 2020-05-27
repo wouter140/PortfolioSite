@@ -48,7 +48,7 @@ export default class ProjectCard extends React.Component {
                     { this.props.badges && this.props.badges.length > 0 && (
                         <div className="mb-2">
                             { this.props.badges.map((badge) => {
-                                const badgeInfo = badgeConverter.find((badgeInfo) => (badgeInfo.name === badge.name));
+                                const badgeInfo = badgeConverter.filter((badgeInfo) => (badgeInfo.name === badge.name))[0];
                                 if(!badgeInfo)
                                     return null;
                                 return (
