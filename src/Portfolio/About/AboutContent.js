@@ -26,8 +26,8 @@ import {ReactComponent as gitIcon} from "../../images/about/languages/git-icon.s
 import {ReactComponent as jenkinsIcon} from "../../images/about/languages/jenkins-icon.svg";
 import {ReactComponent as visualStudioIcon} from "../../images/about/languages/visualstudio-icon.svg";
 import {ReactComponent as phpStormIcon} from "../../images/about/languages/phpstorm-icon.svg";
-import {ReactComponent as autodesk3DSMaxIcon} from "../../images/about/languages/3dsmax-icon.svg";
-import {ReactComponent as photoshopIcon} from "../../images/about/languages/photoshop-icon.svg";
+// import {ReactComponent as autodesk3DSMaxIcon} from "../../images/about/languages/3dsmax-icon.svg";
+// import {ReactComponent as photoshopIcon} from "../../images/about/languages/photoshop-icon.svg";
 
 import "./AboutPageContent.scss"
 
@@ -67,6 +67,12 @@ export default class AboutContent extends React.Component {
                     <div className="mt-2">
                         I am currently looking for an <b>internship from September 2020</b>.<br/>
                         I am based in Breda, the Netherlands but am able to relocate.
+                    </div>
+                    <div className="mt-1">
+                        My passion in game development lay in the Engine and Tools field.
+                        I enjoy both thinking about code, developing solutions on low level problems and creating tools
+                        that will be used by a variety of people, forcing me to work closely together with the other
+                        parties.
                     </div>
 
                     <div className="mt-3">
@@ -127,8 +133,8 @@ export default class AboutContent extends React.Component {
 
                                     <ExperienceIcon src={visualStudioIcon} text="Visual Studio" />
                                     <ExperienceIcon src={phpStormIcon} text="PhpStorm" />
-                                    <ExperienceIcon src={autodesk3DSMaxIcon} text="3ds Max" />
-                                    <ExperienceIcon src={photoshopIcon} text="Photoshop" />
+                                    {/*<ExperienceIcon src={autodesk3DSMaxIcon} text="3ds Max" />*/}
+                                    {/*<ExperienceIcon src={photoshopIcon} text="Photoshop" />*/}
                                 </div>
                             </MDBCardBody>
                         </MDBCard>
