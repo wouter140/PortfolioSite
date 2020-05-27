@@ -182,9 +182,14 @@
     max-height: 60%;
   }
 
-  .contribution-highlights-list li {
-    margin-top: .75rem;
-    margin-bottom: .75rem;
+  .contribution-highlights-list{
+    a {
+      color: #0050aa;
+    }
+    li {
+      margin-top: .75rem;
+      margin-bottom: .75rem;
+    }
   }
   .work-item-row {
     padding-left: .75rem;

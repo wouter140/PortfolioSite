@@ -1,9 +1,11 @@
 import React from "react";
 
 import ProjectPage from "../components/ProjectPage";
+import ProjectStartLayout from "../components/ProjectStartLayout";
 import {ProjectInfoTable} from "../components/InfoTables";
 import {ContributionHighlights} from "../components/ContributionHighlights";
 import {WorkItemWithCarousel} from "../components/WorkItem";
+import {Link} from "react-scroll";
 
 import image from "../../content/bit-buster/images/main-face.png";
 import largeTrailer from "../../content/bit-buster/videos/BitBuster-Trailer.mp4";
@@ -13,7 +15,7 @@ import splashScreenVideo from "../../content/bit-buster/videos/BitBuster-Startup
 import sliderToolsVideo from "../../content/bit-buster/videos/BitBuster-SliderTools.mp4";
 import uiOptionsExampleVideo from "../../content/bit-buster/videos/BitBuster-UIOptionsExample.mp4";
 import controlsMenuImage from "../../content/bit-buster/images/BitBuster-ControlsMenu.png";
-import ProjectStartLayout from "../components/ProjectStartLayout";
+
 
 export default function BitBusterProject() {
     return (
@@ -39,9 +41,9 @@ export default function BitBusterProject() {
 
             <ProjectStartLayout>
                 <ContributionHighlights>
-                    <li>Designed & developed the entire UI systems in the custom C++ Engine.</li>
-                    <li>Created in-engine tools for adding, controlling and editing UI elements, using my UI systems.</li>
-                    <li>Implemented the designed in-game UI into our game.</li>
+                    <li><Link to="ui-systems" href="#ui-systems" smooth={true} offset={-100} duration={500}>Designed & developed the entire UI systems in the custom C++ Engine.</Link></li>
+                    <li><Link to="ui-tools" href="#ui-tools" smooth={true} offset={-100} duration={500}>Created in-engine tools for adding, controlling and editing UI elements, using my UI systems.</Link></li>
+                    <li><Link to="ui-implementation" href="#ui-implementation" smooth={true} offset={-100} duration={500}>Implemented the designed in-game UI into our game.</Link></li>
                     <li>Contributed to reviewing and fixing bugs from various parts of the engine and gameplay.</li>
                 </ContributionHighlights>
 
@@ -63,6 +65,7 @@ export default function BitBusterProject() {
 
             <h4 className="text-white primary-color mt-5 p-3">My Work</h4>
             <WorkItemWithCarousel
+                id="ui-systems"
                 title="UI Systems"
                 sources={[
                     uiOptionsExampleVideo,
@@ -70,7 +73,7 @@ export default function BitBusterProject() {
                 ]}
             >
                 <p>
-                    When I joined the Voxagen engine team we were missing UI systems in the engine.
+                    When I joined the Voxagen engine (our custom engine) team we were missing UI systems in the engine.
                     I implemented these systems to allow us to add:
                 </p>
                 <ul>
@@ -89,6 +92,7 @@ export default function BitBusterProject() {
             </WorkItemWithCarousel>
 
             <WorkItemWithCarousel
+                id="ui-tools"
                 title="UI Tools"
                 carouselBefore
                 sources={[
@@ -97,7 +101,7 @@ export default function BitBusterProject() {
                 ]}
             >
                 <p>
-                    Voxagen also has a custom build-in editor.
+                    Voxagen (our custom engine) also has a custom build-in editor.
                     I developed the editor tools for adding, controlling and editing the UI systems inside the
                     editor.
                 </p>
@@ -114,6 +118,7 @@ export default function BitBusterProject() {
             </WorkItemWithCarousel>
 
             <WorkItemWithCarousel
+                id="ui-implementation"
                 title="UI Implementation"
                 sources={[
                     mainMenuVideo,

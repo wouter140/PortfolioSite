@@ -5,6 +5,7 @@ import {ProjectInfoTable} from "../components/InfoTables";
 import ProjectStartLayout from "../components/ProjectStartLayout";
 import {ContributionHighlights} from "../components/ContributionHighlights";
 import {WorkItemWithCarousel} from "../components/WorkItem";
+import {Link} from "react-scroll";
 
 import image from "../../content/bursting-barrel/images/main-face.png";
 import brandImage from "../../content/bursting-barrel/images/main-face-brand.png";
@@ -31,8 +32,8 @@ export default function BurstingBarrelProject() {
 
             <ProjectStartLayout>
                 <ContributionHighlights>
-                    <li>Custom controller</li>
-                    <li>Custom controller programming.</li>
+                    <li><Link to="controller-development" href="#controller-development" smooth={true} offset={-100} duration={500}>Custom controller</Link></li>
+                    <li><Link to="controller-programming" href="#controller-programming" smooth={true} offset={-100} duration={500}>Custom controller programming.</Link></li>
                     <li>Gameplay implementation.</li>
                     <li>HUD implementation</li>
                 </ContributionHighlights>
@@ -49,6 +50,7 @@ export default function BurstingBarrelProject() {
 
             <h4 className="text-white primary-color mt-5 p-3">My Work</h4>
             <WorkItemWithCarousel
+                id="controller-development"
                 title="Custom Controller"
                 sources={[
                     controllerInside,
@@ -73,6 +75,7 @@ export default function BurstingBarrelProject() {
             </WorkItemWithCarousel>
 
             <WorkItemWithCarousel
+                id="controller-programming"
                 title="Custom Controller Programming"
                 carouselBefore
                 sources={[

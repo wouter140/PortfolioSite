@@ -8,6 +8,7 @@ import {ProjectInfoTable} from "../components/InfoTables";
 import {ContributionHighlights} from "../components/ContributionHighlights";
 import ProjectStartLayout from "../components/ProjectStartLayout";
 import {WorkItemWithCarousel} from "../components/WorkItem";
+import {Link} from "react-scroll";
 
 import video from "../../content/pinball-bash/videos/pinball-bash-trailer.mp4";
 import effects from "../../content/pinball-bash/videos/pinball-bash-effects.mp4";
@@ -33,10 +34,10 @@ export default function PinballBashProject(props) {
             <ProjectStartLayout>
                 <ContributionHighlights>
                     <li>Prototyping</li>
-                    <li>Created the Player</li>
-                    <li>Developed pinball movement system</li>
-                    <li>Implementing Animations</li>
-                    <li>Implementing Effects</li>
+                    <li><Link to="player" href="#player" smooth={true} offset={-100} duration={500}>Created the Player</Link></li>
+                    <li><Link to="pinball" href="#pinball" smooth={true} offset={-100} duration={500}>Developed pinball movement system</Link></li>
+                    <li><Link to="level" href="#level" smooth={true} offset={-100} duration={500}>Implementing Animations</Link></li>
+                    <li><Link to="level" href="#level" smooth={true} offset={-100} duration={500}>Implementing Effects</Link></li>
                 </ContributionHighlights>
 
                 <ProjectInfoTable
@@ -51,6 +52,7 @@ export default function PinballBashProject(props) {
 
             <h4 className="text-white primary-color mt-5 p-3">My Work</h4>
             <WorkItemWithCarousel
+                id="player"
                 title="Player"
                 sources={[
                     playerAnimations,
@@ -71,6 +73,7 @@ export default function PinballBashProject(props) {
             </WorkItemWithCarousel>
 
             <WorkItemWithCarousel
+                id="pinball"
                 title="Pinball"
                 carouselBefore
                 sources={[
@@ -95,6 +98,7 @@ export default function PinballBashProject(props) {
             </WorkItemWithCarousel>
 
             <WorkItemWithCarousel
+                id="level"
                 title="Level"
                 sources={[
                     walls,

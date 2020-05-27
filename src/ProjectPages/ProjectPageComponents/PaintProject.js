@@ -6,9 +6,10 @@ import ProjectPage from "../components/ProjectPage";
 
 // import video from "../../content/videos/bit-buster/bit-buster-trailer.mp4";
 import {ProjectInfoTable} from "../components/InfoTables";
+import ProjectStartLayout from "../components/ProjectStartLayout";
 import {ContributionHighlights} from "../components/ContributionHighlights";
 import {WorkItem, WorkItemWithCarousel} from "../components/WorkItem";
-import ProjectStartLayout from "../components/ProjectStartLayout";
+import {Link} from "react-scroll";
 
 export default function PaintProject(props) {
     return (
@@ -25,15 +26,15 @@ export default function PaintProject(props) {
 
             <ProjectStartLayout>
                 <ContributionHighlights>
-                    <li>Scrum Master</li>
-                    <li>Player</li>
-                    <li>Weapons</li>
-                    <li>Pickups</li>
-                    <li>Audio</li>
-                    <li>Optimizations</li>
-                    <li>Online Presence</li>
-                    <li>Tools that are used by the entire team</li>
-                    <li>Dynamic Split-Screen</li>
+                    <li><Link to="scrum-master" href="#scrum-master" smooth={true} offset={-100} duration={500}>Scrum Master</Link></li>
+                    <li><Link to="gameplay" href="#gameplay" smooth={true} offset={-100} duration={500}>The Player</Link></li>
+                    <li><Link to="gameplay" href="#gameplay" smooth={true} offset={-100} duration={500}>Weapons</Link></li>
+                    <li><Link to="gameplay" href="#gameplay" smooth={true} offset={-100} duration={500}>Pickups</Link></li>
+                    <li><Link to="audio" href="#audio" smooth={true} offset={-100} duration={500}>Audio</Link></li>
+                    <li><Link to="optimizations" href="#optimizations" smooth={true} offset={-100} duration={500}>Optimizations</Link></li>
+                    <li><Link to="presence" href="#presence" smooth={true} offset={-100} duration={750}>Online Presence</Link></li>
+                    <li><Link to="tools" href="#tools" smooth={true} offset={-100} duration={750}>Tools used by the entire team</Link></li>
+                    <li><Link to="dynamic-split-screen" href="#dynamic-split-screen" smooth={true} offset={-100} duration={750}>Dynamic Split-Screen</Link></li>
                 </ContributionHighlights>
 
                 <ProjectInfoTable
@@ -51,6 +52,7 @@ export default function PaintProject(props) {
 
             <h4 className="text-white primary-color mt-5 p-3">My Work</h4>
             <WorkItem
+                id="scrum-master"
                 title="Scrum Master"
             >
                 <p>
@@ -59,6 +61,7 @@ export default function PaintProject(props) {
             </WorkItem>
 
             <WorkItemWithCarousel
+                id="gameplay"
                 title="Gameplay"
                 carouselBefore
                 sources={[
@@ -79,6 +82,7 @@ export default function PaintProject(props) {
             </WorkItemWithCarousel>
 
             <WorkItemWithCarousel
+                id="audio"
                 title="Audio"
                 sources={[
                     "https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg",
@@ -98,6 +102,7 @@ export default function PaintProject(props) {
             </WorkItemWithCarousel>
 
             <WorkItemWithCarousel
+                id="optimizations"
                 title="Optimizations"
                 carouselBefore
                 sources={[
@@ -113,6 +118,7 @@ export default function PaintProject(props) {
 
 
             <WorkItemWithCarousel
+                id="presence"
                 title="Online Presence"
                 sources={[
                     "https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg",
@@ -129,6 +135,7 @@ export default function PaintProject(props) {
             </WorkItemWithCarousel>
 
             <WorkItemWithCarousel
+                id="tools"
                 title="Discord Meeting Tool"
                 carouselBefore
                 sources={[
@@ -183,6 +190,7 @@ export default function PaintProject(props) {
             </WorkItemWithCarousel>
 
             <WorkItemWithCarousel
+                id="dynamic-split-screen"
                 title="Split-Screen"
                 carouselBefore
                 sources={[
