@@ -17,7 +17,7 @@ export default function PortfolioNavBar(props) {
 
     return (
         <React.Fragment>
-            <MDBNavbar color="bg-primary" className={"project-page-navbar overflow-hidden" + (!props.projectTitleVisible ? " enlarge-padding" : "")} fixed="top" light expand="md">
+            <MDBNavbar color="bg-primary" className={"project-page-navbar overflow-hidden" + (!props.projectTitleVisible ? " enlarge-padding" : "")} fixed="top" dark expand="md">
                 <div className="project-page-navtitle-container">
                     <Link to="/">
                         <MDBNavbarBrand className="d-flex clickable">

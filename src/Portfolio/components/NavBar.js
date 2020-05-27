@@ -33,7 +33,7 @@ export default class PortfolioNavBar extends Component {
     render() {
         return (
             <React.Fragment>
-                <MDBNavbar color="bg-primary" fixed="top" light expand="md" scrolling transparent>
+                <MDBNavbar color="bg-primary" fixed="top" dark expand="md" scrolling transparent>
                     <MDBContainer>
                         <MDBNavbarBrand className="d-flex clickable" onClick={ () => animateScroll.scrollToTop() }>
                             <div className="navbar-icon">
@@ -66,11 +66,11 @@ export default class PortfolioNavBar extends Component {
                                         <MDBBtn color="link" className="m-0 p-2 nav-link-button nav-link">Contact</MDBBtn>
                                     </MDBNavItem>
                                 </Link>
-                                <Link activeClass="active" to="contact-page">
-                                    <MDBNavItem>
-                                        <MDBBtn color="link" className="m-0 p-2 nav-link-button nav-link">Resume</MDBBtn>
-                                    </MDBNavItem>
-                                </Link>
+                                {/*<Link activeClass="active" to="contact-page">*/}
+                                {/*    <MDBNavItem>*/}
+                                {/*        <MDBBtn color="link" className="m-0 p-2 nav-link-button nav-link">Resume</MDBBtn>*/}
+                                {/*    </MDBNavItem>*/}
+                                {/*</Link>*/}
                             </MDBNavbarNav>
                         </MDBCollapse>
                     </MDBContainer>
