@@ -49,6 +49,7 @@ export default class ProfessionalProjectsContent extends React.Component {
                                          {name: 'Team Size', content: '25 Person Team', title: "Project Team Size"},
                                          {name: 'Duration', content: '40 Weeks', title: "Project Duration"}
                                      ]}
+                                     inProgress
                         >
                             This project is currently in development.<br/>
                             More will come soon!

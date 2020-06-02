@@ -35,14 +35,23 @@ export default class ProjectCard extends React.Component {
         return (
             <MDBCard className={className}>
                 <div className="hoverable">
-                    <Link to={ this.props.location }>
+                    { this.props.inProgress ? (
                         <MDBCardImage tag='div' waves src=" " overlay={false}>
                             <div className="project-image-container" ref={ this.imageRef }>
-                            <img className="img-fluid project-image"
-                                  src={ this.props.src } alt={ this.props.alt } />
+                                <img className="img-fluid project-image"
+                                     src={ this.props.src } alt={ this.props.alt } />
                             </div>
                         </MDBCardImage>
-                    </Link>
+                    ) : (
+                        <Link to={ this.props.location }>
+                            <MDBCardImage tag='div' waves src=" " overlay={false}>
+                                <div className="project-image-container" ref={ this.imageRef }>
+                                    <img className="img-fluid project-image"
+                                         src={ this.props.src } alt={ this.props.alt } />
+                                </div>
+                            </MDBCardImage>
+                        </Link>
+                    )}
                 </div>
                 <MDBCardBody className="">
                     { this.props.badges && this.props.badges.length > 0 && (
@@ -69,11 +78,17 @@ export default class ProjectCard extends React.Component {
                     <MDBCardText>
                         { this.props.children }
                     </MDBCardText>
-                    <Link to={ this.props.location }>
-                        <MDBBtn color="primary" className="float-right">
-                            More info
+                    { this.props.inProgress ? (
+                        <MDBBtn color="primary" className="float-right" disabled>
+                            Coming Soon
                         </MDBBtn>
-                    </Link>
+                    ) : (
+                        <Link to={ this.props.location }>
+                            <MDBBtn color="primary" className="float-right">
+                                More info
+                            </MDBBtn>
+                        </Link>
+                    )}
                 </MDBCardBody>
             </MDBCard>
         )

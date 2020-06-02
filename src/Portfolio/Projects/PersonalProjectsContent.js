@@ -45,6 +45,7 @@ export default class PersonalProjectsContent extends React.Component {
                                          {name: 'Languages', content: 'C++ & Blueprints'},
                                          {name: 'Platforms', content: 'PC with Discord'}
                                      ]}
+                                     inProgress
                         >
                             I developed a plugin to integrate Discord rich presence into any Unreal project.
                             With this plugin it is simple to update the current game presence for the current user.
