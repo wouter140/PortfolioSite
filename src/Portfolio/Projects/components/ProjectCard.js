@@ -36,7 +36,7 @@ export default class ProjectCard extends React.Component {
             <MDBCard className={className}>
                 <div className="hoverable">
                     { this.props.inProgress ? (
-                        <MDBCardImage tag='div' waves src=" " overlay={false}>
+                        <MDBCardImage tag='div' waves src=" " hover>
                             <div className="project-image-container" ref={ this.imageRef }>
                                 <img className="img-fluid project-image"
                                      src={ this.props.src } alt={ this.props.alt } />
@@ -44,7 +44,7 @@ export default class ProjectCard extends React.Component {
                         </MDBCardImage>
                     ) : (
                         <Link to={ this.props.location }>
-                            <MDBCardImage tag='div' waves src=" " overlay={false}>
+                            <MDBCardImage tag='div' waves src=" " hover>
                                 <div className="project-image-container" ref={ this.imageRef }>
                                     <img className="img-fluid project-image"
                                          src={ this.props.src } alt={ this.props.alt } />
