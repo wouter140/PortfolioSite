@@ -44,9 +44,9 @@ export default function PaintProject(props) {
                     <li><Link to="gameplay" href="#gameplay" smooth={true} offset={-100} duration={500}>Weapons Functionality</Link></li>
                     <li><Link to="gameplay" href="#gameplay" smooth={true} offset={-100} duration={500}>Pickups System</Link></li>
                     <li><Link to="gameplay" href="#gameplay" smooth={true} offset={-100} duration={500}>Gameplay Networking</Link></li>
-                    <li><Link to="audio" href="#audio" smooth={true} offset={-100} duration={500}>Audio Systems</Link></li>
-                    <li><Link to="presence" href="#presence" smooth={true} offset={-100} duration={750}>Online Rich Presence</Link></li>
                     <li><Link to="tools" href="#tools" smooth={true} offset={-100} duration={750}>Tools used by the entire team</Link></li>
+                    <li><Link to="audio" href="#audio" smooth={true} offset={-100} duration={750}>Audio Systems</Link></li>
+                    <li><Link to="presence" href="#presence" smooth={true} offset={-100} duration={750}>Online Rich Presence</Link></li>
                     <li><Link to="dynamic-split-screen" href="#dynamic-split-screen" smooth={true} offset={-100} duration={750}>Dynamic Split-Screen Research</Link></li>
                 </ContributionHighlights>
 
@@ -143,51 +143,6 @@ export default function PaintProject(props) {
             </WorkItem>
 
             <WorkItem
-                id="audio"
-                title="Audio"
-                sources={[
-                    "https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg",
-                    "https://mdbootstrap.com/img/video/Tropical.mp4",
-                    "https://mdbootstrap.com/img/Photos/Slides/img%20(99).jpg"
-                ]}
-            >
-                <p>
-                    Due to a general lack of audio knowledge in our team, I worked on learning about and implementing
-                    the Unreal audio features. Some of the features of Unreal audio I implemented into our game are:
-                </p>
-                <ul>
-                    <li>Setting up the sound system</li>
-                    <li>Added support for audio volume controls</li>
-                    <li>Setup Audio Attenuation</li>
-                    <li>Added Reverb effects to the world</li>
-                </ul>
-            </WorkItem>
-
-            <WorkItem
-                id="presence"
-                title="Online Rich Presence"
-                sources={[
-                    "https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg",
-                    "https://mdbootstrap.com/img/video/Tropical.mp4",
-                    "https://mdbootstrap.com/img/Photos/Slides/img%20(99).jpg"
-                ]}
-            >
-                <p>
-                    I integrated Steam rich presence into our game. Unreal still used outdated parts of the Steam SDK
-                    that make the rich presence work. This meant I went through the Steam SDK and the Unreal Engine source
-                    to find the current implementation, how it's supposed to work and make changes to the Unreal Engine
-                    source code to update the Unreal Steam Rich presence to use the features of the latest SDK.
-                    In-game we now show what the player is doing in the level and with how many people they are playing.
-                </p>
-                <p>
-                    I have also integrated Discord rich presence into our game. Unlike Steam rich presence, there was no
-                    support for Discord functionality in the Unreal Engine. I developed a Unreal plugin that implements
-                    Discord's game SDK features into Unreal. Currently in our game we use this to update the player's
-                    status to show what they are doing in-game and with how many people they are playing.
-                </p>
-            </WorkItem>
-
-            <WorkItem
                 id="tools"
                 title="Discord Meeting Tool"
                 carouselBefore
@@ -240,6 +195,51 @@ export default function PaintProject(props) {
                         next.
                     </li>
                 </ul>
+            </WorkItem>
+
+            <WorkItem
+                id="audio"
+                title="Audio"
+                sources={[
+                    "https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg",
+                    "https://mdbootstrap.com/img/video/Tropical.mp4",
+                    "https://mdbootstrap.com/img/Photos/Slides/img%20(99).jpg"
+                ]}
+            >
+                <p>
+                    Due to a general lack of audio knowledge in our team, I worked on learning about and implementing
+                    the Unreal audio features. Some of the features of Unreal audio I implemented into our game are:
+                </p>
+                <ul>
+                    <li>Setting up the sound system</li>
+                    <li>Added support for audio volume controls</li>
+                    <li>Setup Audio Attenuation</li>
+                    <li>Added Reverb effects to the world</li>
+                </ul>
+            </WorkItem>
+
+            <WorkItem
+                id="presence"
+                title="Online Rich Presence"
+                sources={[
+                    "https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg",
+                    "https://mdbootstrap.com/img/video/Tropical.mp4",
+                    "https://mdbootstrap.com/img/Photos/Slides/img%20(99).jpg"
+                ]}
+            >
+                <p>
+                    I integrated Steam rich presence into our game. Unreal still used outdated parts of the Steam SDK
+                    that make the rich presence work. This meant I went through the Steam SDK and the Unreal Engine source
+                    to find the current implementation, how it's supposed to work and make changes to the Unreal Engine
+                    source code to update the Unreal Steam Rich presence to use the features of the latest SDK.
+                    In-game we now show what the player is doing in the level and with how many people they are playing.
+                </p>
+                <p>
+                    I have also integrated Discord rich presence into our game. Unlike Steam rich presence, there was no
+                    support for Discord functionality in the Unreal Engine. I developed a Unreal plugin that implements
+                    Discord's game SDK features into Unreal. Currently in our game we use this to update the player's
+                    status to show what they are doing in-game and with how many people they are playing.
+                </p>
             </WorkItem>
 
             <WorkItem

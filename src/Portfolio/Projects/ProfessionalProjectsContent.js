@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {MDBBtn, MDBCol, MDBIcon} from "mdbreact";
+import {MDBCol} from "mdbreact";
 
 import ContentContainer from "../../components/ContentContainer";
 import ProjectCard from "./components/ProjectCard";
@@ -44,15 +44,15 @@ export default class ProfessionalProjectsContent extends React.Component {
                                      location="/Paint"
                                      badges={[
                                          {name: 'Engine', content: 'Unreal Engine 4', title: "Engine"},
-                                         {name: 'Languages', content: 'C++ & Python', title: "Used Languages"},
+                                         {name: 'Languages', content: 'C++, Blueprints & Python', title: "Used Languages"},
                                          {name: 'Platforms', content: 'PC & PS4', title: "Target Platforms"},
                                          {name: 'Team Size', content: '25 Person Team', title: "Project Team Size"},
                                          {name: 'Duration', content: '40 Weeks', title: "Project Duration"}
                                      ]}
-                                     inProgress
                         >
-                            This project is currently in development.<br/>
-                            More will come soon!
+                            P.A.I.N.T. is an online cooperative third-person shooter where you join the P.U.N.K.S.
+                            The P.U.N.K.S are a bunch of rebels that hang around in their ultimate hideout. They despise order and structure thus try to correct the world with their paint blasters.
+                            You forge a plan to invade the S.U.I.T.S. factory to cover the environment in bright colours.
                         </ProjectCard>
                     </MDBCol>
 
@@ -118,18 +118,18 @@ export default class ProfessionalProjectsContent extends React.Component {
                     {/*    </ProjectCard>*/}
                     {/*</MDBCol>*/}
 
-                    <MDBCol className="d-xl-none d-flex flex-center">
-                        <MDBBtn color="indigo" className="m-0 expand-projects-btn"
-                                onClick={ () => this.setState((state) => { return {expandProjects: !state.expandProjects} }) }
-                        >
-                            { this.state.expandProjects ? (
-                                <span>Hide extra</span>
-                            ) : (
-                                <span>Show More</span>
-                            )}
-                            <MDBIcon icon="angle-down ml-2" />
-                        </MDBBtn>
-                    </MDBCol>
+                    {/*<MDBCol className="d-xl-none d-flex flex-center">*/}
+                    {/*    <MDBBtn color="indigo" className="m-0 expand-projects-btn"*/}
+                    {/*            onClick={ () => this.setState((state) => { return {expandProjects: !state.expandProjects} }) }*/}
+                    {/*    >*/}
+                    {/*        { this.state.expandProjects ? (*/}
+                    {/*            <span>Hide extra</span>*/}
+                    {/*        ) : (*/}
+                    {/*            <span>Show More</span>*/}
+                    {/*        )}*/}
+                    {/*        <MDBIcon icon="angle-down ml-2" />*/}
+                    {/*    </MDBBtn>*/}
+                    {/*</MDBCol>*/}
 
                 </div>
 
