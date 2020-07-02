@@ -3,7 +3,6 @@ import React from "react";
 import ProjectPage from "../components/ProjectPage";
 import {ProjectInfoTable} from "../components/InfoTables";
 import {ContributionHighlights} from "../components/ContributionHighlights";
-import {WorkItemWithCarousel} from "../components/WorkItem";
 
 import image from "../../content/discord-presence-plugin/images/main-face.png";
 import ProjectStartLayout from "../components/ProjectStartLayout";

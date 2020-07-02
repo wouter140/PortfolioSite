@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {MDBBtn, MDBCol, MDBIcon} from "mdbreact";
+import {MDBCol} from "mdbreact";
 
 import ContentContainer from "../../components/ContentContainer";
 import ProjectCard from "./components/ProjectCard";
@@ -10,7 +10,7 @@ import "./ProjectSpecific.scss";
 
 import burstingBarrelImage from "../../content/bursting-barrel/images/main-face.png";
 import discordPresenceImage from "../../content/discord-presence-plugin/images/main-face.png";
-import cookDontLookImage from "../../content/cook-dont-look/images/main-face.jpg";
+//import cookDontLookImage from "../../content/cook-dont-look/images/main-face.jpg";
 
 export default class PersonalProjectsContent extends React.Component {
 
