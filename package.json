@@ -8,8 +8,6 @@
     "@material-ui/core": "^4.9.5",
     "emailjs-com": "^2.4.1",
     "mdbreact": "^4.25.3",
-    "node-sass": "^4.13.1",
-    "prop-types": "latest",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-google-recaptcha": "^2.0.1",
@@ -18,8 +16,10 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "^3.4.0",
     "react-scroll": "^1.7.16",
-    "react-visibility-sensor": "^5.1.1",
-    "react-youtube": "^7.9.0"
+    "react-visibility-sensor": "^5.1.1"
+  },
+    "node-sass": "^4.14.1",
+    "prop-types": "latest",
   },
   "scripts": {
     "start": "react-scripts start",

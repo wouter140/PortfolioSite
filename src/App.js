@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Suspense} from 'react';
 import {BrowserRouter as Router, Redirect, Route, Switch} from "react-router-dom";
 
 import Progress from "react-progress-2";
@@ -17,14 +17,16 @@ function App() {
 
             <Router>
                 <LocationChangeScrollHandler/>
-                <Switch>
-                    {projects.map((project) => (
-                        <Route key={project.path} path={project.path} component={project.component}/>
-                    ))}
+                <Suspense fallback={<div>Loading...</div>}>
+                    <Switch>
+                        {projects.map((project) => (
+                            <Route key={project.path} path={project.path} component={project.component}/>
+                        ))}
 
-                    <Route exact path="/" component={PortfolioPage}/>
-                    <Redirect to="/" />
-                </Switch>
+                        <Route exact path="/" component={PortfolioPage}/>
+                        <Redirect to="/" />
+                    </Switch>
+                </Suspense>
             </Router>
         </ErrorBoundary>
     );
