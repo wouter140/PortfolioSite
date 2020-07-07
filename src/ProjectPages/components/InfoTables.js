@@ -28,13 +28,14 @@ export function ProjectInfoTable(props) {
         <InfoTable hover borderless className={(props.className || "") + " info-table my-5"}
                title="Project Information"
                infoValues={[
+                   {name: "Trailer", value: props.trailer},
                    {name: "Engine", value: props.engine},
                    {name: "Development Time", value: props.developmentTime},
                    {name: "Team Size", value: props.teamSize},
                    {name: "My Roles", value: props.roles},
                    {name: "Languages Used", value: props.languages},
                    {name: "Target Platforms", value: props.targetPlatforms},
-                   {name: "Release Status", value: props.release}
+                   {name: "Release Status", value: props.release},
                ]}
         />
     )
