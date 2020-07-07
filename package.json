@@ -18,12 +18,16 @@
     "react-scroll": "^1.7.16",
     "react-visibility-sensor": "^5.1.1"
   },
+  "devDependencies": {
+    "@leadhome/react-snap-sitemap": "^0.1.4",
     "node-sass": "^4.14.1",
     "prop-types": "latest",
+    "react-snap": "^1.23.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "postbuild": "react-snap && react-snap-sitemap --base-url=https://woutergrutter.com/",
     "test": "react-scripts test"
   },
   "eslintConfig": {
