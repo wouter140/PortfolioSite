@@ -17,7 +17,7 @@ export default React.memo(
             >
                 <p>
                     During the final year of my game development study, I developed a custom C++ allocator for games.
-                    The primary goal from developing the allocator was to learn about low level functionality like memory allocation and management, together with everything that comes with that.
+                    The primary goal of developing the allocator was to learn about low level functionality like memory allocation and management, together with everything that comes with that.
                 </p>
                 <p>
 
@@ -87,13 +87,13 @@ export default React.memo(
                     </p>
                     <p>
                         I designed the different allocation strategies with their dependencies and uses as a clear overview.
-                        The design allowed for feedback and changed to be incorporated before implementing the actual allocator.
+                        The design allowed for feedback and changes to be incorporated before implementing the actual allocator.
                     </p>
                 </WorkItemWithCarousel>
 
                 <WorkItemWithCarousel
                     id="virtual-memory"
-                    title="Optimized physical memory usage with virtual memory"
+                    title="Optimized physical memory"
                     sources={[]}
                     // sources={[
                     //     uiOptionsExampleVideo,
@@ -123,7 +123,7 @@ export default React.memo(
                         Internally, the multipool uses multiple pool allocation strategies of different sizes and determines the best pool allocator to use for each allocation.
                     </p>
                     <p>
-                        The pool allocator internally stores a freelist of free blocks. This makes the pool allocation strategy very fast to allocate and free a blocks of memory.
+                        The pool allocator internally stores a freelist of free blocks. This makes the pool allocation strategy very fast to allocate and free blocks of memory.
                         When there are no free blocks available in the pool allocator, the pool allocator requests a new range of virtual memory and maps that to physical memory.
                         The pool allocator then divides the new memory into blocks that are linked together so they can be used.
                         The pool allocator also keeps track of the amount of free blocks in a range of memory, so that when a range is completely free, it can be unmapped and the physical memory reused.
@@ -147,14 +147,14 @@ export default React.memo(
                     <p>
                         The freelist also used virtual memory to request a range of memory to use.
                         When the freelist allocates a block of memory, it only maps the required pages that are used by the allocation to physical memory.
-                        When an allocation is freed, the pages that the memory uses are released from physical memory.
-                        This not only minimized physical memory usage, but also decreased physical memory fragmentation.
-                        To further decrease fragmentation in the freelist, neighbouring blocks are tried to be coalesced to create larger free blocks.
+                        When an allocation is freed, the pages that the memory used are released from physical memory.
+                        This not only minimized physical memory usage, but also decreases physical memory fragmentation.
+                        To further decrease fragmentation, the freelist attempts to coalesce neighbouring blocks to create larger free blocks.
                     </p>
                     <p>
                         The freelist uses a first-fit search algorithm, which searches for a free block from the start of the region.
                         The first-fit algorithm minimizes fragmentation and memory utilization by prioritizing memory at the start of the region.
-                        I plan to add next-fit and best-fit search algortims to further improve and balance speed, fragmentation and memory usage.
+                        I plan to add next-fit and best-fit search algorithms to further improve and balance speed, fragmentation and memory usage.
                     </p>
                 </WorkItemWithCarousel>
 
@@ -169,20 +169,20 @@ export default React.memo(
                 >
                     <p>
                         One of the goals of the allocator is that it should be easy to implement into a game or engine.
-                        A game or engine are large projects with a lot of code, so making it easy to implement is a must.
+                        Games or engines are large projects with a lot of code, so making it easy to implement is a must.
                     </p>
                     <p>
                         To satisfy this requirement I added a option that overrides the global new and delete operators.
                         The overridden new and delete use the custom allocator to allocate and free memory.
-                        I chose overriding of new and delete for this requirement as by default C++ uses these in most of its code.
+                        I chose overriding of new and delete for this as by default C++ uses these in most of its code.
                         If the codebase does not use the C malloc and free or custom allocations, new and delete will override the allocation.
                         New and delete is also used by default in the C++ standard containers which means these are also using the custom allocator.
                     </p>
                     <p>
                         I created a general allocator which is optimized to allocate all sorts of sizes to be used in the overriden new and delete.
                         Internally the general allocator has multiple of the above allocation strategies with different page and region sizes.
-                        The general allocator determines which allocator is the best for the allocation by its size.
-                        Using multiple allocation strategies with different page and region sizes also prevents large fragmentation problems in the allocator by separating large size differences.
+                        The general allocator determines which allocator is the best for the allocation by its requested size.
+                        Using multiple allocation strategies with different page and region sizes also minimizes fragmentation problems in the allocator by separating large size-differences.
                     </p>
                 </WorkItemWithCarousel>
 
