@@ -64,10 +64,10 @@ export default class AboutContent extends React.Component {
                         formerly known as NHTV.<br/>
                         I have previously graduated from ROCA12 with a Game Programmer degree.
                     </div>
-                    <div className="mt-2">
-                        I am currently looking for an <b>internship from September 2020</b>.<br/>
-                        I am based in Breda, the Netherlands but am able to relocate.
-                    </div>
+                    {/*<div className="mt-2">*/}
+                    {/*    I am currently looking for an <b>internship from September 2020</b>.<br/>*/}
+                    {/*    I am based in Breda, the Netherlands but am able to relocate.*/}
+                    {/*</div>*/}
                     <div className="mt-1">
                         My passion in game development lay in the Engine and Tools field.
                         I enjoy both thinking about code, developing solutions on low level problems and creating tools
