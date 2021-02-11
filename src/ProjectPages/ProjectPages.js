@@ -19,6 +19,7 @@ import CookDontLookProject from "./ProjectPageComponents/CookDontLookProject";
 import RocketRampageProject from "./ProjectPageComponents/RocketRampageProject";
 import P2GOPlayerProject from "./ProjectPageComponents/P2GOPlayerProject";
 import DiscordPresencePlugin from "./ProjectPageComponents/DiscordPresencePlugin";
+import WMemAllocator from "./ProjectPageComponents/WMemAllocator";
 
 export const projects = [
     {path: "/TestProject", component: TestProject},
@@ -31,4 +32,5 @@ export const projects = [
     {path: "/RocketRampage", component: RocketRampageProject},
     {path: "/P2GOPlayer", component: P2GOPlayerProject},
     {path: "/DiscordPresencePlugin", component: DiscordPresencePlugin},
+    {path: "/WMemAllocator", component: WMemAllocator},
 ];
