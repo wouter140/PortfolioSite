@@ -1,22 +1,38 @@
 import * as React from "react";
 
-import image from "../../content/paint/images/main_face.png";
+import {Link} from "react-scroll";
 
 import ProjectPage from "../components/ProjectPage";
-
-// import video from "../../content/videos/bit-buster/bit-buster-trailer.mp4";
 import {ProjectInfoTable} from "../components/InfoTables";
 import ProjectStartLayout from "../components/ProjectStartLayout";
 import {ContributionHighlights} from "../components/ContributionHighlights";
-import {WorkItem,} from "../components/WorkItem";
-import {Link} from "react-scroll";
+import {WorkItem, WorkItemWithCarousel,} from "../components/WorkItem";
+
+import image from "../../content/paint/images/main_face.png";
+import brandImage from "../../content/paint/images/brand-image.png";
+
+import OptimizationsBeforeImage from "../../content/paint/images/NetworkOptimizations_Before.png";
+import OptimizationsBeforeVideo from "../../content/paint/videos/NetworkPerformance_Before.mp4";
+import OptimizationsAfterImage from "../../content/paint/images/NetworkOptimizations_After.png";
+import OptimizationsAfterVideo from "../../content/paint/videos/NetworkPerformance_After.mp4";
+
+import DynamicSizedSplitscreen from "../../content/paint/videos/DynamicSizedSplitscreen.mp4";
+import DynamicAndSplitscreen from "../../content/paint/videos/DynamicAndSplitscreen.mp4";
+
+import DiscordSteamToolVersionsAndUpgrading from "../../content/paint/images/DiscordSteamToolVersionAndUpgrading.png";
+import DiscordSteamToolBuilds from "../../content/paint/images/DiscordSteamToolBuilds.png";
+import DiscordCalendarTool from "../../content/paint/videos/DiscordCalendarToolCreateEvent.mp4";
+
+import DiscordRichPresenceImage from "../../content/paint/images/DiscordRichPresence.png";
+import SteamRichPresenceImage from "../../content/paint/images/SteamRichPresence.png";
 
 export default function PaintProject(props) {
     return (
         <ProjectPage
             title="P.A.I.N.T."
             imageURL={image}
-            // videoID="U-mC90Tu5SM"
+            brandImageURL={brandImage}
+            brandClassName="paint-brand"
             // videoSource={[
             //     {src: video, type: "video/mp4"}
             // ]}
@@ -63,6 +79,12 @@ export default function PaintProject(props) {
                             Released on Steam
                         </a>
                     )}
+                    trailer={(
+                        <a href="https://youtu.be/jP_pd79_I98" target="_blank" rel="noopener noreferrer"
+                           style={{color: "#007bff"}}>
+                            https://youtu.be/jP_pd79_I98
+                        </a>
+                    )}
                 />
             </ProjectStartLayout>
 
@@ -84,14 +106,14 @@ export default function PaintProject(props) {
                 </ul>
             </WorkItem>
 
-            <WorkItem
+            <WorkItemWithCarousel
                 id="optimizations"
                 title="Profiling and Optimizations"
-                carouselBefore
                 sources={[
-                    "https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg",
-                    "https://mdbootstrap.com/img/video/Tropical.mp4",
-                    "https://mdbootstrap.com/img/Photos/Slides/img%20(99).jpg"
+                    OptimizationsBeforeImage,
+                    OptimizationsAfterImage,
+                    OptimizationsBeforeVideo,
+                    OptimizationsAfterVideo
                 ]}
             >
                 <p>
@@ -106,7 +128,7 @@ export default function PaintProject(props) {
                     reflected back in the network profiler data.
                     From improving the network performance I also learned more best-practices regarding networking in Unreal.
                 </p>
-            </WorkItem>
+            </WorkItemWithCarousel>
 
             <WorkItem
                 id="gameplay"
@@ -142,14 +164,12 @@ export default function PaintProject(props) {
                 </p>
             </WorkItem>
 
-            <WorkItem
+            <WorkItemWithCarousel
                 id="tools"
                 title="Discord Meeting Tool"
                 carouselBefore
                 sources={[
-                    "https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg",
-                    "https://mdbootstrap.com/img/video/Tropical.mp4",
-                    "https://mdbootstrap.com/img/Photos/Slides/img%20(99).jpg"
+                    DiscordCalendarTool
                 ]}
             >
                 <p>
@@ -173,14 +193,13 @@ export default function PaintProject(props) {
                     </li>
                     <li>Reminders are send through Google before the meeting starts.</li>
                 </ul>
-            </WorkItem>
+            </WorkItemWithCarousel>
 
-            <WorkItem
+            <WorkItemWithCarousel
                 title="Discord Steam Versioning and Branching Tool"
                 sources={[
-                    "https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg",
-                    "https://mdbootstrap.com/img/video/Tropical.mp4",
-                    "https://mdbootstrap.com/img/Photos/Slides/img%20(99).jpg"
+                    DiscordSteamToolVersionsAndUpgrading,
+                    DiscordSteamToolBuilds
                 ]}
             >
                 <p>
@@ -195,7 +214,31 @@ export default function PaintProject(props) {
                         next.
                     </li>
                 </ul>
-            </WorkItem>
+            </WorkItemWithCarousel>
+
+
+            <WorkItemWithCarousel
+                id="presence"
+                title="Online Rich Presence"
+                sources={[
+                    DiscordRichPresenceImage,
+                    SteamRichPresenceImage
+                ]}
+            >
+                <p>
+                    I integrated Steam rich presence into our game. Unreal still used outdated parts of the Steam SDK
+                    that make the rich presence work. This meant I went through the Steam SDK and the Unreal Engine source
+                    to find the current implementation, how it's supposed to work and make changes to the Unreal Engine
+                    source code to update the Unreal Steam Rich presence to use the features of the latest SDK.
+                    In-game we now show what the player is doing in the level and with how many people they are playing.
+                </p>
+                <p>
+                    I have also integrated Discord rich presence into our game. Unlike Steam rich presence, there was no
+                    support for Discord functionality in the Unreal Engine. I developed a Unreal plugin that implements
+                    Discord's game SDK features into Unreal. Currently in our game we use this to update the player's
+                    status to show what they are doing in-game and with how many people they are playing.
+                </p>
+            </WorkItemWithCarousel>
 
             <WorkItem
                 id="audio"
@@ -218,38 +261,13 @@ export default function PaintProject(props) {
                 </ul>
             </WorkItem>
 
-            <WorkItem
-                id="presence"
-                title="Online Rich Presence"
-                sources={[
-                    "https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg",
-                    "https://mdbootstrap.com/img/video/Tropical.mp4",
-                    "https://mdbootstrap.com/img/Photos/Slides/img%20(99).jpg"
-                ]}
-            >
-                <p>
-                    I integrated Steam rich presence into our game. Unreal still used outdated parts of the Steam SDK
-                    that make the rich presence work. This meant I went through the Steam SDK and the Unreal Engine source
-                    to find the current implementation, how it's supposed to work and make changes to the Unreal Engine
-                    source code to update the Unreal Steam Rich presence to use the features of the latest SDK.
-                    In-game we now show what the player is doing in the level and with how many people they are playing.
-                </p>
-                <p>
-                    I have also integrated Discord rich presence into our game. Unlike Steam rich presence, there was no
-                    support for Discord functionality in the Unreal Engine. I developed a Unreal plugin that implements
-                    Discord's game SDK features into Unreal. Currently in our game we use this to update the player's
-                    status to show what they are doing in-game and with how many people they are playing.
-                </p>
-            </WorkItem>
-
-            <WorkItem
+            <WorkItemWithCarousel
                 id="dynamic-split-screen"
                 title="Split-Screen"
                 carouselBefore
                 sources={[
-                    "https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg",
-                    "https://mdbootstrap.com/img/video/Tropical.mp4",
-                    "https://mdbootstrap.com/img/Photos/Slides/img%20(99).jpg"
+                    DynamicSizedSplitscreen,
+                    DynamicAndSplitscreen
                 ]}
             >
                 <p>
@@ -267,7 +285,7 @@ export default function PaintProject(props) {
                     Unfortunately due to time constraints and performance reasons, split-screen did not end up in the
                     final product.
                 </p>
-            </WorkItem>
+            </WorkItemWithCarousel>
 
             {/*<WorkItem*/}
             {/*    title="Input Device Detection"*/}

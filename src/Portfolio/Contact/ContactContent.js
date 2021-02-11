@@ -117,103 +117,109 @@ export default class ContactContent extends React.Component {
             <ContentContainer id="contact-page" className="responsive-text-size"
                               contentTitle={ <span>Contact <strong>Me</strong></span> } >
 
-                <form
-                    className="needs-validation container mx-auto"
-                    onSubmit={this.submitHandler.bind(this)}
-                    noValidate
-                    ref={ this.formRef }
-                >
+                { navigator.userAgent !== "ReactSnap" ? (
+                    <form
+                        className="needs-validation container mx-auto"
+                        onSubmit={this.submitHandler.bind(this)}
+                        noValidate
+                        ref={ this.formRef }
+                    >
+                        <div className="pt-4">
+                            Do you have any questions or a cool opportunity, you can always contact me using the form below or send me an email directly to <a href="mailto:info@woutergrutter.com">info@woutergrutter.com</a>
+                        </div>
 
-                    <div className="pt-4">
-                        Do you have any questions or a cool opportunity, you can always contact me using the form below or send me an email directly to <a href="mailto:info@woutergrutter.com">info@woutergrutter.com</a>
-                    </div>
+                        <div>
 
-                    <div>
+                            <p className="text-danger mt-4">
+                                {this.state.errorMessage}
+                            </p>
 
-                        <p className="text-danger mt-4">
-                            {this.state.errorMessage}
-                        </p>
+                            <MDBInput label="Name" name="name"
+                                      required
+                                      value={ this.state.name } onChange={(e) => this.setState({ name: e.target.value })} />
 
-                        <MDBInput label="Name" name="name"
-                                  required
-                                  value={ this.state.name } onChange={(e) => this.setState({ name: e.target.value })} />
+                            <MDBInput type="email" label="Email" name="email"
+                                      required
+                                      value={ this.state.email } onChange={(e) => this.setState({ email: e.target.value })} />
 
-                        <MDBInput type="email" label="Email" name="email"
-                                  required
-                                  value={ this.state.email } onChange={(e) => this.setState({ email: e.target.value })} />
+                            <MDBInput type="tel" label="Phone" name="phone"
+                                      value={ this.state.phoneNr } onChange={(e) => this.setState({ phoneNr: e.target.value })} />
 
-                        <MDBInput type="tel" label="Phone" name="phone"
-                                  value={ this.state.phoneNr } onChange={(e) => this.setState({ phoneNr: e.target.value })} />
+                            <MDBInput label="Company" name="company"
 
-                        <MDBInput label="Company" name="company"
+                                      value={ this.state.company } onChange={(e) => this.setState({ company: e.target.value })}/>
 
-                                  value={ this.state.company } onChange={(e) => this.setState({ company: e.target.value })}/>
+                            <MDBInput type="textarea" label="Message" rows="6"
+                                      required className="overflow-auto"
+                                      value={ this.state.message } onChange={(e) => this.setState({ message: e.target.value })}/>
 
-                        <MDBInput type="textarea" label="Message" rows="6"
-                                  required className="overflow-auto"
-                                  value={ this.state.message } onChange={(e) => this.setState({ message: e.target.value })}/>
+                            <MDBInput type="textarea" name="message" hidden
+                                      value={ this.state.message.split("\n").join('<br/>') } />
 
-                        <MDBInput type="textarea" name="message" hidden
-                                  value={ this.state.message.split("\n").join('<br/>') } />
+                            <ReCAPTCHA
+                                ref={this.recaptchaRef}
+                                sitekey={process.env.REACT_APP_RECAPTCHA_SITEKEY}
+                                onChange={this.recaptchaChange.bind(this)}
+                                onErrored={this.recaptchaError.bind(this)}
+                                onExpired={this.recaptchaTimeout.bind(this)}
+                                size="invisible"
+                            />
 
-                        <ReCAPTCHA
-                            ref={this.recaptchaRef}
-                            sitekey={process.env.REACT_APP_RECAPTCHA_SITEKEY}
-                            onChange={this.recaptchaChange.bind(this)}
-                            onErrored={this.recaptchaError.bind(this)}
-                            onExpired={this.recaptchaTimeout.bind(this)}
-                            size="invisible"
-                        />
+                            <p className="text-muted font-small">
+                                <span>This site is protected by reCAPTCHA and the Google </span>
+                                <span><a href="https://policies.google.com/privacy">Privacy Policy</a> and </span>
+                                <span><a href="https://policies.google.com/terms">Terms of Service</a> apply.</span>
+                            </p>
 
-                        <p className="text-muted font-small">
-                            <span>This site is protected by reCAPTCHA and the Google </span>
-                            <span><a href="https://policies.google.com/privacy">Privacy Policy</a> and </span>
-                            <span><a href="https://policies.google.com/terms">Terms of Service</a> apply.</span>
-                        </p>
-
-                        { this.state.successEmail && (
-                            <p className="note-success p-3 text-muted row">
-                                <div className="position-relative col col-1">
-                                    <MDBIcon icon="check" className="send-email-success" />
-                                </div>
-                                <div className="col col-11">
-                                    <span className="font-weight-bold">Thanks for contacting me!</span><br/>
-                                    <span>
+                            { this.state.successEmail && (
+                                <p className="note-success p-3 text-muted row">
+                                    <div className="position-relative col col-1">
+                                        <MDBIcon icon="check" className="send-email-success" />
+                                    </div>
+                                    <div className="col col-11">
+                                        <span className="font-weight-bold">Thanks for contacting me!</span><br/>
+                                        <span>
                                         I have received your email and will be in contact soon. You should have received a confirmation email with the address you provided.<br/>
                                         If you don't see it, please check you spam folder.
                                     </span>
-                                </div>
-                            </p>
-                        )}
+                                    </div>
+                                </p>
+                            )}
 
-                        <div style={{height: "3.6rem"}}>
+                            <div style={{height: "3.6rem"}}>
 
-                            <div className="d-block position-relative">
-                                <div className="d-block position-absolute submit-button">
-                                    <MDBBtn color="success" type="submit" disabled={ this.state.sendingEmail }>
-                                        <MDBIcon icon="paper-plane" />
-                                        <span className="ml-2">Send Message</span>
-                                    </MDBBtn>
-                                    <Fade
-                                        in={this.state.sendingEmail}
-                                        style={{
-                                            transitionDelay: this.state.sendingEmail ? '200ms' : '0ms',
-                                        }}
-                                        unmountOnExit
-                                    >
-                                        {this.state.successEmail ? (
-                                            <MDBIcon icon="check" className="send-email-success" />
-                                        ) : (
-                                            <CircularProgress size={24} thickness={3.6} className="send-email-loader" />
-                                        ) }
-                                    </Fade>
+                                <div className="d-block position-relative">
+                                    <div className="d-block position-absolute submit-button">
+                                        <MDBBtn color="success" type="submit" disabled={ this.state.sendingEmail }>
+                                            <MDBIcon icon="paper-plane" />
+                                            <span className="ml-2">Send Message</span>
+                                        </MDBBtn>
+                                        <Fade
+                                            in={this.state.sendingEmail}
+                                            style={{
+                                                transitionDelay: this.state.sendingEmail ? '200ms' : '0ms',
+                                            }}
+                                            unmountOnExit
+                                        >
+                                            {this.state.successEmail ? (
+                                                <MDBIcon icon="check" className="send-email-success" />
+                                            ) : (
+                                                <CircularProgress size={24} thickness={3.6} className="send-email-loader" />
+                                            ) }
+                                        </Fade>
+                                    </div>
                                 </div>
                             </div>
+
                         </div>
 
+                    </form>
+                ) : (
+                    <div className="pt-4 w-75 mx-auto">
+                        Do you have any questions or a cool opportunity, you can always contact me by sending me an
+                        email directly to <a href="mailto:info@woutergrutter.com">info@woutergrutter.com</a>
                     </div>
-
-                </form>
+                )}
 
             </ContentContainer>
         );
