@@ -8,7 +8,7 @@ import ProjectCard from "./components/ProjectCard";
 import "./ProjectsContent.scss";
 import "./ProjectSpecific.scss";
 
-import paintImage from "../../content/paint/images/main_face.png";
+import paintImage from "../../content/paint/images/project_short_face.png";
 import bitBusterImage from "../../content/bit-buster/images/main-face.png";
 import pinballBashImage from "../../content/pinball-bash/images/main-face.png";
 //import p2goPlayerImage from "../../content/p2go-player/images/main-face.png";

@@ -8,7 +8,7 @@ import ProjectStartLayout from "../components/ProjectStartLayout";
 import {ContributionHighlights} from "../components/ContributionHighlights";
 import {WorkItem, WorkItemWithCarousel,} from "../components/WorkItem";
 
-import image from "../../content/paint/images/main_face.png";
+import image from "../../content/paint/images/main_face.jpg";
 import brandImage from "../../content/paint/images/brand-image.png";
 
 import OptimizationsBeforeImage from "../../content/paint/images/NetworkOptimizations_Before.png";
@@ -33,9 +33,6 @@ export default function PaintProject(props) {
             imageURL={image}
             brandImageURL={brandImage}
             brandClassName="paint-brand"
-            // videoSource={[
-            //     {src: video, type: "video/mp4"}
-            // ]}
         >
             <p>
                 P.A.I.N.T. is an online cooperative third-person shooter where you join the P.U.N.K.S.
@@ -48,10 +45,6 @@ export default function PaintProject(props) {
                 Together with the P.U.N.K.S. you forge a plan to invade the S.U.I.T.S. factory. You penetrate the factory door with your badass minivan and armed with your paint blaster you cover the environment in bright colours.
             </p>
 
-            <p className="warning-color p-3 mt-4">
-                This page is still work in progress and content might change in the future!
-            </p>
-
             <ProjectStartLayout>
                 <ContributionHighlights>
                     <li><Link to="scrum-master" href="#scrum-master" smooth={true} offset={-100} duration={500}>Scrum Master</Link></li>
@@ -61,9 +54,9 @@ export default function PaintProject(props) {
                     <li><Link to="gameplay" href="#gameplay" smooth={true} offset={-100} duration={500}>Pickups System</Link></li>
                     <li><Link to="gameplay" href="#gameplay" smooth={true} offset={-100} duration={500}>Gameplay Networking</Link></li>
                     <li><Link to="tools" href="#tools" smooth={true} offset={-100} duration={750}>Tools used by the entire team</Link></li>
-                    <li><Link to="audio" href="#audio" smooth={true} offset={-100} duration={750}>Audio Systems</Link></li>
                     <li><Link to="presence" href="#presence" smooth={true} offset={-100} duration={750}>Online Rich Presence</Link></li>
                     <li><Link to="dynamic-split-screen" href="#dynamic-split-screen" smooth={true} offset={-100} duration={750}>Dynamic Split-Screen Research</Link></li>
+                    <li><Link to="audio" href="#audio" smooth={true} offset={-100} duration={750}>Audio Systems</Link></li>
                 </ContributionHighlights>
 
                 <ProjectInfoTable
@@ -109,6 +102,7 @@ export default function PaintProject(props) {
             <WorkItemWithCarousel
                 id="optimizations"
                 title="Profiling and Optimizations"
+                carouselBefore
                 sources={[
                     OptimizationsBeforeImage,
                     OptimizationsAfterImage,
@@ -130,10 +124,9 @@ export default function PaintProject(props) {
                 </p>
             </WorkItemWithCarousel>
 
-            <WorkItem
+            <WorkItemWithCarousel
                 id="gameplay"
                 title="Gameplay"
-                carouselBefore
                 sources={[
                     "https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg",
                     "https://mdbootstrap.com/img/video/Tropical.mp4",
@@ -162,7 +155,7 @@ export default function PaintProject(props) {
                     it up. This was according to the design specifications of the pickups we designed for the game.
                     Unfortunately in the final product we only used the health pickup as a pickup in the game.
                 </p>
-            </WorkItem>
+            </WorkItemWithCarousel>
 
             <WorkItemWithCarousel
                 id="tools"
@@ -197,6 +190,7 @@ export default function PaintProject(props) {
 
             <WorkItemWithCarousel
                 title="Discord Steam Versioning and Branching Tool"
+                carouselBefore
                 sources={[
                     DiscordSteamToolVersionsAndUpgrading,
                     DiscordSteamToolBuilds
@@ -215,7 +209,6 @@ export default function PaintProject(props) {
                     </li>
                 </ul>
             </WorkItemWithCarousel>
-
 
             <WorkItemWithCarousel
                 id="presence"
@@ -239,27 +232,6 @@ export default function PaintProject(props) {
                     status to show what they are doing in-game and with how many people they are playing.
                 </p>
             </WorkItemWithCarousel>
-
-            <WorkItem
-                id="audio"
-                title="Audio"
-                sources={[
-                    "https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg",
-                    "https://mdbootstrap.com/img/video/Tropical.mp4",
-                    "https://mdbootstrap.com/img/Photos/Slides/img%20(99).jpg"
-                ]}
-            >
-                <p>
-                    Due to a general lack of audio knowledge in our team, I worked on learning about and implementing
-                    the Unreal audio features. Some of the features of Unreal audio I implemented into our game are:
-                </p>
-                <ul>
-                    <li>Setting up the sound system</li>
-                    <li>Added support for audio volume controls</li>
-                    <li>Setup Audio Attenuation</li>
-                    <li>Added Reverb effects to the world</li>
-                </ul>
-            </WorkItem>
 
             <WorkItemWithCarousel
                 id="dynamic-split-screen"
@@ -286,6 +258,27 @@ export default function PaintProject(props) {
                     final product.
                 </p>
             </WorkItemWithCarousel>
+
+            <WorkItem
+                id="audio"
+                title="Audio"
+                sources={[
+                    "https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg",
+                    "https://mdbootstrap.com/img/video/Tropical.mp4",
+                    "https://mdbootstrap.com/img/Photos/Slides/img%20(99).jpg"
+                ]}
+            >
+                <p>
+                    Due to a general lack of audio knowledge in our team, I worked on learning about and implementing
+                    the Unreal audio features. Some of the features of Unreal audio I implemented into our game are:
+                </p>
+                <ul>
+                    <li>Setting up the sound system</li>
+                    <li>Added support for audio volume controls</li>
+                    <li>Setup Audio Attenuation</li>
+                    <li>Added Reverb effects to the world</li>
+                </ul>
+            </WorkItem>
 
             {/*<WorkItem*/}
             {/*    title="Input Device Detection"*/}
