@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "@leadhome/react-snap-sitemap": "^0.1.4",
-    "node-sass": "^4.14.1",
+    "node-sass": "^6.0.0",
     "prop-types": "latest",
     "react-snap": "^1.23.0"
   },
