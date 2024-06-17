@@ -10,7 +10,7 @@ import "./ProjectSpecific.scss";
 
 import paintImage from "../../content/paint/images/project_short_face.png";
 import bitBusterImage from "../../content/bit-buster/images/main-face.png";
-import pinballBashImage from "../../content/pinball-bash/images/main-face.png";
+//import pinballBashImage from "../../content/pinball-bash/images/main-face.png";
 //import p2goPlayerImage from "../../content/p2go-player/images/main-face.png";
 
 export default class ProfessionalProjectsContent extends React.Component {
@@ -73,21 +73,21 @@ export default class ProfessionalProjectsContent extends React.Component {
                         </ProjectCard>
                     </MDBCol>
 
-                    <MDBCol md="6" className="animated fadeIn">
-                        <ProjectCard src={ pinballBashImage } alt="Pinball Bash Project" title="Pinball Bash"
-                                     location="/PinballBash"
-                                     badges={[
-                                         {name: 'Engine', content: 'Unreal Engine 4'},
-                                         {name: 'Languages', content: 'Blueprints'},
-                                         {name: 'Platforms', content: 'PC'},
-                                         {name: 'Team Size', content: '9 Person Team'},
-                                         {name: 'Duration', content: '8 Weeks'}
-                                     ]}
-                        >
-                            Pinball Bash is a 4 player co-op game where you try to defeat the others by having deadly pin-balls hit them.
-                            You can deflect these by making walls come up from the floor to win the game.
-                        </ProjectCard>
-                    </MDBCol>
+                    {/*<MDBCol md="6" className="animated fadeIn">*/}
+                    {/*    <ProjectCard src={ pinballBashImage } alt="Pinball Bash Project" title="Pinball Bash"*/}
+                    {/*                 location="/PinballBash"*/}
+                    {/*                 badges={[*/}
+                    {/*                     {name: 'Engine', content: 'Unreal Engine 4'},*/}
+                    {/*                     {name: 'Languages', content: 'Blueprints'},*/}
+                    {/*                     {name: 'Platforms', content: 'PC'},*/}
+                    {/*                     {name: 'Team Size', content: '9 Person Team'},*/}
+                    {/*                     {name: 'Duration', content: '8 Weeks'}*/}
+                    {/*                 ]}*/}
+                    {/*    >*/}
+                    {/*        Pinball Bash is a 4 player co-op game where you try to defeat the others by having deadly pin-balls hit them.*/}
+                    {/*        You can deflect these by making walls come up from the floor to win the game.*/}
+                    {/*    </ProjectCard>*/}
+                    {/*</MDBCol>*/}
 
                     {/*<MDBCol md="6" className="animated fadeIn">*/}
                     {/*    <ProjectCard src={ p2goPlayerImage } alt="Web Video Player" title="Web Video Player"*/}

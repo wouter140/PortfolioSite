@@ -9,8 +9,9 @@ import "./ProjectsContent.scss";
 import "./ProjectSpecific.scss";
 
 import burstingBarrelImage from "../../content/bursting-barrel/images/main-face.png";
-import discordPresenceImage from "../../content/discord-presence-plugin/images/main-face.png";
+//import discordPresenceImage from "../../content/discord-presence-plugin/images/main-face.png";
 import cookDontLookImage from "../../content/cook-dont-look/images/main-face.jpg";
+import pinballBashImage from "../../content/pinball-bash/images/main-face.png";
 
 export default class PersonalProjectsContent extends React.Component {
 
@@ -37,21 +38,35 @@ export default class PersonalProjectsContent extends React.Component {
             >
 
                 <div className="d-flex flex-wrap justify-content-start container">
+                    {/*<MDBCol md="6" xl="4" className="animated fadeIn">*/}
+                    {/*    <ProjectCard src={ discordPresenceImage } alt="Discord Rich Presence Unreal Plugin" title="Discord Rich Presence Plugin"*/}
+                    {/*                 location="/DiscordPresencePlugin"*/}
+                    {/*                 badges={[*/}
+                    {/*                     {name: 'Engine', content: 'Unreal Engine 4'},*/}
+                    {/*                     {name: 'Languages', content: 'C++ & Blueprints'},*/}
+                    {/*                     {name: 'Platforms', content: 'PC with Discord'}*/}
+                    {/*                 ]}*/}
+                    {/*                 inProgress*/}
+                    {/*    >*/}
+                    {/*        I developed a plugin to integrate Discord rich presence into any Unreal project.*/}
+                    {/*        With this plugin it is simple to update the current game presence for the current user.*/}
+                    {/*    </ProjectCard>*/}
+                    {/*</MDBCol>*/}
+
                     <MDBCol md="6" xl="4" className="animated fadeIn">
-                        <ProjectCard src={ discordPresenceImage } alt="Discord Rich Presence Unreal Plugin" title="Discord Rich Presence Plugin"
-                                     location="/DiscordPresencePlugin"
+                        <ProjectCard src={ pinballBashImage } alt="Pinball Bash Project" title="Pinball Bash"
+                                     location="/PinballBash"
                                      badges={[
                                          {name: 'Engine', content: 'Unreal Engine 4'},
-                                         {name: 'Languages', content: 'C++ & Blueprints'},
-                                         {name: 'Platforms', content: 'PC with Discord'}
+                                         {name: 'Languages', content: 'Blueprints'},
+                                         {name: 'Platforms', content: 'PC'},
+                                         {name: 'Team Size', content: '9 Person Team'},
                                      ]}
-                                     inProgress
                         >
-                            I developed a plugin to integrate Discord rich presence into any Unreal project.
-                            With this plugin it is simple to update the current game presence for the current user.
+                            Pinball Bash is a 4 player co-op game where you try to defeat the others by having deadly pin-balls hit them.
+                            You can deflect these by making walls come up from the floor to win the game.
                         </ProjectCard>
                     </MDBCol>
-
 
                     <MDBCol md="6" xl="4" className="animated fadeIn">
                         <ProjectCard src={ burstingBarrelImage } alt="Bursting Barrel Project" title="Bursting Barrel"
@@ -61,7 +76,6 @@ export default class PersonalProjectsContent extends React.Component {
                                          {name: 'Languages', content: 'C & Blueprints'},
                                          {name: 'Platforms', content: 'PC'},
                                          {name: 'Team Size', content: '9 Person Team'},
-                                         {name: 'Duration', content: '2.5 Weeks'}
                                      ]}
                         >
                             Bursting barrel is a party game where the goal is to stop the barrel from leaking and the octopus from escaping by using the physical, keg shaped custom controller.
@@ -76,9 +90,8 @@ export default class PersonalProjectsContent extends React.Component {
                                          {name: 'Languages', content: 'C#'},
                                          {name: 'Platforms', content: 'Gear VR'},
                                          {name: 'Team Size', content: '9 Person Team'},
-                                         {name: 'Duration', content: '2 Weeks'}
                                      ]}
-                                     inProgress
+                                     noPage
                         >
                             Cook Don't Look is Gear VR game where the player has to prepare food and make it perfect quality.
                             To cook the food you look away from it, but have to make sure it does not overcook!
