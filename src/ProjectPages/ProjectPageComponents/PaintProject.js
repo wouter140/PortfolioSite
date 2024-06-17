@@ -16,12 +16,14 @@ import OptimizationsBeforeVideo from "../../content/paint/videos/NetworkPerforma
 import OptimizationsAfterImage from "../../content/paint/images/NetworkOptimizations_After.png";
 import OptimizationsAfterVideo from "../../content/paint/videos/NetworkPerformance_After.mp4";
 
+import GamePlay from "../../content/paint/images/main_face-old.png";
+
 import DynamicSizedSplitscreen from "../../content/paint/videos/DynamicSizedSplitscreen.mp4";
 import DynamicAndSplitscreen from "../../content/paint/videos/DynamicAndSplitscreen.mp4";
 
 import DiscordSteamToolVersionsAndUpgrading from "../../content/paint/images/DiscordSteamToolVersionAndUpgrading.png";
 import DiscordSteamToolBuilds from "../../content/paint/images/DiscordSteamToolBuilds.png";
-import DiscordCalendarTool from "../../content/paint/videos/DiscordCalendarToolCreateEvent.mp4";
+// import DiscordCalendarTool from "../../content/paint/videos/DiscordCalendarToolCreateEvent.mp4";
 
 import DiscordRichPresenceImage from "../../content/paint/images/DiscordRichPresence.png";
 import SteamRichPresenceImage from "../../content/paint/images/SteamRichPresence.png";
@@ -128,9 +130,7 @@ export default function PaintProject(props) {
                 id="gameplay"
                 title="Gameplay"
                 sources={[
-                    "https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg",
-                    "https://mdbootstrap.com/img/video/Tropical.mp4",
-                    "https://mdbootstrap.com/img/Photos/Slides/img%20(99).jpg"
+                    GamePlay,
                 ]}
             >
                 <p>
@@ -157,39 +157,40 @@ export default function PaintProject(props) {
                 </p>
             </WorkItemWithCarousel>
 
-            <WorkItemWithCarousel
-                id="tools"
-                title="Discord Meeting Tool"
-                carouselBefore
-                sources={[
-                    DiscordCalendarTool
-                ]}
-            >
-                <p>
-                    The development team uses Discord as our teams communication platform.
-                    To ease parts of our communication workflow in Discord I created a bot that simplifies making meetings
-                    and manages the inviting and attendance of attendees.
-                </p>
-                <p>
-                    The meeting tool has a workflow in Discord to create and manage meetings in the team and has the
-                    following features:
-                </p>
-                <ul>
-                    <li>Easily create a Google Calendar event from inside Discord.</li>
-                    <li>Add attendees to the meeting through Discord mentions or emails.</li>
-                    <li>Invitees are able to respond to the meeting, both in Discord and externally in Google and both
-                        platforms will update the event state with attendees and their response status.
-                    </li>
-                    <li>Team members are able to add or remove themselves from the meeting inside Discord.</li>
-                    <li>As the meeting is in Google Calendar, responding to the event with attending, adds the event
-                        in that users' Google calendar, which syncs with their phone, Windows and other places.
-                    </li>
-                    <li>Reminders are send through Google before the meeting starts.</li>
-                </ul>
-            </WorkItemWithCarousel>
+            {/*<WorkItemWithCarousel*/}
+            {/*    id="tools"*/}
+            {/*    title="Discord Meeting Tool"*/}
+            {/*    carouselBefore*/}
+            {/*    sources={[*/}
+            {/*        DiscordCalendarTool*/}
+            {/*    ]}*/}
+            {/*>*/}
+            {/*    <p>*/}
+            {/*        The development team uses Discord as our teams communication platform.*/}
+            {/*        To ease parts of our communication workflow in Discord I created a bot that simplifies making meetings*/}
+            {/*        and manages the inviting and attendance of attendees.*/}
+            {/*    </p>*/}
+            {/*    <p>*/}
+            {/*        The meeting tool has a workflow in Discord to create and manage meetings in the team and has the*/}
+            {/*        following features:*/}
+            {/*    </p>*/}
+            {/*    <ul>*/}
+            {/*        <li>Easily create a Google Calendar event from inside Discord.</li>*/}
+            {/*        <li>Add attendees to the meeting through Discord mentions or emails.</li>*/}
+            {/*        <li>Invitees are able to respond to the meeting, both in Discord and externally in Google and both*/}
+            {/*            platforms will update the event state with attendees and their response status.*/}
+            {/*        </li>*/}
+            {/*        <li>Team members are able to add or remove themselves from the meeting inside Discord.</li>*/}
+            {/*        <li>As the meeting is in Google Calendar, responding to the event with attending, adds the event*/}
+            {/*            in that users' Google calendar, which syncs with their phone, Windows and other places.*/}
+            {/*        </li>*/}
+            {/*        <li>Reminders are send through Google before the meeting starts.</li>*/}
+            {/*    </ul>*/}
+            {/*</WorkItemWithCarousel>*/}
 
             <WorkItemWithCarousel
                 title="Discord Steam Versioning and Branching Tool"
+                id="tools"
                 carouselBefore
                 sources={[
                     DiscordSteamToolVersionsAndUpgrading,
@@ -262,11 +263,6 @@ export default function PaintProject(props) {
             <WorkItem
                 id="audio"
                 title="Audio"
-                sources={[
-                    "https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg",
-                    "https://mdbootstrap.com/img/video/Tropical.mp4",
-                    "https://mdbootstrap.com/img/Photos/Slides/img%20(99).jpg"
-                ]}
             >
                 <p>
                     Due to a general lack of audio knowledge in our team, I worked on learning about and implementing
