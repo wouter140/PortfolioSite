@@ -12,20 +12,20 @@ import {ReactComponent as cIcon} from "../../images/about/languages/c-icon.svg";
 import {ReactComponent as cSharpIcon} from "../../images/about/languages/c-sharp-icon.svg";
 import {ReactComponent as pythonIcon} from "../../images/about/languages/python-icon.svg";
 import {ReactComponent as javascriptIcon} from "../../images/about/languages/javascript-icon.svg";
-import {ReactComponent as webGLIcon} from "../../images/about/languages/webgl-icon.svg";
-import {ReactComponent as reactIcon} from "../../images/about/languages/react-icon.svg";
-import {ReactComponent as htmlIcon} from "../../images/about/languages/html-icon.svg";
-import {ReactComponent as cssIcon} from "../../images/about/languages/css-icon.svg";
-import {ReactComponent as phpIcon} from "../../images/about/languages/php-icon.svg";
+// import {ReactComponent as webGLIcon} from "../../images/about/languages/webgl-icon.svg";
+// import {ReactComponent as reactIcon} from "../../images/about/languages/react-icon.svg";
+// import {ReactComponent as htmlIcon} from "../../images/about/languages/html-icon.svg";
+// import {ReactComponent as cssIcon} from "../../images/about/languages/css-icon.svg";
+// import {ReactComponent as phpIcon} from "../../images/about/languages/php-icon.svg";
 import {ReactComponent as unity3DIcon} from "../../images/about/languages/unity3d-icon.svg";
 import {ReactComponent as unrealEngineIcon} from "../../images/about/languages/unrealengine4-icon.svg";
 // import {ReactComponent as trelloIcon} from "../../images/about/languages/trello-icon.svg";
 import {ReactComponent as jiraIcon} from "../../images/about/languages/jira-icon.svg";
 import {ReactComponent as perforceIcon} from "../../images/about/languages/perforce-icon.svg";
-import {ReactComponent as gitIcon} from "../../images/about/languages/git-icon.svg";
-import {ReactComponent as jenkinsIcon} from "../../images/about/languages/jenkins-icon.svg";
+// import {ReactComponent as gitIcon} from "../../images/about/languages/git-icon.svg";
+// import {ReactComponent as jenkinsIcon} from "../../images/about/languages/jenkins-icon.svg";
 import {ReactComponent as visualStudioIcon} from "../../images/about/languages/visualstudio-icon.svg";
-import {ReactComponent as phpStormIcon} from "../../images/about/languages/phpstorm-icon.svg";
+// import {ReactComponent as phpStormIcon} from "../../images/about/languages/phpstorm-icon.svg";
 // import {ReactComponent as autodesk3DSMaxIcon} from "../../images/about/languages/3dsmax-icon.svg";
 // import {ReactComponent as photoshopIcon} from "../../images/about/languages/photoshop-icon.svg";
 
@@ -59,24 +59,13 @@ export default class AboutContent extends React.Component {
                          className="float-left mb-3 d-none d-md-inline-block profile-picture"/>
 
                     <div>
-                        <b>Hey there</b> and welcome to my portfolio! I'm <i>Wouter Grutter</i> and I am a software developer, focusing on games.<br/>
-                        I am currently studying Game Programming at <a href="https://www.buas.nl/opleidingen/creative-media-and-game-technologies" target="_blank" rel="noopener noreferrer">Breda University of Applied Sciences</a>,
-                        formerly known as NHTV.<br/>
-                        I have previously graduated from ROCA12 with a Game Programmer degree.
-                    </div>
-                    {/*<div className="mt-2">*/}
-                    {/*    I am currently looking for an <b>internship from September 2020</b>.<br/>*/}
-                    {/*    I am based in Breda, the Netherlands but am able to relocate.*/}
-                    {/*</div>*/}
-                    <div className="mt-1">
-                        My passion in game development lay in the Engine and Tools field.
-                        I enjoy both thinking about code, developing solutions on low level problems and creating tools
-                        that will be used by a variety of people, forcing me to work closely together with the other
-                        parties.
+                        <b>Hey there</b> and welcome to my portfolio! I'm <i>Wouter Grutter</i>, an experienced software engineer working on AAA games with experience in
+                        cross-platform and online systems. Passionate about game development,
+                        always eager to learn and innovate. I thrive in dynamic team
+                        environments, collaborating to create amazing games.
                     </div>
 
                     <div className="mt-3">
-                        I love video games and movies which take a significant amount of my free time.<br/>
                         I'm a huge enthusiast when it comes to game development and enjoy solving all kinds of problems through code.
                         I work on <Link to="personal-projects-page" href="" smooth={true} offset={-40} duration={500}>personal projects</Link> in my spare time and am always interested and eager to learn and use new technologies.<br/>
                     </div>
@@ -85,8 +74,10 @@ export default class AboutContent extends React.Component {
                     </div>
 
                     <div className="mt-3">
-                        I am currently employed at Learning Valley where I work on their online video platform, tools, apps and other applications that are used in their products and customers.<br/>
-                        At Learning Valley, I have learned new technologies such as React, 3D rendering in the browser, integrated tools and authentication.<br/>
+                        I am currently employed at Hangar 13 Games where I work on TopSpin 2K25. I worked as a systems engineer in the platform and online teams. I
+                        focussed on PlayStation as the platform owner, online gameplay and server support
+                        </div>
+                    <div className="mt-1">
                         Some of my work can be found in the <Link to="professional-projects-page" href="" smooth={true} offset={-40} duration={500}>professional projects</Link> section below with more details.
                     </div>
                 </MDBContainer>
@@ -104,40 +95,43 @@ export default class AboutContent extends React.Component {
                                     <ExperienceIcon src={pythonIcon} text="Python" />
 
                                     <ExperienceIcon src={javascriptIcon} text="JavaScript" />
-                                    <ExperienceIcon src={reactIcon} text="React" />
-                                    <ExperienceIcon src={webGLIcon} text="WebGL" />
-                                    <ExperienceIcon src={htmlIcon} text="HTML" />
-                                    <ExperienceIcon src={cssIcon} text="CSS" />
-                                    <ExperienceIcon src={phpIcon} text="PHP" />
+                                    {/*<ExperienceIcon src={reactIcon} text="React" />*/}
+                                    {/*<ExperienceIcon src={webGLIcon} text="WebGL" />*/}
+                                    {/*<ExperienceIcon src={htmlIcon} text="HTML" />*/}
+                                    {/*<ExperienceIcon src={cssIcon} text="CSS" />*/}
+                                    {/*<ExperienceIcon src={phpIcon} text="PHP" />*/}
                                 </div>
                             </MDBCardBody>
                         </MDBCard>
                         <MDBCard className="middle-card">
                             <MDBCardBody>
-                                <MDBCardTitle tag="h5" className="text-center">Production and QA</MDBCardTitle>
-                                <div className="d-flex justify-content-center flex-wrap">
-                                    <ExperienceIcon src={jiraIcon} text="Jira" />
-
-                                    <ExperienceIcon src={perforceIcon} text="Perforce" />
-                                    <ExperienceIcon src={gitIcon} text="Git / GitHub" />
-                                    <ExperienceIcon src={jenkinsIcon} text="Jenkins" />
-                                </div>
-                            </MDBCardBody>
-                        </MDBCard>
-                        <MDBCard>
-                            <MDBCardBody>
                                 <MDBCardTitle tag="h5" className="text-center">Tools</MDBCardTitle>
                                 <div className="d-flex justify-content-center flex-wrap">
+                                    <ExperienceIcon src={jiraIcon} text="Jira" />
+                                    <ExperienceIcon src={perforceIcon} text="Perforce" />
+                                    <ExperienceIcon src={visualStudioIcon} text="Visual Studio" />
+
                                     <ExperienceIcon src={unrealEngineIcon} text="Unreal Engine 4" />
                                     <ExperienceIcon src={unity3DIcon} text="Unity3D" />
-
-                                    <ExperienceIcon src={visualStudioIcon} text="Visual Studio" />
-                                    <ExperienceIcon src={phpStormIcon} text="PhpStorm" />
-                                    {/*<ExperienceIcon src={autodesk3DSMaxIcon} text="3ds Max" />*/}
-                                    {/*<ExperienceIcon src={photoshopIcon} text="Photoshop" />*/}
+                                    {/*<ExperienceIcon src={gitIcon} text="Git / GitHub" />*/}
+                                    {/*<ExperienceIcon src={jenkinsIcon} text="Jenkins" />*/}
                                 </div>
                             </MDBCardBody>
                         </MDBCard>
+                        {/*<MDBCard>*/}
+                        {/*    <MDBCardBody>*/}
+                        {/*        <MDBCardTitle tag="h5" className="text-center">Tools</MDBCardTitle>*/}
+                        {/*        <div className="d-flex justify-content-center flex-wrap">*/}
+                        {/*            <ExperienceIcon src={unrealEngineIcon} text="Unreal Engine 4" />*/}
+                        {/*            <ExperienceIcon src={unity3DIcon} text="Unity3D" />*/}
+
+                        {/*            <ExperienceIcon src={visualStudioIcon} text="Visual Studio" />*/}
+                        {/*            <ExperienceIcon src={phpStormIcon} text="PhpStorm" />*/}
+                        {/*            /!*<ExperienceIcon src={autodesk3DSMaxIcon} text="3ds Max" />*!/*/}
+                        {/*            /!*<ExperienceIcon src={photoshopIcon} text="Photoshop" />*!/*/}
+                        {/*        </div>*/}
+                        {/*    </MDBCardBody>*/}
+                        {/*</MDBCard>*/}
                     </MDBCardGroup>
                 </MDBContainer>
 

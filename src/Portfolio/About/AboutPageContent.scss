@@ -71,6 +71,7 @@
   .card-group {
     flex-direction: column;
     flex-wrap: nowrap;
+    margin: 0 6rem;
     & > .card {
       margin-bottom: 1rem;
       border-radius: .25rem;
