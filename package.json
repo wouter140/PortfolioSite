@@ -14,13 +14,13 @@
     "react-helmet": "^6.1.0",
     "react-progress-2": "^4.4.3",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^3.4.4",
+    "react-scripts": "^5.0.1",
     "react-scroll": "^1.8.1",
     "react-visibility-sensor": "^5.1.1"
   },
   "devDependencies": {
     "@leadhome/react-snap-sitemap": "^0.1.4",
-    "node-sass": "^4.14.1",
+    "node-sass": "^9.0.0",
     "prop-types": "latest",
     "react-snap": "^1.23.0"
   },
