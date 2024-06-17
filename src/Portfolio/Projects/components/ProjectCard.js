@@ -16,7 +16,8 @@ const badgeConverter = [
     {type: 'primary', name: 'Languages', title: "Used Languages"},
     {type: 'danger', name: 'Platforms', title: "Target Platforms"},
     {type: 'warning', name: 'Team Size', title: "Project Team Size"},
-    {type: 'default', name: 'Duration', title: "Project Duration"}
+    {type: 'default', name: 'Duration', title: "Project Duration"},
+    {type: 'default', name: 'Company', title: "Company"}
 ];
 
 export default class ProjectCard extends React.Component {
@@ -35,7 +36,7 @@ export default class ProjectCard extends React.Component {
         return (
             <MDBCard className={className}>
                 <div className="hoverable">
-                    { this.props.inProgress ? (
+                    { this.props.noPage || this.props.inProgress ? (
                         <MDBCardImage tag='div' waves src=" " hover>
                             <div className="project-image-container" ref={ this.imageRef }>
                                 <img className="img-fluid project-image"
@@ -78,7 +79,9 @@ export default class ProjectCard extends React.Component {
                     <MDBCardText>
                         { this.props.children }
                     </MDBCardText>
-                    { this.props.inProgress ? (
+                    { this.props.noPage ? (
+                        <></>
+                    ) : this.props.inProgress ? (
                         <MDBBtn color="primary" className="float-right" disabled>
                             Coming Soon
                         </MDBBtn>

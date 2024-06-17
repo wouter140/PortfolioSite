@@ -9,6 +9,7 @@ import "./ProjectsContent.scss";
 import "./ProjectSpecific.scss";
 
 import paintImage from "../../content/paint/images/project_short_face.png";
+import topspinImage from "../../content/topspin/images/project_short_face.png";
 import bitBusterImage from "../../content/bit-buster/images/main-face.png";
 //import pinballBashImage from "../../content/pinball-bash/images/main-face.png";
 //import p2goPlayerImage from "../../content/p2go-player/images/main-face.png";
@@ -40,6 +41,22 @@ export default class ProfessionalProjectsContent extends React.Component {
                 <div className="d-flex flex-wrap justify-content-start container">
 
                     <MDBCol lg="6" className="animated fadeIn">
+                        <ProjectCard src={ topspinImage } alt="" title="TopSpin 2K25"
+                                     location="/TopSpin2K25"
+                                     badges={[
+                                         {name: 'Engine', content: 'Custom Engine', title: "Engine"},
+                                         {name: 'Languages', content: 'C/C++', title: "Used Languages"},
+                                         {name: 'Platforms', content: 'PlayStation, Xbox and PC', title: "Target Platforms"},
+                                         {name: 'Company', content: 'Hangar 13 games', title: "Company"},
+                                     ]}
+                                     noPage
+                        >
+                            TopSpin 2K25 is a tennis simulation game featuring tennis legends and your MyPlayer. You can play solo and online in cross-play multiplayer.<br/>
+                            I contributed as a systems engineer in the platform and online teams. I focussed on PlayStation as the platform owner, online gameplay and server support.
+                        </ProjectCard>
+                    </MDBCol>
+
+                    <MDBCol lg="6" className="animated fadeIn">
                         <ProjectCard src={ paintImage } alt="" title="P.A.I.N.T."
                                      location="/Paint"
                                      badges={[
@@ -47,7 +64,6 @@ export default class ProfessionalProjectsContent extends React.Component {
                                          {name: 'Languages', content: 'C++, Blueprints & Python', title: "Used Languages"},
                                          {name: 'Platforms', content: 'PC & PS4', title: "Target Platforms"},
                                          {name: 'Team Size', content: '25 Person Team', title: "Project Team Size"},
-                                         {name: 'Duration', content: '40 Weeks', title: "Project Duration"}
                                      ]}
                         >
                             P.A.I.N.T. is an online cooperative third-person shooter where you join the P.U.N.K.S.
@@ -64,7 +80,6 @@ export default class ProfessionalProjectsContent extends React.Component {
                                          {name: 'Languages', content: 'C++'},
                                          {name: 'Platforms', content: 'PC'},
                                          {name: 'Team Size', content: '25 Person Team'},
-                                         {name: 'Duration', content: '8 Weeks'}
                                      ]}
                         >
                             Bit-buster is a local multiplayer co-op game, in which you have to pass a disk around to kill all the evil spirits.

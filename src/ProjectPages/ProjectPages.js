@@ -1,29 +1,33 @@
-// import React from "react";
+import React from "react";
 
-// const TestProject = React.lazy(() => import("./ProjectPageComponents/TestProject"));
-// const BitBusterProject = React.lazy(() => import("./ProjectPageComponents/BitBusterProject"));
-// const PaintProject = React.lazy(() => import("./ProjectPageComponents/PaintProject"));
-// const BurstingBarrelProject = React.lazy(() => import("./ProjectPageComponents/BurstingBarrelProject"));
-// const PinballBashProject = React.lazy(() => import("./ProjectPageComponents/PinballBashProject"));
-// const CookDontLookProject = React.lazy(() => import("./ProjectPageComponents/CookDontLookProject"));
-// const RocketRampageProject = React.lazy(() => import("./ProjectPageComponents/RocketRampageProject"));
-// const P2GOPlayerProject = React.lazy(() => import("./ProjectPageComponents/P2GOPlayerProject"));
-// const DiscordPresencePlugin = React.lazy(() => import("./ProjectPageComponents/DiscordPresencePlugin"));
+const TestProject = React.lazy(() => import("./ProjectPageComponents/TestProject"));
+const BitBusterProject = React.lazy(() => import("./ProjectPageComponents/BitBusterProject"));
+const PaintProject = React.lazy(() => import("./ProjectPageComponents/PaintProject"));
+const BurstingBarrelProject = React.lazy(() => import("./ProjectPageComponents/BurstingBarrelProject"));
+const PinballBashProject = React.lazy(() => import("./ProjectPageComponents/PinballBashProject"));
+const CookDontLookProject = React.lazy(() => import("./ProjectPageComponents/CookDontLookProject"));
+const RocketRampageProject = React.lazy(() => import("./ProjectPageComponents/RocketRampageProject"));
+const P2GOPlayerProject = React.lazy(() => import("./ProjectPageComponents/P2GOPlayerProject"));
+const DiscordPresencePlugin = React.lazy(() => import("./ProjectPageComponents/DiscordPresencePlugin"));
+const WMemAllocator = React.lazy(() => import("./ProjectPageComponents/WMemAllocator"));
+const TopSpinProject = React.lazy(() => import("./ProjectPageComponents/TopspinProject"));
 
-import TestProject from "./ProjectPageComponents/TestProject";
-import BitBusterProject from "./ProjectPageComponents/BitBusterProject";
-import PaintProject from "./ProjectPageComponents/PaintProject";
-import BurstingBarrelProject from "./ProjectPageComponents/BurstingBarrelProject";
-import PinballBashProject from "./ProjectPageComponents/PinballBashProject";
-import CookDontLookProject from "./ProjectPageComponents/CookDontLookProject";
-import RocketRampageProject from "./ProjectPageComponents/RocketRampageProject";
-import P2GOPlayerProject from "./ProjectPageComponents/P2GOPlayerProject";
-import DiscordPresencePlugin from "./ProjectPageComponents/DiscordPresencePlugin";
-import WMemAllocator from "./ProjectPageComponents/WMemAllocator";
+// import TestProject from "./ProjectPageComponents/TestProject";
+// import BitBusterProject from "./ProjectPageComponents/BitBusterProject";
+// import PaintProject from "./ProjectPageComponents/PaintProject";
+// import BurstingBarrelProject from "./ProjectPageComponents/BurstingBarrelProject";
+// import PinballBashProject from "./ProjectPageComponents/PinballBashProject";
+// import CookDontLookProject from "./ProjectPageComponents/CookDontLookProject";
+// import RocketRampageProject from "./ProjectPageComponents/RocketRampageProject";
+// import P2GOPlayerProject from "./ProjectPageComponents/P2GOPlayerProject";
+// import DiscordPresencePlugin from "./ProjectPageComponents/DiscordPresencePlugin";
+// import WMemAllocator from "./ProjectPageComponents/WMemAllocator";
+// import TopSpinProject from "./ProjectPageComponents/TopspinProject";
 
 export const projects = [
     {path: "/TestProject", component: TestProject},
 
+    {path: "/TopSpin2K25", component: TopSpinProject},
     {path: "/Paint", component: PaintProject},
     {path: "/Bit-Buster", component: BitBusterProject},
     {path: "/BurstingBarrel", component: BurstingBarrelProject},
