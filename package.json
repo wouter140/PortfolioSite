@@ -27,7 +27,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "postbuild": "react-snap && react-snap-sitemap --base-url=https://woutergrutter.com/",
+    "postbuild": "(node -e \"console.log(process.env) || !process.env.CI && process.exit(1)\") || (react-snap && react-snap-sitemap --base-url=https://woutergrutter.com/)",
     "test": "react-scripts test"
   },
   "eslintConfig": {
