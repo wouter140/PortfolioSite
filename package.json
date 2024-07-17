@@ -2,6 +2,7 @@
   "name": "portfoliosite",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "dependencies": {
     "@bugsnag/js": "^7.6.0",
     "@bugsnag/plugin-react": "^7.6.0",
@@ -14,21 +15,25 @@
     "react-helmet": "^6.1.0",
     "react-progress-2": "^4.4.3",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^5.0.1",
     "react-scroll": "^1.8.1",
     "react-visibility-sensor": "^5.1.1"
   },
   "devDependencies": {
     "@leadhome/react-snap-sitemap": "^0.1.4",
-    "node-sass": "^9.0.0",
+    "@vitejs/plugin-react": "^4.3.1",
     "prop-types": "latest",
-    "react-snap": "^1.23.0"
+    "react-snap": "^1.23.0",
+    "sass": "^1.77.8",
+    "typescript": "^4.9.5",
+    "vite": "^5.3.4",
+    "vite-plugin-svgr": "^4.2.0",
+    "vite-tsconfig-paths": "^4.3.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "vite",
+    "build": "tsc && vite build",
     "postbuild": "(node -e \"!process.env.GITHUB_ACTION && process.exit(1)\") || (react-snap && react-snap-sitemap --base-url=https://woutergrutter.com/)",
-    "test": "react-scripts test"
+    "preview": "vite preview"
   },
   "eslintConfig": {
     "extends": "react-app"

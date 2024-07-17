@@ -82,7 +82,7 @@ export default class ContactContent extends React.Component {
 
         bugsnagClient.leaveBreadcrumb('Contact Information Send', this.state);
 
-        emailjs.sendForm(process.env.REACT_APP_CONTACT_SERVICE_ID, process.env.REACT_APP_CONTACT_TEMPLATE_ID, this.formRef.current, process.env.REACT_APP_CONTACT_USER_ID)
+        emailjs.sendForm(import.meta.env.VITE_CONTACT_SERVICE_ID, import.meta.env.VITE_CONTACT_TEMPLATE_ID, this.formRef.current, import.meta.env.VITE_CONTACT_USER_ID)
             .then((result) => {
                 console.log(result.text);
 
@@ -158,7 +158,7 @@ export default class ContactContent extends React.Component {
 
                             <ReCAPTCHA
                                 ref={this.recaptchaRef}
-                                sitekey={process.env.REACT_APP_RECAPTCHA_SITEKEY}
+                                sitekey={import.meta.env.VITE_RECAPTCHA_SITEKEY}
                                 onChange={this.recaptchaChange.bind(this)}
                                 onErrored={this.recaptchaError.bind(this)}
                                 onExpired={this.recaptchaTimeout.bind(this)}

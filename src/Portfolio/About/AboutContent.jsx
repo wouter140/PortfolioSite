@@ -7,27 +7,16 @@ import Tooltip from "@material-ui/core/Tooltip";
 
 import profilepicture from "../../images/profilepicture.jpg";
 
-import {ReactComponent as cPlusPlusIcon} from "../../images/about/languages/c++-icon.svg";
-import {ReactComponent as cIcon} from "../../images/about/languages/c-icon.svg";
-import {ReactComponent as cSharpIcon} from "../../images/about/languages/c-sharp-icon.svg";
-import {ReactComponent as pythonIcon} from "../../images/about/languages/python-icon.svg";
-import {ReactComponent as javascriptIcon} from "../../images/about/languages/javascript-icon.svg";
-// import {ReactComponent as webGLIcon} from "../../images/about/languages/webgl-icon.svg";
-// import {ReactComponent as reactIcon} from "../../images/about/languages/react-icon.svg";
-// import {ReactComponent as htmlIcon} from "../../images/about/languages/html-icon.svg";
-// import {ReactComponent as cssIcon} from "../../images/about/languages/css-icon.svg";
-// import {ReactComponent as phpIcon} from "../../images/about/languages/php-icon.svg";
-import {ReactComponent as unity3DIcon} from "../../images/about/languages/unity3d-icon.svg";
-import {ReactComponent as unrealEngineIcon} from "../../images/about/languages/unrealengine4-icon.svg";
-// import {ReactComponent as trelloIcon} from "../../images/about/languages/trello-icon.svg";
-import {ReactComponent as jiraIcon} from "../../images/about/languages/jira-icon.svg";
-import {ReactComponent as perforceIcon} from "../../images/about/languages/perforce-icon.svg";
-// import {ReactComponent as gitIcon} from "../../images/about/languages/git-icon.svg";
-// import {ReactComponent as jenkinsIcon} from "../../images/about/languages/jenkins-icon.svg";
-import {ReactComponent as visualStudioIcon} from "../../images/about/languages/visualstudio-icon.svg";
-// import {ReactComponent as phpStormIcon} from "../../images/about/languages/phpstorm-icon.svg";
-// import {ReactComponent as autodesk3DSMaxIcon} from "../../images/about/languages/3dsmax-icon.svg";
-// import {ReactComponent as photoshopIcon} from "../../images/about/languages/photoshop-icon.svg";
+import cPlusPlusIcon from "../../images/about/languages/c++-icon.svg?react";
+import cIcon from "../../images/about/languages/c-icon.svg?react";
+import cSharpIcon from "../../images/about/languages/c-sharp-icon.svg?react";
+import pythonIcon from "../../images/about/languages/python-icon.svg?react";
+import javascriptIcon from "../../images/about/languages/javascript-icon.svg?react";
+import unity3DIcon from "../../images/about/languages/unity3d-icon.svg?react";
+import unrealEngineIcon from "../../images/about/languages/unrealengine4-icon.svg?react";
+import jiraIcon from "../../images/about/languages/jira-icon.svg?react";
+import perforceIcon from "../../images/about/languages/perforce-icon.svg?react";
+import visualStudioIcon from "../../images/about/languages/visualstudio-icon.svg?react";
 
 import "./AboutPageContent.scss"
 
